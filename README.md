@@ -1,4 +1,4 @@
-<img src="resources/img/capa.png">
+<img src="resources/img/capa.png" align="center">
 
 <hr>
 
