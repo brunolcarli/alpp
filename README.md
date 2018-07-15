@@ -1,5 +1,6 @@
-<img src="resources/img/capa.png" align="center">
-
+<p align="center">
+<img src="resources/img/capa.png">
+</p>
 <hr>
 
 <br /><br />
