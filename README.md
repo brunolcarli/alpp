@@ -118,9 +118,7 @@ __inprogress
     - [Python](##python)
 * [Capítulo 2](#capitulo-2)
 
-[comment]: <> (######################################)
-[comment]: <> (             APRESENTAÇÃO             )
-[comment]: <> (######################################)
+
 # Apresentação
 
 <p align="justify">
