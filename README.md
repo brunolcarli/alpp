@@ -260,7 +260,13 @@ de instruções através de figuras geométricas, sendo elas:
 
 <p align="center">
 Tabela 1 – Símbolos utilizados no fluxograma e seus significados
+</p>
+
+<p align="center">
 <img src="resources/img/tabela1.png">
+</p>
+
+<p align="center">
 Fonte: Ascencio & Campos (2010, p. 4)
 </p>
 
