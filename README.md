@@ -270,7 +270,13 @@ algoritmo cujo objetivo é realizar a soma de dois números, o mesmo algoritmo a
 
 <p align="center">
 Figura 1. Fluxograma representando um algoritmo para soma de dois números
+</p>
+
+<p align="center">
 <img src="resources/img/fig1.png">
+</p>
+
+<p align="center">
 Fonte: O autor.
 </p>
 
@@ -281,7 +287,13 @@ Campos(2010) são a necessidade de aprender os significados dos símbolos do flu
 
 <p align="center">
 Figura 2: Representações para a Saída de Dados
+</p>
+
+<p align="center">
 <img src="resources/img/fig2.png">
+</p>
+
+<p align="center">
 Fonte: Figura do lado esquerdo, Ascencio & Campos (2010). Figura do lado direito, Puga &
 Rissetti (2010).
 </p>
@@ -418,13 +430,25 @@ IDLE
 
 <p align="center">
 Figura 3 – Aparência do IDLE no Mac Os
+</p>
+
+<p align="center">
 <img src="resources/img/fig3.png">
+</p>
+
+<p align="center">
 Fonte: O autor.
 </p>
 
 <p align="center">
 Figura – 4 – Aparência do IDLE no Windows.
+</p>
+
+<p align="center">
 <img src="resources/img/fig4.png">
+</p>
+
+<p align="center">
 Fonte: O autor.
 </p>
 
@@ -444,13 +468,25 @@ programas de verdade.
 
 <p align="center">
 Figura 5 – Chamar o Python pelo terminal no Mac Os
+</p>
+
+<p align="center">
 <img src="resources/img/fig5.png">
+</p>
+
+<p align="center">
 Fonte: O autor.
 </p>
 
 <p align="center">
 Figura 6 – Chamando Python no terminal Windows
+</p>
+
+<p align="center">
 <img src="resources/img/fig6.png">
+</p>
+
+<p align="center">
 Fonte: O autor.
 </p>
 
