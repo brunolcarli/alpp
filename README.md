@@ -106,10 +106,6 @@ que computação era besteira...
 
 <br />
 
-[comment]: <> (######################################)
-[comment]: <> (               SUMARIO                )
-[comment]: <> (######################################)
-
 # Sumário
 
 __inprogress
@@ -172,10 +168,6 @@ dificuldade.
 <hr>
 
 <br /><br />
-
-[comment]: <> (######################################)
-[comment]: <> (                 CH1                  )
-[comment]: <> (######################################)
 
 # Capítulo 1
 
@@ -480,9 +472,5 @@ Programação.
 Os algoritmos em Python apresentados nesta obra
 poderão ser encontrados através [deste link](https://github.com/brunolcarli/AlgoritmosELogicaDeProgramacaoComPython).
 
-
-[comment]: <> (######################################)
-[comment]: <> (                 CH2                  )
-[comment]: <> (######################################)
 
 # Capítulo 2
