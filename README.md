@@ -1134,7 +1134,7 @@ Tabela 6 – Operadores lógicos em Python
 | and | Conjunção | 2 | A conjunção resultará em verdadeiro se, e somente se, todos os valores examinados forem verdadeiros |
 | not | Negação | 3 | A negação inverte o valor lógico da variável examinada. Se o valor for verdadeiro ele se tornará falso, e vice-versa. |
 
-<p alig="center">Fonte: O autor </p>
+<p align="center">Fonte: O autor </p>
 
 Vamos examinar estas operações com o Python:
 
