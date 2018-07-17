@@ -743,7 +743,7 @@ ao tipo de dado e alocando espaço dinamicamente na memória. Para atribuir um v
     idade = 97
     peso = 67.24
 
-<p align="center">
+<p align="justify">
 Diferentemente do pseudocódigo e de algumas
 linguagens de programação não precisamos declarar o tipo de variável para que o Python a reconheça. Vamos a um exemplo, abra seu IDLE e crie um novo arquivo (<i>File</i> então <i>New File</i>), insira o pequeno trecho a seguir:
 </p>
