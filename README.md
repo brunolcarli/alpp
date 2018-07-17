@@ -123,6 +123,9 @@ __inprogress
     - [Constantes](##constantes)
     - [Expressões](##expressões)
     - [Funções Intrínsecas](##funcões-intrinsecas)
+    - [Entrada de dados](##entrada-de-dados)
+    - [Exercicios Elaborados](##exercicios-elaborados)
+* [Capítulo 3](#capitulo-3)
 
 
 
@@ -722,8 +725,8 @@ Tabela 3 – Identificadores válidos e inválidos
 | Joao12 | Começa com letras | 8C | Não pode começar com números|
 | cpf | Contém somente letras | nome usuario | Não pode conter espaços em branco|
 | _nome | Pode começar com *underscore* (_)| True | Não pode conter nomes de palavras reservadas da linguagem (True é uma palavra reservada para um tipo de dado booleano) |
-| registro_usuario | Liga duas palavras através de um *underscore* | id-paciente | Não pode conter careacteres especiais (- é um careactere que representa a subtração) |
-| NOTA | Caixa alta é permitido | bot@ao | Não é permitido o uso de carácteres especiais (exceto o underscore) |
+| registro_usuario | Liga duas palavras através de um *underscore* | id-paciente | Não pode conter careacteres especiais (- é um caractere que representa a subtração) |
+| NOTA | Caixa alta é permitido | bot@ao | Não é permitido o uso de caracteres especiais (exceto o underscore) |
 
 <p align="center">Fonte: O autor.</p>
 
@@ -1001,11 +1004,11 @@ Porém escrever uma variável em caixa alta não a torna realmente uma "constant
 
 Declarando uma tupla:
 
-    quantidade = (100)
+    QUANTIDADE = (100)
 
 Para acessar o valor da tupla:
 
-    qt = quantidade[0]
+    qt = QUANTIDADE[0]
     print(qt)
 
 Não se preocupe quanto a isto neste momento, veremos mais sobre tuplas em seções futuras deste livro.
@@ -1097,6 +1100,12 @@ Existem mais operadores que não cobriremos aqui, mas
 você pode conferir a lista completa na documentação do Python.<small><sup>4</sup></small>
 </p>
 
+<hr>
+<small><sup>4</sup></small> : <small>
+Disponível <a href="https://docs.python.org/3.5/reference/lexical_analysis.html#operators"> aqui </a>.
+</small>
+<hr>
+
 <p align="justify">
 Uma aplicação interessante em Python é a multiplicação de strings, veja:
 </p>
@@ -1158,3 +1167,302 @@ Por fim perguntamos ao Python se a e b são idênticos e informar o valor lógic
 </p>
 
 ## Funções Intrínsecas
+
+<p align="justify">
+Funções intrínsecas são funções (instruções) prédefinidas
+em uma linguagem de programação. Estas funções
+auxiliam o programador para não ter que reinventar a roda em
+seus algoritmos. Por exemplo, a instrução print( ) é uma
+função pré-definida (built-in function de acordo com BARRY,
+2015) da linguagem que permite exibir uma mensagem na tela.
+No site oficial do Python encontramos uma tabela com as
+funções intrínsecas existentes no Python 3:
+</p>
+
+<p align="center">
+Tabela 7 – Funções intrínsecas no Python 3
+</p>
+
+<p align="center">
+<img src="resources/img/tabela7.png">
+</p>
+
+<p align="center">
+Fonte: https://docs.python.org/3/library/functions.html
+</p>
+
+<p align="justify">
+Você não precisa decorar todas estas funções, mas a
+medida que for construindo seus algoritmos vai utilizar
+algumas delas, existem outras funções que não estão presentes
+nesta lista mas você poderá conhece-las na documentação do
+Python, outras apresentaremos no decorrer deste livro. A
+descrição destas pode ser encontrada na documentação do
+Python. Algumas destas você já utilizou aqui em alguns
+exemplos, como por exemplo print( ), int( ), input( ) e type( ).
+Lembra-se do int( ) para converter números em dados literais
+para números inteiros? Também temos as funções str( ) e
+float( ) para converter dados em literais e números reais
+respectivamente.
+</p>
+
+    a = 2
+    print(str(a))
+    print(float(a))
+
+Saída:
+
+    2
+    2.0
+
+## Entrada de dados
+
+<p align="justify">
+Como vimos, o Python possui uma função interna
+chamada input( ) que recebe uma entrada do usuário. Nesta
+instrução podemos fornecer uma string para ajudar o usuário a
+saber que tipo de dado ele deve fornecer, como no exemplo a
+seguir:
+</p>
+
+    nome = input("Insira seu nome ")
+    print("Ola ", nome, " como esta hoje?")
+
+Saída:
+
+<p align="center">
+<img src="resources/img/fig_exemplo12.png">
+</p>
+
+<p align="justify">
+Como vimos, a instrução input( ) recebe uma string por
+padrão, e caso precisemos que a entrada seja de outro tipo de
+dado temos que fazer a conversão com int( ) ou float( ), desta
+forma:
+</p>
+
+    nome = input("Insira seu nome ")
+    idade = int(input("Insira sua idade "))
+    altura = float(input("Insira sua altura "))
+    print("Seu nome e ", nome)
+    print("Voce tem ", idade, " anos de idade")
+    print("Voce mede ", altura, " de altura")
+
+<p align="justify">
+Perceba que ao obter a idade, primeira declaramos a
+variável então atribuímos a ela a instrução int( ) pois ela deve
+ser um número inteiro, e dentro da instrução int( ) inserimos o
+input( ). Lembra quando dissemos que tudo que estiver dentro
+do parêntese acontece antes? É exatamente isto, primeiro
+ocorre a chamada da função input( ) que irá fazer uma
+solicitação de entrada ao usuário. Quando ele realizar esta
+entrada o valor fornecido será processado pela função int( ),
+convertendo o valor para um dado do tipo inteiro, que então será armazenado na variável idade. O mesmo acontece com a
+altura, primeiro um valor é solicitado, então convertido para o
+tipo de dados float e então atribuído à variável altura. Quando
+acessarmos estas variáveis elas já estarão com o tipo de dado
+que convertemos. A saída para o algoritmo acima seria parecida
+com esta:
+</p>
+
+<p align="center">
+<img src="resources/img/fig_exemplo13.png">
+</p>
+
+## Exercícios elaborados
+
+Primeiramente será mostrado alguns problemas e suas
+soluções em Python, vamos explicar a elaboração dos
+exercícios e alguns exercícios para que você leitor resolva
+sozinho utilizando os conhecimentos aprendidos até aqui.
+
+1. Formular um algoritmo que leia e apresente os dados de
+uma pessoa: nome, idade, endereço, telefone de contato
+e mostre as informações obtidas na tela.
+Problema a ser resolvido: Obter informações de uma
+pessoa e exibir as informações na tela;
+
+**Dados de entrada**: nome, idade, endereco, telefone;
+
+**Processamento**: Não há processamento, apenas entrada e saída de informações;
+
+**Saída**: Exibir os dados da pessoa;
+
+<p align="center">
+Figura 9 – Fluxograma Atividade 1
+</p>
+
+<p align="center">
+<img src="resources/img/fig9.png">
+</p>
+
+<p align="center">Fonte: O autor.</p>
+
+
+    nome = input("Insira seu nome ")
+    idade = int(input("Insira sua idade "))
+    endereco = input("Insira seu endereco ")
+    telefone = input("Insira seu telefone ")
+
+    print("Nome: ", nome)
+    print("Idade: ", idade)
+    print("Endereço ", endereco)
+    print("Telefone para contato: ", telefone)
+
+<p align="justify">
+Primeiramente declaramos a variável nome e atribuímos
+a ela uma string informada pelo usuário, em seguida a variável idade irá receber um valor de entrada do usuário que será
+convertido em um inteiro. Então atribuímos um valor de
+entrada para a variável endereco e mais uma para a variável
+telefone. Como não temos processamento as próximas
+instruções são comandos de saída, exibindo as informações
+obtidas correspondentes aos dados da pessoa.
+</p>
+
+<p align="center">
+<img src="resources/img/exercicio1.png">
+</p>
+
+<p align="justify">
+<b>Observações</b>: É muito comum obtermos o valor de um
+telefone como string, pois o usuário pode entrar com caracteres
+especiais como parêntese ( ) e o traço -. Também recomenda-se
+que nas variáveis que possuem acento ou cedilha este caractere
+seja substituído ou omitido como no caso de endereço
+(declaramos como endereco). Salienta-se ainda o cuidado ao
+declarar instruções dentro de instruções como no caso de
+int(input( )) onde abrimos dois parênteses então precisamos
+fechar dois parênteses, do contrário você receberá um erro.
+</p>
+
+<br />
+
+2) Sua professora de matemática pediu que você
+calculasse a área e o perímetro de um quadrado e lhe
+passou as fórmulas para o cálculo da área sendo A = L x
+L (o tamanho do lado do quadrado vezes ele mesmo) e
+o perímetro deve ser obtido através da soma dos quatro
+lados do quadrado. Vamos escrever um algoritmo que
+faça seu dever de casa:
+
+**Problema a ser resolvido**: Calcular a área e o
+perímetro de um quadrado;
+
+**Dados de entrada**: area, perimetro, lado
+
+**Processamento**: calcular a área (A = lado x lado ou lado**2) e calcular o perímetro (b x 4 ou b + b + b + b);
+
+**Saída**: Exibir o resultado do cálculo;
+
+<p align="center">
+Figura10 – Fluxograma Atividade 2
+</p>
+
+<p align="center">
+<img src="resources/img/fig10.png">
+
+<p align="center">Fonte: O autor.</p>
+
+
+    lado = float(input("Insira o tamanho dos lados do quadrado: "))
+    area = lado * lado
+    perimetro = lado * 4
+    print("A area do quadrado e de: ", area)
+    print("O perimetro do quadrado e de: ", perimetro)
+
+<p align="justify">
+Primeiro precisamos do valor correspondente ao
+tamanho dos lados do quadrado então declaramos a variável
+lado e atribuímos a ela o valor que for inserido pelo usuário
+convertido em um número real, em seguida fazemos o
+processamento, multiplicando o lado por ele mesmo e
+atribuindo o resultado à variável area, a variável perímetro
+recebe o valor de lado multiplicado por 4. Em seguida temos as
+saídas exibindo os resultados.
+</p>
+
+<p align="center">
+<img src="resources/img/exercicio2.png">
+</p>
+
+<p align="justify">
+Observação: Como o valor de area deveria ser lado ao
+quadrado poderia-se ter utilizado lado**2 que funcionaria da
+mesma forma, o operador ** eleva o valor da esquerda à potência do valor da direita, tente fazer isto no seu IDLE.
+</p>
+
+<br />
+
+3) Sua professora gostou tanto do seu algoritmo
+computacional que lhe pediu para elaborar outro
+algoritmo, dessa vez um que realize o cálculo da área
+de um triângulo, sabendo que a área do triângulo é igual
+o quociente da base vezes a altura por 2, vamos elaborar este algoritmo:
+
+**Problema a ser resolvido**: Calcular a área de um
+triângulo;
+
+**Dados de entrada**: base, altura;
+
+**Processamento**: calcular a área A = (base x altura) / 2;
+
+**Saída**: Exibir o resultado do cálculo;
+
+<p align="center">
+Figura 11 – Fluxograma atividade 3
+</b>
+
+<p align="center">
+<img src="resources/img/fig11.png">
+</p>
+
+<p align="center">Fonte: O autor.</p>
+
+    base = float(input("Insira o valor da base do triangulo: "))
+    altura = float(input("Insira o valor da altura do triangulo: "))
+    print("A area do triangulo e: ", (base * altura) / 2)
+
+<p align="justify">
+Primeiro vamos receber a entrada necessária.
+Declaramos uma variável base e atribuímos a ela o valor
+inserido pelo usuário convertido em número real, depois
+fazemos o mesmo com a variável altura. Desta vez inserimos o
+processamento diretamente no comando de saída através de
+uma expressão, assim economizamos uma variável fazendo
+com que o algoritmo tenha um melhor desempenho. Em um
+pequeno programa como este pode não fazer nenhuma
+diferença, mas a medida que for construindo algoritmos mais
+complexos o número de linhas e comandos pode impactar no desempenho do seu programa.
+</p>
+
+<p align="center">
+<img src="resources/img/exercicio3.png">
+</p>
+
+<p align="justify">
+Observação: Se você andou brincando com o Python pode já
+ter percebido que em alguns cálculos com números reais o
+Python pode retornar um valor com várias casas decimais, isso
+é normal não se assuste, veremos como lidar com isso no
+decorrer do livro. Caso você ainda não tenha visto isso tente
+calcular 2.90 x 1.43.
+</p>
+
+*Exercícios propostos*
+
+1) Elabore um algoritmo em Python que leia, calcule e
+escreva a média aritmética entre quatro números;
+2) Elabore um algoritmo em Python que receba um número
+inteiro e escreva na tela o número fornecido, o antecessor
+desse número e o sucessor desse número;
+3) Elabore um algoritmo em Python que:
+
++ Primeiro exiba uma mensagem de boas vindas;
++ Pergunte o nome do usuário;
++ Exiba uma mensagem dizendo uma mensagem de olá,
+seguida pelo nome do usuário, seguida por outra mensagem
+fazendo um elogio.
+4) Elabore um algoritmo em Python que calcule a área e o
+perímetro de um círculo, sabendo que A = π.r² e P=2π.r.
+
+# Capítulo 3
