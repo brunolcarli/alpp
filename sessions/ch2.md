@@ -223,7 +223,7 @@ As variáveis em Python são bem flexíveis, se adaptando
 ao tipo de dado e alocando espaço dinamicamente na memória. Para atribuir um valor à uma variável utilizamos o operador de atribuição, representado pelo careactere <b>=</b>
 </p>
 
-```python
+```
     nome = "Edgar Morin"
     idade = 97
     peso = 67.24
