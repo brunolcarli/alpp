@@ -145,6 +145,8 @@ semelhante a um código escrito em linguagem de programação de alto nível, to
 e a linguagem natural humana, mais especificamente, o nosso Português. De acordo com Puga & Rissetti (Op. Cit.) o nome “Pseudocódigo” significa “falso código”, justamente por ser extremamente parecido com um algoritmo implementado em linguagem de alto nível. Vamos ver o mesmo exemplo anterior (soma de dois números) representado em Pseudocódigo:
 </p>
 
+
+<pre>
     ALGORITMO: soma
     VAR
         num1, num2, soma : Inteiro
@@ -154,6 +156,7 @@ e a linguagem natural humana, mais especificamente, o nosso Português. De acord
         soma ← num1 + num2
         ESCREVA(soma)
     FIM.
+</pre>
 
 <p align="justify">
 Este exemplo pode ser facilmente transcrito em
@@ -195,7 +198,7 @@ computador.
 
 ## Python
 
-><small>Python é uma linguagem extremamente eficiente: seus programas farão mais com menos linhas de código, se comparado ao que muitas outras linguagens exigiriam. A sintaxe de Python também ajudará você a escrever um código “limpo”. Seu código será fácil de ler, fácil de depurar, fácil de estender e de expandir, quando comparados com outras linguagens. (MATTHES, 2016. p. 28) </small>
+<quote><small>Python é uma linguagem extremamente eficiente: seus programas farão mais com menos linhas de código, se comparado ao que muitas outras linguagens exigiriam. A sintaxe de Python também ajudará você a escrever um código “limpo”. Seu código será fácil de ler, fácil de depurar, fácil de estender e de expandir, quando comparados com outras linguagens. (MATTHES, 2016. p. 28) </small></quote>
 
 <p align="justify">
 Para a metodologia deste livro, pretende-se utilizar a
@@ -246,8 +249,8 @@ seu Sistema Operacional você notará que um editor chamado
 “IDLE” foi instalado juntamente com sua versão do Python.
 </p>
 
-><small>Quando você instala o Python 3, também terá o
-IDLE, o ambiente simples – mas surpreendentemente útil – de desenvolvimento integrado do Python. O IDLE inclui um editor de destaque da sintaxe, um depurador, o Python Shell e uma cópia completa do conjunto de documentação online do Python 3. (BARRY, 2015) </small>
+<quote><small>Quando você instala o Python 3, também terá o
+IDLE, o ambiente simples – mas surpreendentemente útil – de desenvolvimento integrado do Python. O IDLE inclui um editor de destaque da sintaxe, um depurador, o Python Shell e uma cópia completa do conjunto de documentação online do Python 3. (BARRY, 2015) </small></quote>
 
 <p align="justify">
 Este é um editor padrão do Python porém você também
@@ -332,4 +335,4 @@ Programação.
 </p>
 
 Os algoritmos em Python apresentados nesta obra
-poderão ser encontrados através [deste link](https://github.com/brunolcarli/AlgoritmosELogicaDeProgramacaoComPython).
+poderão ser encontrados através <a href="https://github.com/brunolcarli/AlgoritmosELogicaDeProgramacaoComPython">deste link</a>.
