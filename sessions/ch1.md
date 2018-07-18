@@ -368,3 +368,8 @@ Programação.
 
 Os algoritmos em Python apresentados nesta obra
 poderão ser encontrados através <a href="https://github.com/brunolcarli/AlgoritmosELogicaDeProgramacaoComPython">deste link</a>.
+
+<hr>
+
+* [< Voltar à Apresentação](sessions/apresentacao.md)
+* [> Continuar para o Capítulo 2](sessions/ch2.md)

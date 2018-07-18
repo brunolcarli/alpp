@@ -45,3 +45,5 @@ dificuldade.
 <hr>
 
 <br /><br />
+
+[Continuar para o Capítulo 1](sessions/ch1.md)

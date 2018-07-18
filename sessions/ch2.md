@@ -1036,3 +1036,6 @@ seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
 4) Elabore um algoritmo em Python que calcule a área e o perímetro de um círculo, sabendo que A = π.r² e P=2π.r.
 
 <hr>
+
+* [< Voltar ao Capítulo 1](sessions/ch1.md)
+* [> Continuar para o Capítulo 3](sessions/ch3.md)

@@ -535,3 +535,9 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 | 2 | Água Mineral | R$ 3.00 |
 | 3 | Feijão | R$ 8.00 |
 | 4 | Arroz | R$ 7.25 |
+
+
+<hr>
+
+* [< Voltar para o Capítulo 2](sessions/ch2.md)
+* [> Continuar para o Capítulo 4](sessions/ch4.md)
