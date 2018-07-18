@@ -110,7 +110,7 @@ que computação era besteira...</small>
 
 __inprogress
 
-* [Apresentação](#apresentacao)
+* [Apresentação](resources/sessions/apresentacao.md)
 * [Capítulo 1](#capitulo-1)
     - [Conceito de Algoritmo](##conceito-de-algoritmo)
     - [Algoritmos para a lógica de programação](##algoritmos-para-a-logica-de-programacao) 
@@ -124,13 +124,13 @@ __inprogress
     - [Expressões](##expressões)
     - [Funções Intrínsecas](##funcões-intrinsecas)
     - [Entrada de dados](##entrada-de-dados)
-    - [Exercicios Elaborados](##exercicios-elaborados)
 * [Capítulo 3](#capitulo-3)
     - [Comentários](##comentarios)
     - [Estruturas Condicionais](##estruturas-condicionais)
     - [Estrutura condicional simples](##estrutura-condicional-simples)
     - [Estrutura condicional composta](##estrutura-condicional-composta)
-
+    - [Estrutura condicional aninhada](##estrutura-condicional-aninhada)
+* [Capítulo 4](#capitulo-4)
 
 # Apresentação
 
@@ -1816,3 +1816,167 @@ resultados. Pesquise sobre o tipo complex em Python e
 implemente o algoritmo para reconhecer este tipo de dado.
 </p>
 
+## Estrutura condicional aninhada
+
+<p align="justify">
+Na estrutura condicional aninhada, também conhecida
+por encadeamento (PUGA; RISSETTI, 2010) são estruturas condicionais dentro de outras estruturas condicionais. Desta forma ao realizar uma verificação condicional que retorne verdadeiro, o interpretador poderá encontrar com outros testes condicionais.
+</p>
+
+<p align="center">
+<img src="resources/img/box4.png">
+</p>
+
+Vamos exemplificar melhor em um algoritmo que verifica o maior dentre 3 números escolhidos:
+
+    # primeiro recebemos a entrada
+    num1 = int(input("Insira o primeiro numero "))
+    num2 = int(input("Insira o segundo numero "))
+    num3 = int(input("Insira o terceiro numero "))
+
+    # estrutura condicional externa
+    if num1 > num2:
+
+        # estrutura condicional interna (aninhada)
+        if num1 > num3: 
+            print("O primeiro numero foi o maior, ", num1)
+        else:
+            print("O terceiro numero e o maior, ", num3)
+    else: 
+        
+        if num2 > num3:
+            print("O segundo numero e o maior, ",num2)
+        else:
+            print("O terceiro numero e o maior, ", num3)
+
+<p align="justify">
+Neste exemplo primeiro recebemos três entradas que
+devem ser números inteiros, então verificamos se o num1 é maior que o num2, caso isso seja verdade partimos para uma outra verificação, que analisa se o num1 é maior que o num3, e se for verdade isso significa que o primeiro número foi o maior, do contrário o terceiro número é o maior. Se a primeira condição for falsa, partimos para outra verificação, que analisa se o num2 é maior que o num3.
+</p>
+
+<p align="center">
+<img src="resources/img/fig_exemplo19.png">
+</p>
+
+<p align="justify">
+Existem sim formas diferentes e até mais eficazes de se implementar este algoritmo, porém para nível de exemplo este algoritmo é capaz de demonstrar o funcionamento da estrutura condicional aninhada. A grande diferença entre usar as condições aninhadas, de acordo com Leal (2016a, p. 70) “é que o uso destes encadeados melhora o desempenho do algoritmo, isto é, torna o algoritmo mais rápido por realizar menos testes e comparações. Ou ainda, executar um menor número de passos para chegar à solução do problema.”
+</p>
+
+## Exercícios elaborados
+
+4) Elabore um algoritmo que receba o nome e a idade de uma pessoa e informe se é menor de idade, maior de idade ou idoso.
+
+**Objetivo**: Informar se a pessoa é menor de idade, maior de idade ou idoso;
+
+**Entrada**: nome e idade;
+
+**Processamento**: Verificar se a idade é menor que 18 (menor de idade), maior que 18 e menor que 65 (adulto) ou maior que 65 (idoso);
+
+**Saída**: escrever se a pessoa é menor, maior ou idoso;
+
+<p align="center">Figura 15 – Fluxograma atividade 4</p>
+
+<p align="center">
+<img src="resources/img/fig15.png">
+</p>
+
+<p align="center">Fonte: O Autor.</p>
+
+    # ler nome
+    nome = input("Insira seu nome: ")
+
+    # ler idade
+    idade = int(input("Insira sua idade: ")) 
+
+    # verifica se a idade e menor que 18
+    if idade < 18:
+        print(nome, " voce e menor de idade")
+
+    # senao verifica se a idade est entre 18 e 65
+    elif idade >= 18 and idade < 65: 
+        print(nome, " voce e maior de idade")
+    
+    # senao for nenhuma das acima, entao e idoso
+    else:
+        print(nome, " voce ja e idoso")
+
+<br />
+
+5) Elabore um algoritmo que calcule o IMC (Índice de
+Massa Corporal) de uma pessoa de acordo com seu peso
+e altura. O programa deve informar se a pessoa está
+abaixo do peso (IMC menor que 20), normal (IMC entre
+20 e 25), excesso de peso (entre 26 e 30), obesa (IMC
+entre 31 e 35) ou com obesidade mórbida (acima de 35 .
+ O cálculo do IMC é dado por:
+
+ <p align="center"><img src="resources/img/imc.png"></p>
+
+**Objetivo**: Verificar o Índice de Massa Corporal de um indivíduo;
+
+**Entrada**: Valores de peso e altura;
+
+**Processamento**: Calcular o IMC, verificar em que faixa o IMC se encontra;
+
+**Saída**: Mostrar o IMC e a faixa em que a pessoa se encontra;
+
+
+<p align="center">Figura 16 – Fluxograma atividade 5</p>
+
+<p align="center"><img src="resources/img/fig16.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+    # receber o valor do peso
+    peso = float(input("Insira seu peso: "))
+
+    # receber o valor da altura
+    altura = float(input("Insira sua altura: ")) 
+
+    # calcular o imc
+    imc = peso/(altura**2)
+
+    # se o imc for menor que 20
+    if imc < 20:
+        print("Abaixo do peso ideal")
+
+    # senao
+    else:
+        # se for menor que 25
+        if imc <= 25:
+            print("Seu imc esta normal")
+        # senao
+        else:
+            # se for menor que 30
+            if imc <= 30:
+                print("Excesso de peso")
+
+            # ou se for maior que 30 e menor que 35  
+            elif imc > 30 and imc <= 35: 
+                print("Obesidade")
+            # ou entao se for mairo que isso
+            else:
+                print("Obesidade morbida")
+    
+    # finalmente mostramos o imc
+    print("Seu imc e: ", imc) 
+
+
+*Exercícios propostos*
+
+1) Elabore um algoritmo que leia o percurso em quilômetros, o tipo de automóvel e informe o consumo estimado de combustível, sabendo que um automóvel do tipo A faz 26 Km com um litro de gasolina, um automóvel do tipo B faz 20 Km e um automóvel do tipo C faz 7 Km.
+
+2) Formule um algoritmo que leia cinco números e conte quantos deles são negativos.
+
+3) Escreva um algoritmo que recebe uma letra e verifica se é uma vogal ou uma consoante.
+
+4) Formule um algoritmo que leia o código do produto e a quantidade desse produto que o cliente está adquirindo, informe os produtos que o cliente comprou, a quantidade e o total a pagar:
+
+| Código | Produto | Valor |
+| :----: | :-----: | :---: |
+| 1 | Refrigerante | R$ 4.50 |
+| 2 | Água Mineral | R$ 3.00 |
+| 3 | Feijão | R$ 8.00 |
+| 4 | Arroz | R$ 7.25 |
+
+# Capítulo 4
