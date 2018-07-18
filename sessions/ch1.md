@@ -371,5 +371,9 @@ poderão ser encontrados através <a href="https://github.com/brunolcarli/Algori
 
 <hr>
 
+
 * [< Voltar à Apresentação](apresentacao.md)
+
+
 * [> Continuar para o Capítulo 2](ch2.md)
+
