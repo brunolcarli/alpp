@@ -7,11 +7,13 @@
 utilização de comentários em certas partes do algoritmo. Estes comentários servem para documentar o código e possibilitar o entendimento de certas sessões do algoritmo por outros programadores que venham a ler seu código posteriormente. Em Python declaramos um comentário ao inserir o caractere #. Quando o Python se deparar com um comentário durante a interpretação do código, ele ignorará a linha comentada, ou seja, o Python não liga para os seus comentários.
 </p>
 
+```python
     # Este é um comentário
     # Sempre que o Python encontrar o símbolo # ele irá descartar
     # tudo que houver depois dele
     print("Esta instrucao sera executada")
     # print("esta instrucao nao sera executada")
+```
 
 Saída:
 
@@ -24,6 +26,7 @@ Perceba que tudo que estava depois do # não foi
 executado, pois o Python identificou como um comentário e logo passou para a próxima instrução válida. Este é o comentário de uma linha, porém também é possível inserir comentários de várias linhas desde que estejam entre aspas triplas (''' comentário ''' ou “““comentário”””) como no exemplo a seguir:
 </p>
 
+```python
     '''
     Este é um comentário de 
     várias linhas
@@ -34,6 +37,7 @@ executado, pois o Python identificou como um comentário e logo passou para a pr
     executado
     pelo Python
     """
+```
 
 Vamos comentar nosso código de agora em diante para facilitar o entendimento do contexto.
 
@@ -56,6 +60,7 @@ para demonstrar o funcionamento da estrutura condicional
 simples.
 </p>
 
+```python
     luz = False # luz apagada
 
     acender_luz = input("Gostaria de acender a luz?[s/n] ")
@@ -65,6 +70,7 @@ simples.
     
     # verificamos o estado da luz
     print(luz)
+```
 
 <p align="justify">
 Veja que a instrução if irá analisar a variável
@@ -75,8 +81,10 @@ acender_luz, e se o conteúdo armazenado nesta variável for igual a string “s
 <img src="resources/img/box1.png">
 </p>
 
+```python
     if acender_luz == "s":
     → → luz = True # observe a indentação
+```
 
 <p align="justify">
 Caso o código pertencente ao if não esteja tabulado à
@@ -97,6 +105,7 @@ Fonte: O autor
 
 Vamos melhorar o algoritmo anterior para verificar se a luz está acesa ou apagada:
 
+```python
     luz = False # a luz começa apagada
     acender_luz = input("Gostaria de acender a luz? [s/n] ")
 
@@ -105,18 +114,23 @@ Vamos melhorar o algoritmo anterior para verificar se a luz está acesa ou apaga
     
     if luz:    # se o valor de luz for True
         print("A luz esta acesa")
+```
 
 <p align="justify">
 Perguntar ao Python <b>if luz</b> é o mesmo que perguntar <b>if luz == True</b>. Se você quiser verificar se o valor é falso basta perguntar:
 </p>
 
+```python
     if not luz:
         print("A luz está apagada")
+```
 
 Que é o mesmo que perguntar:
 
+```python
     if luz == False:
         print("A luz está apagada")
+```
 
 ## Estrutura condicional composta
 
@@ -125,6 +139,7 @@ Na estrutura condicional composta nós temos mais de
 uma opção de desvio para uma condição a ser analisada. Vamos melhorar ainda mais o algoritmo da luz:
 </p>
 
+```python
     # a luz começa apagada
     luz = False
 
@@ -141,7 +156,7 @@ uma opção de desvio para uma condição a ser analisada. Vamos melhorar ainda 
     # se não
     else:
         print("A luz esta apagada")
-
+```
 
 <p align="justify">
 O else é um segmento do if que diz ao Python, “caso a
@@ -170,7 +185,7 @@ calcular sua média, primeiro vamos receber o nome da
 disciplina então as quatro notas e o programa deve informar sua média nesta disciplina.
 </p>
 
-
+```python
     # solicitamos o nome da disciplina
     disciplina = input("Insira o nome da disciplina: ")
 
@@ -194,7 +209,7 @@ disciplina então as quatro notas e o programa deve informar sua média nesta di
     # senão, é aprovado
     else: 
         print("Aprovado")
-
+```
 
 <p align="justify">
 As instruções if e else em Python analisam uma
@@ -224,6 +239,7 @@ Bem, na verdade o Python tem mais um comando de
 decisão composta para não precisarmos ficar repetindo if's toda hora. Quando o Python encontra um <b>if</b> ele obrigatóriamente irá realizar a verificação, mesmo que o if anterior tenha resultado em Verdadeiro. Com elif caso isso ocorra ele não executará a verificação, o que poupa processamento ao computador. O comando elif pode ser utilizado depois do if e antes do else, desta forma:
 </p>
 
+```python
     # solicitamos o nome da disciplina
     disciplina = input("Insira o nome da disciplina: ")
 
@@ -251,6 +267,7 @@ decisão composta para não precisarmos ficar repetindo if's toda hora. Quando o
     # seão, está reprovado
     else:
         print("Reprovado")
+```
 
 <p align="justify">
 Tivemos que fazer algumas mudanças no nosso
@@ -296,6 +313,7 @@ A estrutura condicional em Python nos permite uma
 gama de verificações, inclusive verificar se determinadas letras ou palavras existem em uma string, veja:
 </p>
 
+```python
     frase = "Quem ensina aprende o que ensina e quem aprende ensina ao aprender - FREIRE"
 
     # se existir a palavra FREIRE na frase
@@ -303,12 +321,14 @@ gama de verificações, inclusive verificar se determinadas letras ou palavras e
         print("Graaaaaande Mestre Paulo Freire")
     else:
         print("Frase de outra autoria")
+```
 
 <p align="justify">
 Perguntamos ao Python se uma determinada palavra ou
 letra existe em uma string, ele irá analisar a string e se existir ele irá retornar verdadeiro, noutro caso ele retorna falso. Lembra-se da instrução type( )? Vamos fazer um algoritmo que recebe uma variável e verifica qual o tipo da variável escrevendo na tela:
 </p>
 
+```python
     # definimos uma variavel com um valor
     caixa = 72 
 
@@ -329,6 +349,7 @@ letra existe em uma string, ele irá analisar a string e se existir ele irá ret
         
     else:
         print("Outro")
+```
 
 <p align="justify">
 Lembra que a instrução type( ) retorna um texto
@@ -359,6 +380,7 @@ por encadeamento (PUGA; RISSETTI, 2010) são estruturas condicionais dentro de o
 
 Vamos exemplificar melhor em um algoritmo que verifica o maior dentre 3 números escolhidos:
 
+```python
     # primeiro recebemos a entrada
     num1 = int(input("Insira o primeiro numero "))
     num2 = int(input("Insira o segundo numero "))
@@ -378,6 +400,7 @@ Vamos exemplificar melhor em um algoritmo que verifica o maior dentre 3 números
             print("O segundo numero e o maior, ",num2)
         else:
             print("O terceiro numero e o maior, ", num3)
+```
 
 <p align="justify">
 Neste exemplo primeiro recebemos três entradas que
@@ -412,6 +435,7 @@ Existem sim formas diferentes e até mais eficazes de se implementar este algori
 
 <p align="center">Fonte: O Autor.</p>
 
+```python
     # ler nome
     nome = input("Insira seu nome: ")
 
@@ -429,6 +453,7 @@ Existem sim formas diferentes e até mais eficazes de se implementar este algori
     # senao for nenhuma das acima, entao e idoso
     else:
         print(nome, " voce ja e idoso")
+```
 
 <br />
 
@@ -457,6 +482,7 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 
 <p align="center">Fonte: O autor.</p>
 
+```python
     # receber o valor do peso
     peso = float(input("Insira seu peso: "))
 
@@ -490,7 +516,7 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
     
     # finalmente mostramos o imc
     print("Seu imc e: ", imc) 
-
+```
 
 *Exercícios propostos*
 
@@ -501,6 +527,7 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 3) Escreva um algoritmo que recebe uma letra e verifica se é uma vogal ou uma consoante.
 
 4) Formule um algoritmo que leia o código do produto e a quantidade desse produto que o cliente está adquirindo, informe os produtos que o cliente comprou, a quantidade e o total a pagar:
+
 
 | Código | Produto | Valor |
 | :----: | :-----: | :---: |
