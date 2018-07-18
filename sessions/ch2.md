@@ -239,6 +239,7 @@ linguagens de programação não precisamos declarar o tipo de variável para qu
 </pre>
 </code>
 
+
 Salve seu arquivo e execute em <i>run module</i>. Sua saída deve ser parecida com esta:
 
 <p align="center">
