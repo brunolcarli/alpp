@@ -1038,9 +1038,6 @@ seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
 <hr>
 
 
-
-<a href="ch1.md">< Voltar ao Capítulo 1</a>
+<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch1.html">< Voltar ao Capítulo 1</a>
 <br />
-<a href="ch3.md">> Continuar para o Capítulo 3</a>
-
-
+<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch3.html">> Continuar para o Capítulo 3</a>
