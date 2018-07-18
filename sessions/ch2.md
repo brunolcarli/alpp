@@ -232,12 +232,10 @@ Diferentemente do pseudocódigo e de algumas
 linguagens de programação não precisamos declarar o tipo de variável para que o Python a reconheça. Vamos a um exemplo, abra seu IDLE e crie um novo arquivo (<i>File</i> então <i>New File</i>), insira o pequeno trecho a seguir:
 </p>
 
-<code>
-<pre>
+```python
     mensagem = "Ola Mundo"
     print(mensagem)
-</pre>
-</code>
+```
 
 
 Salve seu arquivo e execute em <i>run module</i>. Sua saída deve ser parecida com esta:
