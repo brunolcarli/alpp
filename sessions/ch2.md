@@ -18,7 +18,7 @@ importante sabermos como elaborar um algoritmo. Ascencio e Campos (2010, p. 3) d
 Vamos realizar cada uma destas etapas e comparar o
 último exemplo de algoritmo fornecido (soma de dois
 números) em Pseudocódigo e Python para ter uma boa visão de como seria um algoritmo implementado em Python 3:
-<p>
+</p>
 
 1. **Problema a ser resolvido**: Somar dois números;
 
