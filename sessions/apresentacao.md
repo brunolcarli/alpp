@@ -47,6 +47,6 @@ dificuldade.
 <br /><br />
 
 
-[Continuar para o Capítulo 1](ch1.md)
+<a href="ch1.md">> Continuar para o Capítulo 1</a>
 
 

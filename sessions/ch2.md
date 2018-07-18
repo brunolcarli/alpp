@@ -1038,8 +1038,9 @@ seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
 <hr>
 
 
-* [< Voltar ao Capítulo 1](ch1.md)
 
+<a href="ch1.md">< Voltar ao Capítulo 1</a>
+<br />
+<a href="ch3.md">> Continuar para o Capítulo 3</a>
 
-* [> Continuar para o Capítulo 3](ch3.md)
 
