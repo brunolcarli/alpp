@@ -256,10 +256,10 @@ retornará um erro. Tente reescrever o programa anterior omitindo uma letra da v
 </p>
 
 
-```python
+<pre>
     mensagem = "Ola Mundo"
     print(mesagem)
-```
+</pre>
 
 
 <p align="justify">
