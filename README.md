@@ -110,12 +110,12 @@ que computação era besteira...</small>
 
 __inprogress
 
-* [Apresentação](resources/sessions/apresentacao.md)
-* [Capítulo 1](resources/sessions/ch1.md)
-    - [Conceito de Algoritmo](resources/sessions/ch1.md##conceito-de-algoritmo)
+* [Apresentação](sessions/apresentacao.md)
+* [Capítulo 1](sessions/ch1.md)
+    - [Conceito de Algoritmo](sessions/ch1.md##conceito-de-algoritmo)
     - [Algoritmos para a lógica de programação](##algoritmos-para-a-logica-de-programacao) 
-    - [Tipos de algoritmo](resources/sessions/ch1.md##tipos-de-algoritmos)
-    - [Python](resources/sessions/ch1.md##python)
+    - [Tipos de algoritmo](sessions/ch1.md##tipos-de-algoritmos)
+    - [Python](sessions/ch1.md##python)
 * [Capítulo 2](#capitulo-2)
     - [Construindo algoritmos com Python](##construindo-algoritmos-com-python)
     - [Variáveis e tipos de dados](##variaveis-e-tipos-de-dados)
