@@ -223,16 +223,19 @@ As variáveis em Python são bem flexíveis, se adaptando
 ao tipo de dado e alocando espaço dinamicamente na memória. Para atribuir um valor à uma variável utilizamos o operador de atribuição, representado pelo careactere <b>=</b>
 </p>
 
-```
+
+```python
     nome = "Edgar Morin"
     idade = 97
     peso = 67.24
 ```
 
+
 <p align="justify">
 Diferentemente do pseudocódigo e de algumas
 linguagens de programação não precisamos declarar o tipo de variável para que o Python a reconheça. Vamos a um exemplo, abra seu IDLE e crie um novo arquivo (<i>File</i> então <i>New File</i>), insira o pequeno trecho a seguir:
 </p>
+
 
 ```python
     mensagem = "Ola Mundo"
@@ -252,10 +255,12 @@ pois o Python diferencia letras maiúsculas e minúsculas, assim a variável <b>
 retornará um erro. Tente reescrever o programa anterior omitindo uma letra da variável mensagem na instrução print( ), desta forma:
 </p>
 
+
 ```python
     mensagem = "Ola Mundo"
     print(mesagem)
 ```
+
 
 <p align="justify">
 Perceba que criamos uma variável chamada mensagem,
