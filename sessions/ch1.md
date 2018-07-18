@@ -23,14 +23,20 @@ Para finalizar a conceituação de algoritmo de uma
 forma, simples e entendível, um algoritmo é um passo a passo ou ainda, uma sequência de instruções para se chegar a um determinado objetivo, simples assim. Para exemplificar vamos demonstrar um algoritmo de uma tarefa corriqueira que todos fazemos diariamente: Beber água.
 </p>
 
+
 *Passo a passo para beber água:*
 
+
 1. Pegar um copo ou recipiente;
+
 2. Colocá-lo sob a torneira ou filtro de água;
+
 3. Abrir a torneira/filtro;
-4. Quando o copo estiver suficientemente cheio, fechar a
-torneira/filtro;
+
+4. Quando o copo estiver suficientemente cheio, fechar a torneira/filtro;
+
 5. Beber a água do copo/recipiente;
+
 
 <p align="justify">
 Simples, não é? Pode-se perceber que não temos nada
@@ -38,14 +44,21 @@ de muito matemático nisso, é um simples passo a passo, ou ainda, uma sequênci
 telefônica.
 </p>
 
+
 *Passo a passo para realizar uma ligação:*
 
+
 1. Pegar o telefone;
+
 2. Inserir o número para quem deseja-se telefonar;
+
 3. Aguardar ser atendido;
+
 4. Depois de realizar a conversação, colocar o telefone no gancho (ou apertar o botão de desligar no caso de alguns telefones);
 
+
 ## Algoritmos para a lógica de programação
+
 
 <p align="justify">
 Certo, já sabemos o que são algoritmos e de onde essa
@@ -56,7 +69,9 @@ palavra surgiu. Mas e a relação entre os algoritmos e a programação de compu
 Os computadores não compreendem instruções humanas como estas citadas anteriormente, os computadores só conhecem um tipo de linguagem: binária (zeros e uns) ou como define Tanenbaum (2010, p. 1) linguagem de máquina, mas se acalme, não há necessidade de se tornar um expert em linguagem binária para programar um computador, para isso existem as linguagens de alto nível ou linguagens de programação, que de acordo com Pressman (2010, p. 677) “são veículos de comunicação entre os seres humanos e os computadores”, as quais permitem que o programador possa elaborar um roteiro de instruções passo a passo (algoritmo) para que o computador execute uma determinada tarefa, estas linguagens de alto nível ou popularmente conhecidas como linguagens de programação, das quais pode-se citar o C, C++, Java, Cobol, Fortran, Python, dentre muitas outras linguagens existentes. Cada linguagem possui sua própria estrutura sintática porém sua essência reside na coerência lógica em que as instruções são fornecidas ao computador, sendo assim, o algoritmo escrito em uma linguagem de programação recebe o nome de programa (TANENBAUM, 2010).
 </p>
 
+
 ## Tipos de algoritmo
+
 
 <p align="justify">
 Os algoritmos podem ser descritos em diferentes
@@ -64,7 +79,10 @@ formas, Ascencio e Campos (2010, p.3-4) apresentam a
 Descrição Narrativa, o Fluxograma e o Pseudocódigo. Cada um desses será analisado nesta seção:
 </p>
 
+
 *Descrição Narrativa*
+
+
 <p align="justify">
 A descrição narrativa já foi apresentada no início deste capitulo, nos exemplos de beber água e no exemplo de realizar uma ligação telefônica. Consiste em descrever em linguagem natural a sequência de eventos que se sucederão. Vamos exemplificar com mais um algoritmo em descrição narrativa:
 </p>
@@ -72,9 +90,13 @@ A descrição narrativa já foi apresentada no início deste capitulo, nos exemp
 Somar dois números:
 
 1. Definir o primeiro número;
+
 2. Definir o segundo número;
+
 3. Realizar a operação de soma entre os dois números;
+
 4. Obter e demonstrar o resultado;
+
 
 <p align="justify">
 Esse tipo de algoritmo nos lembra muito de receitas de
@@ -82,7 +104,9 @@ bolo por exemplo, porém possui uma grande desvantagem, por se tratar de uma lin
 não seja muito utilizado em programação.
 </p>
 
+
 *Fluxograma*
+
 
 <p align="justify">
 O fluxograma é uma forma de representar a sequência
@@ -135,7 +159,9 @@ Fonte: Figura do lado esquerdo, Ascencio & Campos (2010). Figura do lado direito
 Rissetti (2010).
 </p>
 
+
 *Pseudocódigo*
+
 
 <p align="justify">
 O Pseudocódigo, também conhecido como Portugol
@@ -168,6 +194,7 @@ computador. Vamos analisar a estrutura do pseudocódigo:
 Tabela 2 – Estrutura do pseudocódigo
 </p>
 
+
 | Psudocódigo | Descrição |
 | ------------- | ------------- |
 | ALGORITMO: soma | Esta primeira seção declara o nome do algoritmo |
@@ -196,7 +223,9 @@ programação e estará escrevendo seus próprios programas de
 computador.
 </p>
 
+
 ## Python
+
 
 <quote><small>Python é uma linguagem extremamente eficiente: seus programas farão mais com menos linhas de código, se comparado ao que muitas outras linguagens exigiriam. A sintaxe de Python também ajudará você a escrever um código “limpo”. Seu código será fácil de ler, fácil de depurar, fácil de estender e de expandir, quando comparados com outras linguagens. (MATTHES, 2016. p. 28) </small></quote>
 
