@@ -128,6 +128,7 @@ Fonte: Ascencio & Campos (2010, p. 4)
 <p align="justify">
 Vamos exemplificar a utilização do fluxograma em um
 algoritmo cujo objetivo é realizar a soma de dois números, o mesmo algoritmo apresentado anteriormente:
+</p>
 
 <p align="center">
 Figura 1. Fluxograma representando um algoritmo para soma de dois números
