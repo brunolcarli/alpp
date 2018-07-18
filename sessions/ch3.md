@@ -539,5 +539,5 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 
 <hr>
 
-* [< Voltar para o Capítulo 2](sessions/ch2.md)
-* [> Continuar para o Capítulo 4](sessions/ch4.md)
+* [< Voltar para o Capítulo 2](ch2.md)
+* [> Continuar para o Capítulo 4](ch4.md)

@@ -1037,5 +1037,5 @@ seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
 
 <hr>
 
-* [< Voltar ao Capítulo 1](sessions/ch1.md)
-* [> Continuar para o Capítulo 3](sessions/ch3.md)
+* [< Voltar ao Capítulo 1](ch1.md)
+* [> Continuar para o Capítulo 3](ch3.md)
