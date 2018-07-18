@@ -1,5 +1,5 @@
 <p align="center">
-<img src="resources/img/capa.png">
+<img src="sessions/resources/img/capa.png">
 </p>
 <hr>
 
@@ -12,13 +12,13 @@
 <br />
 
 <p align="center">
-<img src="resources/img/cc1.png">
+<img src="sessions/resources/img/cc1.png">
 </p>
 
 <br />
 
 <p align="center">
-<img src="resources/img/cc2.png">
+<img src="sessions/resources/img/cc2.png">
 </p>
 
 <br />
@@ -112,24 +112,24 @@ __inprogress
 
 * [Apresentação](sessions/apresentacao.md)
 * [Capítulo 1](sessions/ch1.md)
-    - [Conceito de Algoritmo](sessions/ch1.md##conceito-de-algoritmo)
-    - [Algoritmos para a lógica de programação](##algoritmos-para-a-logica-de-programacao) 
-    - [Tipos de algoritmo](sessions/ch1.md##tipos-de-algoritmos)
+    - [Conceito de Algoritmo](sessions/ch1.md#conceito-de-algoritmo)
+    - [Algoritmos para a lógica de programação](sessions/ch1.md#algoritmos-para-a-logica-de-programacao) 
+    - [Tipos de algoritmo](sessions/ch1.md#tipos-de-algoritmos)
     - [Python](sessions/ch1.md##python)
 * [Capítulo 2](sessions/ch2.md)
     - [Construindo algoritmos com Python](sessions/ch2.md#construindo-algoritmos-com-python)
-    - [Variáveis e tipos de dados](sessions/ch2.md##variaveis-e-tipos-de-dados)
-    - [Variáveis em Python](sessions/ch2.md##variaveis-em-python)
-    - [Constantes](sessions/ch2.md##constantes)
-    - [Expressões](sessions/ch2.md##expressões)
-    - [Funções Intrínsecas](sessions/ch2.md##funcões-intrinsecas)
+    - [Variáveis e tipos de dados](sessions/ch2.md#variaveis-e-tipos-de-dados)
+    - [Variáveis em Python](sessions/ch2.md#variaveis-em-python)
+    - [Constantes](sessions/ch2.md#constantes)
+    - [Expressões](sessions/ch2.md#expressões)
+    - [Funções Intrínsecas](sessions/ch2.md#funcões-intrinsecas)
     - [Entrada de dados](sessions/ch2.md#entrada-de-dados)
 * [Capítulo 3](#capitulo-3)
-    - [Comentários](##comentarios)
-    - [Estruturas Condicionais](##estruturas-condicionais)
-    - [Estrutura condicional simples](##estrutura-condicional-simples)
-    - [Estrutura condicional composta](##estrutura-condicional-composta)
-    - [Estrutura condicional aninhada](##estrutura-condicional-aninhada)
+    - [Comentários](#comentarios)
+    - [Estruturas Condicionais](#estruturas-condicionais)
+    - [Estrutura condicional simples](#estrutura-condicional-simples)
+    - [Estrutura condicional composta](#estrutura-condicional-composta)
+    - [Estrutura condicional aninhada](#estrutura-condicional-aninhada)
 * [Capítulo 4](#capitulo-4)
 
 
