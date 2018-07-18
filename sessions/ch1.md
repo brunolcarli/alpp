@@ -196,7 +196,7 @@ Tabela 2 – Estrutura do pseudocódigo
 
 
 | Psudocódigo | Descrição |
-| ------------- | ------------- |
+| ----------- | --------- |
 | ALGORITMO: soma | Esta primeira seção declara o nome do algoritmo |
 | VAR: num1, num2, soma : inteiro | Esta seção é chamada de declaração de variáveis, onde todas as variáveis que serão utilizadas no algoritmo devem ser fornecidas, neste caso precisamos de três delas, o primeiro número, o segundo número e o resultado da soma. Todas elas são do tipo inteiro então declaramos uma após a outra, separando-as por vírgulas. Veremos mais sobre variáveis mais adiante.|
 | INICIO LEIA(num1) LEIA(num2) soma ← num1 + num2 ESCREVA(soma) FIM |  Esta seção é o corpo principal do algoritmo, onde todas as instruções serão declaradas. Neste caso temos duas instruções, LEIA( ) e ESCREVA( ). A instrução LEIA( ) é um comando de entrada de dados, o que significa que um valor será fornecido para a variável num1 e num2. Então temos a atribuição do resultado para a variável soma, esta atribuição é representada pelo simbolo “← “. O comando ESCREVA( ) representa uma saída de dados, que neste caso demonstra a exibição do valor guardado na variável “soma”. FIM. Indica que chegamos ao fim do algoritmo. |
