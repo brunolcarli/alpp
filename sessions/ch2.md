@@ -21,10 +21,15 @@ números) em Pseudocódigo e Python para ter uma boa visão de como seria um alg
 <p>
 
 1. **Problema a ser resolvido**: Somar dois números;
+
 2. **Dados de entrada**: numero1 e numero2;
+
 3. **Processamento**: Somar o numero1 com o numero2;
+
 4. **Saída**: Exibir o resultado da soma;
+
 5. **Construção do algoritmo**:
+
 
 | Pseudocódigo | Python |
 | ------------ | ------ |
@@ -36,6 +41,7 @@ números) em Pseudocódigo e Python para ter uma boa visão de como seria um alg
 |soma ← num1 + num2 | soma = int(num1) + int(num2)|
 | ESCREVA(soma) | print("Resultado: ", soma)|
 | FIM. | |
+
 
 <p align="justify">
 Perceba de acordo com a tabela acima que algumas declarações feitas em pseudocódigo não são necessárias em Python.
@@ -89,7 +95,9 @@ com os tipos de dados isto se tornará mais simples de compreender.</small>
 
 <br />
 
+
 ## Variáveis e tipos de dados
+
 
 <p align="justify">
 Variáveis em Algoritmos e Lógica de Programação são
@@ -110,7 +118,9 @@ As variáveis sempre guardam valores de um respectivo
 tipo de dado, que de acordo com Ascencio e Campos (2010, p.8) os mais comuns são numéricos, lógicos e literais.
 </p>
 
+
 *Numéricos*
+
 
 <p align="justify">
 Os dados do tipo numérico são divididos em duas
@@ -139,7 +149,9 @@ Campos (2010) é que “os números reais seguem a notação da língua inglesa,
 
 <br />
 
+
 *Lógicos*
+
 
 <p align="justify">
 Os valores lógicos, também chamados de booleanos
@@ -150,7 +162,9 @@ valores: verdadeiro ou falso. Estes são utilizados muitas vezes em comparaçõe
 
 <br />
 
+
 *Literais*
+
 
 <p align="jutify">
 Os dados do tipo literal são formados por sequências de caracteres (letras maiúsculas, minúsculas e símbolos) ou por um único caractere(ASCENCIO; CAMPOS, 2010). Este tipo de dado é popularmente chamado de string, sendo representado pelo texto envolto por “aspas”, como no exemplo a seguir:
@@ -204,6 +218,7 @@ utilizando, nomes de variáveis já declaradas no escopo, etc.
 Tabela 3 – Identificadores válidos e inválidos
 </p>
 
+
 | FORMA VALIDA | Razão | FORMA INVÁLIDA | Razão |
 | ------------ | ----- | -------------- | ----- |
 | Joao12 | Começa com letras | 8C | Não pode começar com números|
@@ -212,11 +227,14 @@ Tabela 3 – Identificadores válidos e inválidos
 | registro_usuario | Liga duas palavras através de um *underscore* | id-paciente | Não pode conter careacteres especiais (- é um caractere que representa a subtração) |
 | NOTA | Caixa alta é permitido | bot@ao | Não é permitido o uso de caracteres especiais (exceto o underscore) |
 
+
 <p align="center">Fonte: O autor.</p>
 
 <br />
 
+
 ## Variáveis em Python
+
 
 <p align="justify">
 As variáveis em Python são bem flexíveis, se adaptando
@@ -495,7 +513,9 @@ nesta obra, você pode conferir o modelo de dados do Python <a href="https://doc
 
 <br />
 
+
 ## Constantes
+
 
 <p align="justify">
 Da mesma forma que possuímos valores variáveis,
@@ -528,7 +548,9 @@ Para acessar o valor da tupla:
 
 Não se preocupe quanto a isto neste momento, veremos mais sobre tuplas em seções futuras deste livro.
 
+
 ## Expressões
+
 
 <p align="justify">
 Quando estivermos elaborando nossos algoritmos,
@@ -543,6 +565,7 @@ quadro com os operadores em Python:
 Tabela 4 – Operadores aritméticos mais comuns em Python e sua
 precedência
 </p>
+
 
 | OPERADOR | OPERAÇÃO | PRECEDÊNCIA | DESCRIÇÃO |
 | :------: | :------: | :---------: | --------- |
@@ -582,6 +605,7 @@ permitem realizar comparações entre valores:
 Tabela 5 – Operadores relacionais em Python
 </p>
 
+
 | OPERADOR | COMPARAÇÃO | DESCRIÇÃO |
 | :------: | :--------: | --------- |
 | == | Igualdade | Dois sinais de = compara se dois valores são idênticos. Ex: a == b | 
@@ -590,6 +614,7 @@ Tabela 5 – Operadores relacionais em Python
 | < | Menor | Compara se o primeiro valor é menor que o segundo. Ex: a < b |
 | >= | Maior igual | Compara se o primeiro valor é maior ou igual ao segundo valor. Ex: a >= b |
 | <= | Menor igual | Compara se o primeiro valor é menor ou igual ao segundo. Ex: a <= b |
+
 
 <p align="center">Fonte: O autor.</p>
 
@@ -649,11 +674,13 @@ utilizados juntamente com os relacionais fazendo comparações, a seguir os oper
 Tabela 6 – Operadores lógicos em Python
 </p>
 
+
 | OPERADOR | OPERAÇÃO | PRECEDÊNCIA | DESCRIÇÃO |
 | :------: | :------: | :---------: | --------- |
 | or | Disjunção | 1 | A disjunção entre duas operações resultara verdadeiro se um dos valores for verdadeiro |
 | and | Conjunção | 2 | A conjunção resultará em verdadeiro se, e somente se, todos os valores examinados forem verdadeiros |
 | not | Negação | 3 | A negação inverte o valor lógico da variável examinada. Se o valor for verdadeiro ele se tornará falso, e vice-versa. |
+
 
 <p align="center">Fonte: O autor </p>
 
@@ -689,7 +716,9 @@ menor que c?”, o Python responde: True, pois na conjunção obtemos resultado 
 Por fim perguntamos ao Python se a e b são idênticos e informar o valor lógico inverso (como assim? você pergunta), temos que 2 não é igual a 5, então o resultado da avaliação seria Falso, mas como dissemos ao Python para nos informar o inverso ele respondeu Verdadeiro (True). Um detalhe interessante é que sempre que uma variável estiver inicializada com o valor 0 ela retornará Falso.
 </p>
 
+
 ## Funções Intrínsecas
+
 
 <p align="justify">
 Funções intrínsecas são funções (instruções) prédefinidas
@@ -741,7 +770,9 @@ Saída:
     2.0
 </pre>
 
+
 ## Entrada de dados
+
 
 <p align="justify">
 Como vimos, o Python possui uma função interna
@@ -799,7 +830,9 @@ com esta:
 <img src="resources/img/fig_exemplo13.png">
 </p>
 
+
 ## Exercícios elaborados
+
 
 Primeiramente será mostrado alguns problemas e suas
 soluções em Python, vamos explicar a elaboração dos
@@ -982,21 +1015,24 @@ decorrer do livro. Caso você ainda não tenha visto isso tente
 calcular 2.90 x 1.43.
 </p>
 
+
 *Exercícios propostos*
+
 
 1) Elabore um algoritmo em Python que leia, calcule e
 escreva a média aritmética entre quatro números;
-2) Elabore um algoritmo em Python que receba um número
-inteiro e escreva na tela o número fornecido, o antecessor
-desse número e o sucessor desse número;
+
+2) Elabore um algoritmo em Python que receba um número inteiro e escreva na tela o número fornecido, o antecessor desse número e o sucessor desse número;
+
 3) Elabore um algoritmo em Python que:
 
 + Primeiro exiba uma mensagem de boas vindas;
+
 + Pergunte o nome do usuário;
+
 + Exiba uma mensagem dizendo uma mensagem de olá,
-seguida pelo nome do usuário, seguida por outra mensagem
-fazendo um elogio.
-4) Elabore um algoritmo em Python que calcule a área e o
-perímetro de um círculo, sabendo que A = π.r² e P=2π.r.
+seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
+
+4) Elabore um algoritmo em Python que calcule a área e o perímetro de um círculo, sabendo que A = π.r² e P=2π.r.
 
 <hr>
