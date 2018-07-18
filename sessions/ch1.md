@@ -230,6 +230,8 @@ computador.
 
 <quote><small>Python é uma linguagem extremamente eficiente: seus programas farão mais com menos linhas de código, se comparado ao que muitas outras linguagens exigiriam. A sintaxe de Python também ajudará você a escrever um código “limpo”. Seu código será fácil de ler, fácil de depurar, fácil de estender e de expandir, quando comparados com outras linguagens. (MATTHES, 2016. p. 28) </small></quote>
 
+<br />
+
 <p align="justify">
 Para a metodologia deste livro, pretende-se utilizar a
 Linguagem Python como forma de aprendizado de algoritmos,
