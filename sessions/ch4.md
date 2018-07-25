@@ -16,7 +16,7 @@ contado, que significa que vamos repetir um determinado conjunto de instruções
 
 
 ```python
-<pre>
+
     # primeiro recebemos o nome
     nome = input("Insira seu nome")
 
@@ -29,7 +29,7 @@ contado, que significa que vamos repetir um determinado conjunto de instruções
 
     for contagem in range(10):
         print(nome)
-</pre>
+
 ```
 
 <p align="justify">
@@ -48,9 +48,16 @@ Veja que o laço repete a instrução print(nome) o
 número de vezes que pedimos que fizesse. Vamos exemplificar novamente pedindo ao Python que escreva na tela a tabuada do 2:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo22.png">
-</p>
+
+```python
+
+    # a variável i é o nosso contador
+    for i in range(11):
+        # perceba com i muda a cada repetição
+        print("2 x ", i, " = ", 2 * i)
+
+```
+
 
 <p align="justify">
 Aqui ao invés de nomear a variável contadora com o
@@ -69,9 +76,16 @@ Observe como o valor de <b>i</b> se inicia em zero e a cada vez que a instruçã
 estrutura do tipo laço contado porque sabemos exatamente quantas vezes devemos repetir os comandos, neste caso apresentado o laço deve ser percorrido o número de vezes que for passado para o comando range( ). Neste comando range( ) não precisamos passar um número diretamente, também podemos passar um valor numérico guardado em uma variável<small><sup>5</sup></small>. Veja este próximo exemplo:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo24.png">
-</p>
+
+```python
+
+    mensagem = input("Insira uma mensagem")
+    repeticoes = int(input("Insira o numero de repetições: "))
+
+    for i in range(repeticoes):
+    print(mensagem)
+
+```
 
 <p align="justify">
 Primeiro recebemos uma mensagem do usuário através
@@ -96,14 +110,25 @@ Em Python, a instrução for também pode ser utilizada
 para iterar pelos caracteres de uma string. Iterar pela string quer dizer que o Python vai passar verificando caracter por caracter da string que você quer analisar, veja no exemplo a seguir:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo26.png">
-</p>
+
+```python
+
+    # definimos uma string
+    palavra = 'bola'
+
+    # para cada letra na string
+    for letra in palavra():
+        # escreva a letra na tela
+        print(letra)
+
+```
+
 
 <p align="justify">
 A cada repetição do laço for o Python vai escrever a
 letra que ele identificou, uma de cada vez até chegar ao fim da string, quando o Python identificar que já não há mais caracteres para ele verificar o loop se encerra.
 </p>
+
 
 <p align="center">
 <img src="resources/img/fig_exemplo27.png">
@@ -114,9 +139,23 @@ Lembra quando verificamos a existência de um
 determinado caractere em uma string com a instrução if? Vamos fazer um algoritmo que leia um número de ponto flutuante e caso este tenha sido inserido com vírgula (,) ao invés de ponto (.) o Python substitua os caracteres para nós:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo999.png">
-</p>
+```python
+
+    # pedimos uma altura
+    entrada = input("Insira sua altura: ")
+
+    # para cada caractere na entrada
+    for caractere in entrada:
+        # se houver vigula na entrada
+        if caracter == ',':
+            # substituimos por um ponto
+            entrada = float(entrada.replace(',', '.'))
+    
+    print(entrada)
+
+```
+
+
 
 <p align="justify">
 Neste exemplo recebemos uma entrada referente a
@@ -133,5 +172,15 @@ através da instrução float() e atribuímos o resultado da conversão para a e
 <p align="center">
 <img src="resources/img/fig_exemplo29.png">
 </p>
+
+A mesma tarefa pode ser realizada também utilizando o operador **in**, desta forma:
+
+```python
+
+    entrada = input("Insira sua altura: ")
+    if "," in entrada:
+        entrada = float(entrada.replace(",", "."))
+```
+
 
 ## Estrutura while
