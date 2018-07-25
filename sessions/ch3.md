@@ -435,6 +435,7 @@ Existem sim formas diferentes e até mais eficazes de se implementar este algori
 
 <p align="center">Fonte: O Autor.</p>
 
+
 <pre>
     # ler nome
     nome = input("Insira seu nome: ")
