@@ -130,4 +130,6 @@ __inprogress
     - [Estrutura condicional simples](sessions/ch3.md#estrutura-condicional-simples)
     - [Estrutura condicional composta](sessions/ch3.md#estrutura-condicional-composta)
     - [Estrutura condicional aninhada](sessions/ch3.md#estrutura-condicional-aninhada)
-* [Capítulo 4](#capitulo-4)
+* [Capítulo 4](sessions/ch4.md)
+    - [Estruturas de repetição](sessions/ch4.md#estruturas-de-repeticao)
+    - [Estrutura for](sessions/ch4.md#estrutura-for)
