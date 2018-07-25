@@ -101,7 +101,7 @@ variável mensagem, depois recebemos um valor numérico do usuário que é armaz
 <small><sup>5</sup></small> : <small>
 Na instrução range() também é possível passar um valor mínimo e um máximo separados por virgula assim range(10, 21). Desta forma o contador iniciará em 10 e contará até 20.</small>
 
-</small>
+<small>
 Um terceiro parâmetro pode ser fornecido para indicar o passo da contagem, range(0, 11, 2) irá contar até  10 pulando de 2 em 2.
 </small>
 <hr>
