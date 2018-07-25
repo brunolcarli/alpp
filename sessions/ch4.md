@@ -99,8 +99,9 @@ variável mensagem, depois recebemos um valor numérico do usuário que é armaz
 
 <hr>
 <small><sup>5</sup></small> : <small>
-Na instrução range() também é possível passar um valor mínimo e um máximo separados por virgula assim range(10, 21). Desta forma o contador iniciará em 10 e contará até 20.
+Na instrução range() também é possível passar um valor mínimo e um máximo separados por virgula assim range(10, 21). Desta forma o contador iniciará em 10 e contará até 20.</small>
 
+</small>
 Um terceiro parâmetro pode ser fornecido para indicar o passo da contagem, range(0, 11, 2) irá contar até  10 pulando de 2 em 2.
 </small>
 <hr>
@@ -174,6 +175,7 @@ através da instrução float() e atribuímos o resultado da conversão para a e
 </p>
 
 A mesma tarefa pode ser realizada também utilizando o operador **in**, desta forma:
+
 
 ```python
 
