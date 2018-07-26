@@ -186,3 +186,160 @@ A mesma tarefa pode ser realizada também utilizando o operador **in**, desta fo
 
 
 ## Estrutura while
+
+<p align="justify">
+A instrução while é uma estrutura de repetição do tipo condicional, o que significa que os comandos inseridos no bloco de instruções while se repetirão até que uma determinada
+condição se satisfaça. Lembra da instrução if? Ela analisa uma condição e caso seja verdadeira executa um bloco de instruções. A instrução while funciona de maneira similar, porém ela ficará executando os comandos enquanto a condição
+for verdadeira. Acompanhe no exemplo:
+</p>
+
+```python
+
+# definimos uma variavel com valor zero
+num = 0
+# definimos uma string qualquer
+nome = "String"
+
+# enquanto num tiver valor menor que cinco
+while num < 5:
+    # escreva a string na tela
+    print(nome)
+    # incrementamos a variavel num
+    num += 1
+
+```
+
+Saída:
+
+```
+String
+String
+String
+String
+String
+>>>
+```
+
+<p align="justify">
+Na estrutura de repetição condicional é muito
+importante que a variável analisada seja modificada dentro do bloco while, nesse caso analisamos a variável num, e dissemos ao Python “Repita essas instruções enquanto num for menor que 5 ok?”, e dentro do bloco while, após a instrução print, nós temos num += 1, que é equivalente a num = num + 1. Sem esse incremento o loop ficaria repetindo infinitamente a mensagem, pois num seria sempre menor que 5.
+</p>
+
+<p align="justify">
+Outro adendo importante a se ressaltar a respeito desta estrutura é a inicialização da variável avaliada. A inicialização de uma variável quer dizer que antes de avaliarmos esta variável devemos atribuir um valor a ela. Diferentemente da estrutura for onde declaramos uma variável contadora no próprio comando, a instrução while precisa que a variável possua um valor inicial atribuído antes de chegar no loop, ou então nosso interpretador Python irá retornar um erro:
+</p>
+
+```python
+
+nome  = "wubalubadubdub"
+
+while num < 5:
+    print(nome)
+
+```
+
+<p align="justify">
+Veja no exemplo acima que dissemos ao Python para
+repetir o conteúdo da variável nome enquanto o valor de num for menor que 5. Mas a variável num não foi declarada em lugar algum, então o Python não saberá o que você quer analisar exatamente, devolvendo este erro:
+</p>
+
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'num' is not defined
+>>>
+```
+
+<p align="justify">
+Lembra-se do Traceback? Sim exatamente, é a forma
+que o Python tem de dizer que houve um erro no seu algoritmo, nesse caso ele retornou um NameError, informando que o identificador num não foi definido. Se você se recordar, já vimos este erro no capitulo 2, é muito comum este tipo de erro quando tentamos manipular uma variável que não foi declarada ou quando erramos o nome de um identificador.
+</p>
+
+<p align="justify">
+A estrutura de repetição condicional é caracterizada por repetir uma determinada sequência de comandos indefinidamente (LEAL, 2016a p. 96) , ou seja, não sabemos quantas vezes o loop deve se repetir. Para exemplificar vamos supor que temos que escrever um algoritmo que receba vários números do usuário, e continuará recebendo números até que seja digitado o valor zero (0). Neste algoritmo vamos contar quantos números foram inseridos pelo usuário e mostrar na tela depois de sair do loop. Veja:
+</p>
+
+```python
+
+# variavel que conta quantos numeros são inseridos
+inseridos = 0
+
+# variavel que controla o loop
+num = 1
+
+# o loop vai persistir enquanto o loop não for zero
+while num:
+    
+    # pedimos um numero
+    num = int(input("Insira um numero ou 0 oara sair: "))
+
+    # caso a entrada nao seja zero incrementamos
+    # o contador
+    if num:
+        inseridos += 1
+
+# no final escrevemos o resultado na tela
+print("Voce inseriu ", inseridos, " numeros")
+
+```
+
+<p align="justify">
+Perceba que nesse loop while não temos um incremento para sair do loop, mas uma condição bem específica que é tratada dentro do loop, nesse caso, a entrada do usuário. Toda
+vez que o usuário inserir uma entrada diferente de zero fazemos uma verificação if num, e se for diferente de zero incrementamos o contador.
+Quando o usuário inserir 0 o loop while irá realizar novamente a análise, nesse ponto o Python irá detectar que num é igual a zero, então ele não executará o while. Depois do loop, temos
+outra instrução informando quantos números o usuário inseriu, esta instrução está fora do loop como podemos ver pela indentação. A saída deve ser parecida com esta:
+</p>
+
+```
+Insira um numero ou 0 oara sair: 4
+Insira um numero ou 0 oara sair: 6
+Insira um numero ou 0 oara sair: 4
+Insira um numero ou 0 oara sair: 8
+Insira um numero ou 0 oara sair: 1
+Insira um numero ou 0 oara sair: 9079
+Insira um numero ou 0 oara sair: 012
+Insira um numero ou 0 oara sair: 0
+Voce inseriu  7  numeros
+>>>
+```
+
+<p align="justify">
+Podemos criar um laço while diretamente com
+booleanos (True ou False) e para saírmos do loop basta utilizar a instrução break:
+</p>
+
+```python
+# enquanto for verdade
+while True:
+    # solicite um nome
+    nome = input("Insira seu nome: ")
+
+    # se o nome for fim
+    if nome == "fim":
+        # saimos do loop
+        break
+    else:
+        # senão diga oi
+        print("Oi ", nome)
+
+# esta instrução contece quando o loop encerra
+print("fim do loop")
+```
+
+<p align="justify">
+Criamos a condição True no laço que continuará sempre a executar, dentro do loop criamos uma condição de saída que quando satisfeita freia o loop e parte para a próxima instrução depois do laço, neste caso uma instrução print( ) informando que o laço acabou, veja a saída:
+</p>
+
+```
+Insira seu nome: Bruno
+Oi  Bruno
+Insira seu nome: Joana
+Oi  Joana
+Insira seu nome: André
+Oi  André
+Insira seu nome: fim
+fim do loop
+>>>
+```
+
+## Estruturas de repetição aninhadas

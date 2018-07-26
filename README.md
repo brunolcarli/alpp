@@ -133,3 +133,5 @@ __inprogress
 * [Capítulo 4](sessions/ch4.md)
     - [Estruturas de repetição](sessions/ch4.md#estruturas-de-repeticao)
     - [Estrutura for](sessions/ch4.md#estrutura-for)
+    - [Estrutura while](sessions/ch4.md#estrutura-while)
+    - [Estruturas de repetição aninhadas](sessions/ch4.md#estruturas-de-repeticao-aninhadas)
