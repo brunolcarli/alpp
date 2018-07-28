@@ -135,3 +135,5 @@ __inprogress
     - [Estrutura for](sessions/ch4.md#estrutura-for)
     - [Estrutura while](sessions/ch4.md#estrutura-while)
     - [Estruturas de repetição aninhadas](sessions/ch4.md#estruturas-de-repeticao-aninhadas)
+* [Capítulo 5](sessions/ch5.md)
+    - [Estruturas de dados](sessions/ch5.md#estruturas-de-dados)
