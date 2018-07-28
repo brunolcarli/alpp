@@ -343,3 +343,288 @@ fim do loop
 ```
 
 ## Estruturas de repetição aninhadas
+
+<p align="justify">
+Assim como nas estruturas condicionais, podemos
+aninhar ou encadear as estruturas de repetição. De acordo com Manzano e Oliveira (1997) <i>apud</i> Leal (2016a) “Não existem regras para o encadeamento das estruturas de repetição. De modo que você precisa conhecer cada uma delas para saber quando é conveniente encadeá-las, quais devem ser utilizadas e como”, porém com o tempo e prática você saberá exatamente que tipo de instrução utilizar para elaborar seus algoritmos.
+</p>
+
+<p align="justify">
+Pode-se encadear qualquer tipo de estrutura de repetição dentro da outra. Pode-se inserir <b>while</b> dentro de <b>while</b>, <b>for</b> dentro de <b>for</b>, <b>while</b> dentro de <b>for</b>, <b>for</b> dentro de <b>while</b>, da forma como seu algoritmo exigir, mas é importante ressaltar que a indentação esteja correta para cada bloco de repetição para que você não se depare com execuções inesperadas do seu código. Vamos a um exemplo:
+</p>
+
+```python
+# inicializamos uma condição para o loop while
+loop = 's'
+
+# enquanto o loop for diferente de 'n'
+while loop != 'n':
+
+    # inicializamos a soma
+    soma = 0
+
+    # somar quantos números o usuário quiser
+    maximo = int(input("Quantos números você deseja somar? "))
+
+    # loop para somar a quantidade desejada
+    for i in range(maximo):
+        entrada = int(input("Insira um número para somar: "))
+        soma += entrada
+    
+    # aqui estamos fora do loop for, mas dentro do loop while ainda
+    print("O resultado da soma é: ", soma)
+
+    # verifica se o usuario quer continuar a somar
+    # caso contrario saimos do loop while
+    loop = input("Gostaria de realizar outra soma? [s/n] ")
+```
+
+<p align="justify">
+Neste exemplo temos dois níveis de repetição, o mais externo é o loop while, ele será o laço principal do programa e continuará executando até que o usuário entre com o valor correspondente para encerrar o laço. Dentro deste laço principal nós temos um segundo laço interno que irá repetir de acordo com o número de somas que o usuário deseja realizar. Ao completar seus ciclos o laço interno se encerrará dando continuidade ao programa, porém o programa continua dentro do laço principal que continuará a se repetir até que o valor necessário para interromper sua execução seja fornecido pelo usuário.
+</p>
+
+Saída:
+
+```
+Quantos números você deseja somar? 5
+Insira um número para somar: 2
+Insira um número para somar: 3
+Insira um número para somar: 2
+Insira um número para somar: 5
+Insira um número para somar: 1
+O resultado da soma é:  13
+Gostaria de realizar outra soma? [s/n] n
+>>>
+```
+
+<p align="justify">
+Você pode aninhar quantas estruturas de repetição
+forem necessárias em seu algoritmo assim como as estruturas condicionais, assim como pode inserir estruturas de repetição em estruturas condicionais e vice-versa. Veja que no exemplo anterior poderia-se ter utilizado o laço <b>while</b> ao invés do <b>for</b> e o algoritmo comportaria-se da mesma forma, experimente modificar o algoritmo anterior e utilizar o loop <b>while</b> internamente no lugar do loop <b>for</b>.
+</p>
+
+
+## Exercícios elaborados
+
+6) Escreva um algoritmo que apresente todos os números divisíveis por 5 que sejam menores que 200.
+
+**Problema a ser resolvido**: Calcular todos os números divisíveis por 5 que sejam menores ou igual a 200;
+
+**Dados de entrada**: nenhum;
+
+**Processamento**: calcular de 1 a 200 dividindo por 5, os resultados iguais a 0 devem ser mostrados na tela;
+
+**Saída**: Exibir os divisíveis por 5;
+
+<p align="center">Figura 17 - Fluxograma atividade 6</p>
+
+<p align="center"><img src="resources/img/fig17.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+```python
+# para cada número de 1 a 200
+for numero in range(1, 201):
+    # se o número for divisivel por 5
+    if numero % 5 == 0:
+        # escreva esse número na tela
+        print(numero)
+
+# escreva uma mensagem amigavel e informativa no final
+print("São divisieveis por 5")
+```
+
+Saída:
+
+```
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+105
+110
+115
+120
+125
+130
+135
+140
+145
+150
+155
+160
+165
+170
+175
+180
+185
+190
+195
+200
+São divisieveis por 5
+>>>
+```
+
+<p align="justify">
+Perceba que utilizamos 201 como alcance máximo para
+nosso range( ), pois se passássemos 200 como parâmetro o Python ia contar do 0 ao 199 e não dividiríamos o 200 também. Tente fazer isso para ver a diferença.
+</p>
+
+<p align="justify">
+Observe também que no fluxograma não temos
+exatamente um símbolo para representar o laço de repetição, o loop se baseia nas avaliações condicionais, estas orientam o fluxo de dados do algoritmo até que sejam satisfeitas.
+</p>
+
+7) Escreva um algoritmo que receba a idade e o estado civil de várias pessoas e imprima a quantidade de pessoas casadas, solteiras, separadas e viúvas. O algoritmo finaliza quando for informado o valor zero para idade.
+
+**Problema a ser resolvido**: Verificar e contabilizar o estado civil de várias pessoas;
+
+**Dados de entrada**: idade, estado civil;
+
+**Processamento**: calcular o número de pessoas solteiras, casadas, separadas e viúvas;
+
+**Saída**: Informar a quantidade de pessoas solteiras, casadas, separadas e viúvas;
+
+<p align="center">Figura 18 - Fluxograma atividade 7</p>
+
+<p align="center"><img src="resources/img/fig18.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+```python
+# primeiro inicializamos as variráveis
+casadas = 0
+solteiras = 0
+viuvas = 0
+divorciadas = 0
+
+idade = int(input("Insira sua idade ou 0 para sair: "))
+
+# o programa só funciona se a idade for maior que zero
+
+while idade: # loop externo
+
+    # solicite o estado civil
+    print("Informe o estado civil [C/S/D/V]")
+
+    # inicializamos a varieavel do loop interno
+    estado = ""
+    while estado != "C" and estado != "S" and estado != "D" and estado != "V":
+
+        # Veja na string abaixo o uso de \n
+        # isso diz ao Python para pular uma linha
+        estado = input("C: Casado\nS: Solteiro\nD: Divorciado\nV: Viuvo \n")
+
+        # .upper() transforma os caracteres da string em CAIXA ALTA
+        estado = estado.upper()
+
+    # Aqui acaba o loop interno
+
+    # ainda dentro do loop externo fazemos as verificações
+    if estado == "C":
+        casadas += 1
+    elif estado == "S":
+        solteiras += 1
+    elif estado == "D":
+        divorciadas += 1
+    elif estado == "V":
+        viuvas += 1
+    else:
+        print("Oops, algo deu errado!")
+    
+    # solicitamos a idade mais uma vez
+    idade = int(input("Insira sua idade ou 0 para sair: "))
+
+# fim do loop externo
+
+# informamos os resultados
+print("O número de solteiros é: ", solteiras)
+print("O número de casados é: ", casadas)
+print("O número de divorciados é: ", divorciadas)
+print("O número de viúvos é: ", viuvas)
+```
+
+Saída:
+
+```
+Insira sua idade ou 0 para sair: 26
+Informe o estado civil [C/S/D/V]
+C: Casado
+S: Solteiro
+D: Divorciado
+V: Viuvo
+s
+Insira sua idade ou 0 para sair: 45
+Informe o estado civil [C/S/D/V]
+C: Casado
+S: Solteiro
+D: Divorciado
+V: Viuvo
+d
+Insira sua idade ou 0 para sair: 32
+Informe o estado civil [C/S/D/V]
+C: Casado
+S: Solteiro
+D: Divorciado
+V: Viuvo
+c
+Insira sua idade ou 0 para sair: 89
+Informe o estado civil [C/S/D/V]
+C: Casado
+S: Solteiro
+D: Divorciado
+V: Viuvo
+v
+Insira sua idade ou 0 para sair: 12
+Informe o estado civil [C/S/D/V]
+C: Casado
+S: Solteiro
+D: Divorciado
+V: Viuvo
+s
+Insira sua idade ou 0 para sair: 0
+O número de solteiros é:  2
+O número de casados é:  1
+O número de divorciados é:  1
+O número de viúvos é:  1
+>>>
+```
+
+<p align="justify">
+Perceba que neste algoritmo utilizamos alguns macetes. Primeiro perceba a utilização dos caracteres \n dentro da string no input( ). Estes caracteres servem para que o interpretador pule uma linha, toda vez que o Python se deparar com \n dentro de uma string ele irá fazer a quebra de uma linha. Outro apetrecho interessante é o método upper( ). Ao trabalhar com strings podemos chamar este método adicionando .upper( ) ao final da variável contendo a string para que as letras fiquem maiúsculas, desta forma podemos garantir que, se caso o usuário insira um 's' minúsculo ele seja logo convertido para maiúsculo, pois como você deve se lembrar o Python é case sensitive o que o faz diferenciar letras maiúsculas e minúsculas. O Python também conhece os métodos .lower( ) para deixar as letras minúsculas e o método .capitalize( ) para deixar somente a primeira letra maiúscula e as outras minúsculas. Vamos conhecer mais coisas legais sobre strings no decorrer do livro.
+</p>
+
+
+*Exercícios propostos*:
+
+1) Construa um algoritmo que leia números inteiros até que seja inserido um número negativo. Ao final, informe a média dos números, o maior e o menor valor inserido.
+
+2) Elabore um algoritmo que imprima todas as tabuadas do 1
+ao 10.
+
+3) Construa um algoritmo que receba o nome de uma pessoa e sua idade, o algoritmo deve escrever na tela o nome da pessoa em letras maiúsculas o número de vezes equivalente à sua idade.
+
+4) Escreva um algoritmo que simule um cardápio, cada item do cardápio tem um código que vai de 1 a 6. Mostre os produtos do cardápio na tela, o código do item e o valor, o usuário poderá fazer pedidos pelo código do item até que seja inserido o valor zero. No final escreva na tela os itens que o usuário escolheu e o valor a pagar.
+
+
+<hr>
+
+
+<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch3.html">< Voltar para o Capítulo 3</a>
+<br />
+<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch5.html">> Continuar para o Capítulo 5</a>
