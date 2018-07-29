@@ -451,3 +451,297 @@ Saída:
 ```
 
 ## Estruturas de dados multidimensionais
+
+<p align="justify">
+Uma matriz é uma estrutura de dados
+multidimensional, o que quer dizer que ela tem várias dimensões, ou seja uma lista que contém outras listas. Até agora vimos vetores unidimensionais, ou seja, listas com elementos singulares em sequência, já as matrizes podem conter outras listas dando uma característica multidimensional. Para exemplificar melhor, vamos dizer que você estabeleceu uma lista de afazeres do seu dia:
+</p>
+
+ 1 – Ir na padaria:
+- 1.1 – Comprar pão;
+- 1.2 - Comprar manteiga;
+- 1.3 Comprar queijo;
+
+2 – Passar no posto de gasolina:
+- 2.1 – Calibrar os pneus do carro;
+- 2.2 Trocar o óleo;
+
+3 – Passar na farmácia:
+- 3.1 – Comprar remédio;
+- 3.2 - Pesar-se na balança;
+
+4 – Voltar pra casa:
+- 4.1 – Fazer café;
+- 4.2 - Tomar o remédio;
+- 4.3 - Limpar a casa;
+- 4.4 - Ler um livro
+
+<p align="justify">
+Muitas vezes nossas tarefas são compostas de outras
+listas de tarefas, sendo assim nossa lista de atividades do dia é multidimensional. Em Python poderíamos definir essa lista desta forma:
+</p>
+
+```python
+afazeres = [ # abrimos uma lista
+    ['comprar pão', 'comprar manteiga', 'comprar queijo'], # na padaria
+    ['calibrar pneu', 'trocar óleo'], # no posto
+    ['comprar remédio', 'pesar na balança'], # na farmácia
+    ['fazer café', 'tomar remédio', 'limpar a casa', 'ler um livro'], # em casa
+] # fechamos a lista
+
+# verificamos as listas
+for lista in afazeres:
+    print(lista)
+```
+
+<p align="justify">
+Utilizamos um laço for para percorrer a primeira
+dimensão da nossa lista, para cada elemento da lista afazeres será exibido na tela, como o conteúdo de afazeres são quatro listas:
+</p>
+
+```
+['comprar pão', 'comprar manteiga', 'comprar queijo']
+['calibrar pneu', 'trocar óleo']
+['comprar remédio', 'pesar na balança']
+['fazer café', 'tomar remédio', 'limpar a casa', 'ler um livro']
+>>>
+```
+
+<p align="justify">
+Para referenciar uma um item da lista interna pelo
+índice utilizamos dois pares de colchetes passando o índice da lista a ser verificada no primeiro e o índice do elemento no segundo:
+</p>
+
+```python
+afazeres = [ # abrimos uma lista
+    ['comprar pão', 'comprar manteiga', 'comprar queijo'], # na padaria
+    ['calibrar pneu', 'trocar óleo'], # no posto
+    ['comprar remédio', 'pesar na balança'], # na farmácia
+    ['fazer café', 'tomar remédio', 'limpar a casa', 'ler um livro'], # em casa
+] # fechamos a lista
+
+# mostra o primeiro item da primeira lista
+print(afazeres[0][0])
+
+# mostra o terceiro item da última lista
+print(afazeres[-1][2])
+```
+Saída:
+
+```
+comprar pão
+limpar a casa
+>>>
+```
+<p align="justify">
+Você pode aninhar quantas listas quiser desde que tenha conhecimento da complexidade que estará lidando. Cada linha aninhada será uma dimensão na sua estrutura de dados. Vamos dizer que você tem uma lista que contém uma lista que contém uma lista que contém uma lista...
+</p>
+
+<p align="center"><img src="resources/img/box5.png"</p>
+
+```python
+matriz = [
+    "1 dimensão da matriz",  # abrimos uma lista
+    ["2 dimensão da matriz", # abrimos uma lista dentro da lista
+    ["3 dimensao da matriz", # abrimos uma lista na lista da lista
+    ["4 dimensao da matriz", # abrimos uma lista na lista da lista na lista
+    ]]] # feche todas as listas
+] # sim, todas
+
+# vamos acessar as listas pelo índice
+
+# acesso a primeira dimensão da matriz
+print(matriz[0])
+# acesso a segunda dimensão da matriz
+print(matriz[1][0])
+# acessa a terceira dimensão da matriz
+print(matriz[1][1][0])
+# acesso a quarta dimensão da matriz
+print(matriz[1][1][1][0])
+```
+
+<p align="justify">
+Observe atentamente este código para acessar as
+camadas mais internas da matriz multidimensional. Para cada
+camada mais profunda um novo índice deve ser utilizado entre
+colchetes para acessar o elemento existente. Neste exemplo
+criamos listas dentro de listas onde o primeiro item de cada
+lista é uma string dizendo em qual dimensão da lista estamos,
+este elemento pode ser verificado pelo índice 0 desta lista. O
+segundo elemento de cada lista é uma nova lista. Veja a saída:
+</p>
+
+```
+1 dimensão da matriz
+2 dimensão da matriz
+3 dimensao da matriz
+4 dimensao da matriz
+>>>
+```
+
+<p align="justify">
+Recorda-se de como criar uma lista com <i>list
+comprehension</i>? Podemos fazer isto para criar uma matriz bidimensional, veja:
+</p>
+
+```python
+# vamos criar uma lista com 3 listas de cinco números de 0 a 4
+matriz = [[numeros for numeros in range(5)] for numeros in range(3)]
+
+print("A matriz")
+print(matriz) # podemos acessar a matriz toda
+
+print("As listas")
+for lista in matriz: # ou acessar as listas
+    print(lista)
+
+print("Os números") # ou acessar os dados nas listas
+for lista in matriz:
+    for numero in lista:
+        print(numero)
+
+# ou acessar pelo índice como ja vimos anteriormente
+```
+
+Saída:
+
+```
+A matriz
+[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+As listas
+[0, 1, 2, 3, 4]
+[0, 1, 2, 3, 4]
+[0, 1, 2, 3, 4]
+Os números
+0
+1
+2
+3
+4
+0
+1
+2
+3
+4
+0
+1
+2
+3
+4
+>>>
+```
+
+<p align="justify">
+Você pode pensar em uma matriz multidimensional
+como se fosse uma tabela com linhas e colunas, considerando a matriz anterior com 3 listas de 5 inteiros, poderíamos considerar as listas como colunas e as posições dos itens nas listas as linhas:
+</p>
+
+<p align="center">Figura 19 - Tabela de matriz bidimensional</p>
+
+<p align="center"><img src="resources/img/fig19.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Para exemplificar vamos criar uma matriz
+representando o mês de Junho de 2017, nesta matriz haverá
+sete listas representando os dias da semana, e nas listas internas
+os dias do mês que cairão naquele dia da semana:
+</p>
+
+```python
+
+junho = [
+    [4, 11, 18, 25],    # domingos
+    [5, 12, 19, 26],    # segundas
+    [6, 13, 20, 27],    # terças
+    [7, 14, 21, 28],    # quartas
+    [1, 8, 15, 22, 29], # quintas
+    [2, 9, 16, 23, 30], # sextas
+    [3, 10, 17, 24],    # sábados 
+]
+
+print("Quinta dia ", junho[4][2])
+```
+Saída:
+
+```
+Quinta dia  15
+>>>
+```
+
+<p align="center">Figura 20 - Matriz representativa do mês de Junho de 2017</p>
+
+<p align="center"><img src="resources/img/fig20.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+Agora pense um pouco e tente responder, quais dias
+seriam os dias representados por:
+
+` junho[3][3], junho[1][2], junho[6][3], junho[0][2]`
+
+<p align="justify">
+Agora que você conhece sobre as listas e os índices,
+vamos fazer uma rápida abordagem sobre os índices em
+strings. Em Python, os dados do tipo literal (strings) também podem ser analisados por meio de índices da mesma forma como nas listas, veja:
+</p>
+
+```python
+nome = input("Insira seu nome: ")
+
+print(nome[0])
+print(nome[2])
+print(nome[-1])
+print(nome[-2])
+```
+
+Saída:
+
+```
+Insira seu nome: bruno
+b
+u
+o
+n
+>>>
+```
+
+<p align="justify">
+O <i>slicing</i> (fatiamento) é uma técnica muito prática e
+comumente utilizada em Python para trabalhar com strings e listas,
+podemos fatiar uma palavra pelo seu índice e depois
+concatená-las novamente para formar outras palavras, veja
+neste próximo exemplo, vamos pedir uma palavra par ao
+usuário e substituir a primeira letra pela última letra.
+</p>
+
+```python
+# pedimos uma palavra
+palavra = input("Insira uma palavra: ")
+
+# slicing
+palavra = palavra[-1] + palavra[1:-1] + palavra[0]
+
+# exiba a palavra
+print(palavra)
+```
+<p align="justify">
+Começamos pedindo uma palavra ao usuário que ficará
+guardada na variável palavra. Então realizamos o slicing para substituir as letras. Nós queremos a última letra no início, então vamos pegá-la pelo índice palavra[-1] vamos concatenar
+(somar as strings) com a parte da palavra que não contém nem a primeira nem a última letra, então vamos utilizar o índice [1:-1]. Quando utilizamos o sinal de : estamos dizendo ao Python “Ei queremos somente os caracteres que estão entre a posição 1 e -1 desta string ok?”, então concatenamos no final o primeiro caractere identificado pelo índice [0], como resultado obtemos a palavra com primeira letra substituída pela última:
+</p>
+
+```
+Insira uma palavra: python
+nythop
+>>>
+```
+
+## Tuplas
+
+<p align="justify">
+As tuplas são como as listas, são estruturas de dados
+onde podemos agrupar diversos tipos de dados, porém a tupla se caracteriza por ser imutável, o que quer dizer que, uma vez definida, os valores da tupla não poderão ser alterados. Depois de declarada, não podemos adicionar nem remover dados à tupla. Para criar uma tupla em Python basta definirmos um identificador e atribuir os valores entre parênteses e separados por vírgula:
+</p>
+
