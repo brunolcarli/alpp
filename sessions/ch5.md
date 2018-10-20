@@ -690,10 +690,10 @@ strings. Em Python, os dados do tipo literal (strings) também podem ser analisa
 ```python
 nome = input("Insira seu nome: ")
 
-print(nome[0])
-print(nome[2])
-print(nome[-1])
-print(nome[-2])
+print(nome[0]) # primeira letra do nome
+print(nome[2]) # terceira letra do nome
+print(nome[-1]) # última letra do nome
+print(nome[-2]) # penúltima letra do nome
 ```
 
 Saída:
@@ -775,6 +775,133 @@ Saída:
 
 ```
 Altura: 1280
-Largura: 720
+Largura:    720
 >>>
 ```
+
+<p align="justify">
+Não podemos modificar os valores da tupla, mas é possível sobrescrever a tupla com novos valores:
+</p>
+
+```python
+TAMANHO = (1280, 720)
+
+print("Dimensões originais")
+for dimensao in TAMANHO: # para cada valor na tupla
+    print(dimensao)      # imprime o valor
+
+TAMANHO = (800, 550)     # sobrescrevemos a tupla
+
+print("Novas dimensões")
+for dimensao in TAMANHO:
+    print(dimensao)
+```
+
+Saída:
+
+```
+Dimensões originais
+1280
+720
+Novas dimensões
+800
+550
+>>>
+```
+
+## Dicionários
+
+<p align="justify">
+Dicionários são semelhantes às listas, são estruturas que nos permitem guardar diferentes tipos de dados, porém seu índice não será um número e sim um dado definido pelo próprio programador, este dado será a chave de acesso para um valor qualquer.
+</p>
+
+<quote><small>
+Entender os dicionários permite modelar uma diversidade de objetos do mundo real de modo mais preciso. Você será capaz de criar um dicionário que representa uma pessoa e armazenar quantas informações quiser sobre ela. Poderá armazenar o nome, a idade, a localização a profissão e qualquer outro aspecto de uma pessoa que possa ser descrito. (MATTHES, 2016 p. 139)
+</small></quote>
+
+
+Para declarar um dicionário utilizamos a seguinte sintaxe:
+
+<p align="center">
+    <i>
+        identificador = {chave : valor}
+    </i>
+</p>
+
+<p align="justify">
+Onde identificador, como sabemos é o nome da variável que conterá o dicionário, o dicionário é caracterizado por um par de {}, entre as chaves temos um par de dados determinados “par chave-valor” (MATTHES, 2016). Sempre que precisarmos acessar um valor de um dicionário iremos acessar através da chave, da mesma forma que acessávamos um item da lista pelo índice. Vamos começar com este exemplo mesmo dado por Matthes, e elaborar um dicionário que guarda o nome, a idade e localização:
+</p>
+
+```python
+# Definimos um dicionário
+pessoa = {'nome': 'Bruno', 'idade': 28, 'local': 'Curitiba/PR'}
+
+# Acessamos os valores através da chave
+print('Nome: ', pessoa['nome'])
+print('Idade: ', pessoa['idade'])
+print('Localização: ', pessoa['local'])
+```
+
+Saída
+
+```
+Nome: Bruno
+Idade: 28
+Localização: Curitiba/PR
+>>>
+```
+
+Os dicionários assim como as listas, podem ser modificados, basta atribuir um novo valor para a chave:
+
+```python
+# Definimos um dicionário
+pessoa = {'nome': 'Bruno', 'idade': 28, 'local': 'Curitiba/PR'}
+
+# nome original
+print("Nome original: ", pessoa['nome'])
+
+# alteramos o nome
+pessoa['nome'] = "Kleber"
+
+# inspecionamos o nome novamente
+print("Novo nome: ", pessoa['nome'])
+```
+
+Saída:
+
+```
+Nome original: Bruno
+Novo nome: Kleber
+>>>
+```
+
+<p align="justify">
+Os dicionários podem ser percorridos por um laço for fornecendo a chave o valor para o laço e assim podemos verificar tanto chave quanto valor em um dicionário escrevendo-os na tela, veja um exemplo:
+</p>
+
+```python
+frutas = {
+	'chave1': 'melancia', # definimos um dicionário de frutas
+	'chave2': 'laranja',
+	'chave3': 'morango'
+}
+
+for chave, valor, in frutas.items():
+	print(chave + " = " + valor)
+```
+
+<p align="justify">
+Através do método .items( ) podemos fornecer duas variáveis de busca para o laço for e varrer todos os valores e chaves de um dicionário.
+</p>
+
+```
+chave1 = melancia
+chave2 = laranja
+chave3 = morango
+>>>
+```
+
+<p align="justify">
+Recorda-se quando criamos aquele pequeno algoritmo que recebe as notas de um aluno de uma disciplina e calcula sua média? Para esse algoritmo precisávamos definir quatro variáveis para as notas do aluno, através do dicionário basta criarmos as chaves para os valores que desejamos obter (no caso as notas do aluno), veja como seria obter e guardar as notas e medias de um aluno em um dicionário:
+</p>
+

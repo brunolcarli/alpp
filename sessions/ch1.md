@@ -173,17 +173,17 @@ e a linguagem natural humana, mais especificamente, o nosso Português. De acord
 </p>
 
 
-<pre>
-    ALGORITMO: soma
-    VAR
-        num1, num2, soma : Inteiro
-    INICIO
-        LEIA(num1)
-        LEIA(num2)
-        soma ← num1 + num2
-        ESCREVA(soma)
-    FIM.
-</pre>
+```
+ALGORITMO: soma
+VAR
+    num1, num2, soma : Inteiro
+INICIO
+    LEIA(num1)
+    LEIA(num2)
+    soma ← num1 + num2
+    ESCREVA(soma)
+FIM.
+```
 
 <p align="justify">
 Este exemplo pode ser facilmente transcrito em
