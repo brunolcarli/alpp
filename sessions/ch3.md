@@ -17,9 +17,9 @@ print("Esta instrucao sera executada")
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo14.png">
-</p>
+```
+Esta instrucao sera executada
+```
 
 <p align="justify">
 Perceba que tudo que estava depois do # não foi
@@ -126,8 +126,7 @@ if not luz:
 
 Que é o mesmo que perguntar:
 
-```
-python
+```python
 if luz == False:
     print("A luz está apagada")
 ```
@@ -217,13 +216,29 @@ condição, no caso de if(media < 7.0) nós passamos para o Python uma expressã
 As saídas:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo15.png">
-</p>
+```
+Insira o nome da disciplina: Fisica
+Insira a nota do 1 Bimestre: 2.4
+Insira a nota do 2 Bimestre: 1.9
+Insira a nota do 3 Bimestre: 5.8
+Insira a nota do 4 Bimestre: 6.3
+Disciplina:  Fisica
+Media:  4.1
+Reprovado
+>>>
+```
 
-<p align="center">
-<img src="resources/img/fig_exemplo16.png">
-</p>
+```
+Insira o nome da disciplina: História
+Insira a nota do 1 Bimestre: 9.6
+Insira a nota do 2 Bimestre: 6.8
+Insira a nota do 3 Bimestre: 8.8
+Insira a nota do 4 Bimestre: 9.2
+Disciplina:  História
+Media:  8.6
+Aprovado
+>>>
+```
 
 <p align="justify">
 Seu professor gostou do programa, mas agora ele disse
@@ -274,9 +289,17 @@ Tivemos que fazer algumas mudanças no nosso
 programa, primeiro trocamos o primeiro if que verificava se a media era menor que 7.0, se a média fosse menor que 7.0 o aluno seria reprovado, mas como temos alunos que ainda podem ficar de recuperação vamos ver somente as médias que estão acima ou igual a 7.0, do contrario se a média for entre 6.0 e 6.9 será exibido uma mensagem dizendo que o aluno está em recuperação, e se ele não for aprovado nem estiver de recuperação, então ele está reprovado.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo17.png">
-</p>
+```
+Insira o nome da disciplina: Química
+Insira a nota do 1 Bimestre: 5.6
+Insira a nota do 2 Bimestre: 6.2
+Insira a nota do 3 Bimestre: 6.7
+Insira a nota do 4 Bimestre: 6.0
+Disciplina:  Química
+Media:  6.125
+Recuperacao
+>>>
+```
 
 <p align="center">
 <img src="resources/img/box3.png">
@@ -357,9 +380,26 @@ esquisito dizendo algo tipo &lt;class 'int'>? Então, o que fizemos foi adiciona
 str( ), você também deve se recordar que as instruções que estão nos parênteses mais internos acontecem primeiro, certo? Depois verificamos se a variável contém a abreviatura correspondente ao seu tipo no nome e escrevemos uma mensagem um pouco mais elegante do que &lt;class 'int'> para informar o tipo da variável que estamos lidando.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo18.png">
+```
+Essa variavel e do tipo Inteiro
+>>>
+```
+
+<p align="justify">
+Uma observação bacana aqui é que o python possui uma função embutida chamada <b>isinstance</b> que verifica se a variavel é do tipo passado como parâmetro:
 </p>
+
+```python
+num = 9
+if isinstance(num, int):
+	print("Esse valor é um inteiro")
+```
+
+Saída:
+
+```
+Esse valor é um inteiro
+```
 
 <p align="justify">
 Tente mudar o tipo de variável para testar os outros
@@ -407,9 +447,29 @@ Neste exemplo primeiro recebemos três entradas que
 devem ser números inteiros, então verificamos se o num1 é maior que o num2, caso isso seja verdade partimos para uma outra verificação, que analisa se o num1 é maior que o num3, e se for verdade isso significa que o primeiro número foi o maior, do contrário o terceiro número é o maior. Se a primeira condição for falsa, partimos para outra verificação, que analisa se o num2 é maior que o num3.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo19.png">
-</p>
+```
+Insira o primeiro numero 1
+Insira o segundo numero 2
+Insira o terceiro numero 3
+O terceiro numero e o maior,  3
+>>>
+```
+
+```
+Insira o primeiro numero 3
+Insira o segundo numero 2
+Insira o terceiro numero 1
+O primeiro numero foi o maior,  3
+>>>
+```
+
+```
+Insira o primeiro numero 1
+Insira o segundo numero 3
+Insira o terceiro numero 2
+O segundo numero e o maior,  3
+>>>
+```
 
 <p align="justify">
 Existem sim formas diferentes e até mais eficazes de se implementar este algoritmo, porém para nível de exemplo este algoritmo é capaz de demonstrar o funcionamento da estrutura condicional aninhada. A grande diferença entre usar as condições aninhadas, de acordo com Leal (2016a, p. 70) “é que o uso destes encadeados melhora o desempenho do algoritmo, isto é, torna o algoritmo mais rápido por realizar menos testes e comparações. Ou ainda, executar um menor número de passos para chegar à solução do problema.”
