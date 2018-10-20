@@ -242,11 +242,11 @@ ao tipo de dado e alocando espaço dinamicamente na memória. Para atribuir um v
 </p>
 
 
-<pre>
-    nome = "Edgar Morin"
-    idade = 97
-    peso = 67.24
-</pre>
+```python
+nome = "Edgar Morin"
+idade = 97
+peso = 67.24
+```
 
 
 <p align="justify">
@@ -255,10 +255,10 @@ linguagens de programação não precisamos declarar o tipo de variável para qu
 </p>
 
 
-<pre>
-    mensagem = "Ola Mundo"
-    print(mensagem)
-</pre>
+```python
+mensagem = "Ola Mundo"
+print(mensagem)
+```
 
 
 Salve seu arquivo e execute em <i>run module</i>. Sua saída deve ser parecida com esta:
@@ -274,10 +274,10 @@ retornará um erro. Tente reescrever o programa anterior omitindo uma letra da v
 </p>
 
 
-<pre>
-    mensagem = "Ola Mundo"
-    print(mesagem)
-</pre>
+```python
+mensagem = "Ola Mundo"
+print(mesagem)
+```
 
 
 <p align="justify">
@@ -334,14 +334,14 @@ Fonte: https://docs.python.org/3.5/reference/lexical_analysis.html#identifiers
 Vamos exercitar mais um pouco e criar uma variável
 para cada tipo de dado que acabamos de conhecer:
 
-<pre>
-    texto = "mensagem com texto"
-    numero_inteiro = 9
-    fracionario = 1.29
-    dado_logico = True
+```python
+texto = "mensagem com texto"
+numero_inteiro = 9
+fracionario = 1.29
+dado_logico = True
 
-    print(texto, numero_inteiro, fracionario, dado_logico)
-</pre>
+print(texto, numero_inteiro, fracionario, dado_logico)
+```
 
 <p align="justify">
 Os dados do tipo literal em Python podem ser
@@ -360,12 +360,12 @@ Podemos passar as variáveis separadas por vírgula para
 a instrução print( ) como no exemplo anterior, ou podemos fazer uma instrução para cada variável:
 </p>
 
-<pre>
-    print(texto)
-    print(numero_inteiro)
-    print(fracionario)
-    print(dado_logico)
-</pre>
+```python
+print(texto)
+print(numero_inteiro)
+print(fracionario)
+print(dado_logico)
+```
 
 <p align="justify">
 Há outras formas de imprimir na tela pulando linhas, e formas mais eficientes de se trabalhar com os dados de forma que o desempenho do algoritmo seja superior, porém em nível de aprendizado estas instruções demonstram muito bem o comportamento do interpretador Python.
@@ -377,14 +377,13 @@ somente pode guardar um valor por vez, isso quer dizer que se eu declarar uma va
 anterior será esquecido, veja:
 </p>
 
-<pre>
-    surpresa = 9
-    surpresa = 16.78
-    surpresa = 'doce de goiaba'
-    surpresa = "CWB City Rocks"
-
-    print(surpresa)
-</pre>
+```python
+surpresa = 9
+surpresa = 16.78
+surpresa = 'doce de goiaba'
+surpresa = "CWB City Rocks"
+print(surpresa)
+```
 
 <p align="justify">
 Atribuímos inicialmente o o valor inteiro 9 para a
@@ -406,12 +405,12 @@ Lembra-se do algoritmo soma.py que construímos no
 início do capítulo? Neste algoritmo o a instrução input( ) irá esperar o usuário entrar com um tipo de dado, porém independente do tipo de dado fornecido, o Python irá armazenar a entrada como uma string (dado do tipo literal), então para realizar a soma tivemos que fazer uma conversão utilizando uma instrução int( ). Quando passamos um tipo de dado para a instrução int( ) o Python tentará realizar uma conversão do tipo de dado fornecido para um tipo inteiro. Vamos ver um exemplo:
 </p>
 
-<pre>
-    numero = '12'
-    print(numero)
-    numero = int(numero)
-    print(numero)
-</pre>
+```python
+numero = '12'
+print(numero)
+numero = int(numero)
+print(numero)
+```
 
 <p align="justify">
 Primeiro declaramos uma variável chamada numero e
@@ -427,15 +426,15 @@ Mas se tentarmos realizar uma operação matemática,
 como a soma, em variáveis do tipo literal o que acontece é um evento chamado concatenação, e não a adição em si, veja o exemplo:
 </p>
 
-<pre>
-    numero = '12'
-    numero2 = '3'
-    print(numero + numero2)
+```python
+numero = '12'
+numero2 = '3'
+print(numero + numero2)
 
-    numero = int(numero)
-    numero2 = int(numero2)
-    print(numero + numero2)
-</pre>
+numero = int(numero)
+numero2 = int(numero2)
+print(numero + numero2)
+```
 
 <p align="justify">
 Primeiro declaramos duas strings e tentamos exibir a
@@ -456,11 +455,11 @@ Mas o que aconteceria se você tentasse converter uma
 letra para número?
 </p>
 
-<pre>
-    fruta = "banana"
-    banana = int(fruta)
-    print(fruta)
-</pre>
+```python
+fruta = "banana"
+banana = int(fruta)
+print(fruta)
+```
 
 <p align="justify">
 Ao criarmos uma variável literal com caracteres não
@@ -482,17 +481,17 @@ Caso você tenha dúvida quanto ao tipo de dado que
 você está lidando, o Python tem a instrução type( ). Quando você passar uma variável para a instrução type(variavel) ele ira informar o tipo de dado dessa variável, como no exemplo a seguir:
 </p>
 
-<pre>
-    fruta = "banana"
-    numero = 78
-    God = False
-    PI = 3.1415
+```python
+fruta = "banana"
+numero = 78
+God = False
+PI = 3.1415
 
-    print(type(fruta))
-    print(type(numero))
-    print(type(God))
-    print(type(PI))
-</pre>
+print(type(fruta))
+print(type(numero))
+print(type(God))
+print(type(PI))
+```
 
 Saida:
 
@@ -523,11 +522,11 @@ também temos valores constantes, ou seja, que não se
 modificam ao longo do seu algoritmo. No Python, por questões de boas práticas, sempre definimos uma constante com todas as letras do identificador em CAIXA ALTA, ou seja, letras maiúsculas, dessa forma:
 </p>
 
-<pre>
-    PI = 3.1215
-    ALTURA = 600
-    LARGURA = 600
-</pre>
+```python
+PI = 3.1215
+ALTURA = 600
+LARGURA = 600
+```
 
 <p align="justify">
 Porém escrever uma variável em caixa alta não a torna realmente uma "constante", o que quer dizer que ainda se pode modificar o valor desta variável atribuindo outro valor à mesma. Escrever com letras maiúsculas é apenas uma boa prática para facilitar a legibilidade do código e distinção das variáveis pelo programador. Em Python é muito comum declarar valores constantes em formas de tuplas, que nada mais são que listas imutáveis, o que torna a alteração do valor contido na variável impossível de ser realizado.
@@ -535,16 +534,16 @@ Porém escrever uma variável em caixa alta não a torna realmente uma "constant
 
 Declarando uma tupla:
 
-<pre>
-    QUANTIDADE = (100)
-</pre>
+```python
+QUANTIDADE = (100)
+```
 
 Para acessar o valor da tupla:
 
-<pre>
-    qt = QUANTIDADE[0]
-    print(qt)
-</pre>
+```python
+qt = QUANTIDADE[0]
+print(qt)
+```
 
 Não se preocupe quanto a isto neste momento, veremos mais sobre tuplas em seções futuras deste livro.
 
@@ -584,13 +583,13 @@ por último, neste caso ao observar a expressão 2 + 3 * 5, assim como na matem�
 parêntese ( ), dando precedência para a expressão que estiver dentro do parêntese, desta forma:
 </p>
 
-<pre>
-    a = 2 + 3 * 5
-    b = (2 + 3) * 5
+```python
+a = 2 + 3 * 5
+b = (2 + 3) * 5
 
-    print("O valor de a: ", a)
-    print("O valor de b: ", b)
-</pre>
+print("O valor de a: ", a)
+print("O valor de b: ", b)
+```
 
 Saída:
 
@@ -621,17 +620,17 @@ Tabela 5 – Operadores relacionais em Python
 As expressões relacionais sempre retornarão um valor
 lógico (**True** ou **False**), veja no exemplo a seguir:
 
-<pre>
-    a = 2
-    b = 3
+```python
+a = 2
+b = 3
 
-    print(a == b)
-    print(a != b)
-    print(a > b)
-    print(a < b)
-    print(a >= a)
-    print(a <= b)
-</pre>
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= a)
+print(a <= b)
+```
 
 Saída:
 
@@ -654,10 +653,10 @@ Disponível <a href="https://docs.python.org/3.5/reference/lexical_analysis.html
 Uma aplicação interessante em Python é a multiplicação de strings, veja:
 </p>
 
-<pre>
-    chaves = "pi"
-    print(chaves * 10)
-</pre>
+```python
+chaves = "pi"
+print(chaves * 10)
+```
 
 Saída:
 
@@ -686,15 +685,15 @@ Tabela 6 – Operadores lógicos em Python
 
 Vamos examinar estas operações com o Python:
 
-<pre>
-    a = 2
-    b = 3
-    c = 4
+```python
+a = 2
+b = 3
+c = 4
 
-    print(a > b or a > c)
-    print(a < b and a < c)
-    print(not a == b)
-</pre>
+print(a > b or a > c)
+print(a < b and a < c)
+print(not a == b)
+```
 
 Saída:
 
@@ -758,17 +757,17 @@ float( ) para converter dados em literais e números reais
 respectivamente.
 </p>
 
-<pre>
-    a = 2
-    print(str(a))
-    print(float(a))
-</pre>
+```python
+a = 2
+print(str(a))
+print(float(a))
+```
 
 Saída:
-<pre>
-    2
-    2.0
-</pre>
+```
+2
+2.0
+```
 
 
 ## Entrada de dados
@@ -782,10 +781,10 @@ saber que tipo de dado ele deve fornecer, como no exemplo a
 seguir:
 </p>
 
-<pre>
-    nome = input("Insira seu nome ")
-    print("Ola ", nome, " como esta hoje?")
-</pre>
+```python
+nome = input("Insira seu nome ")
+print("Ola ", nome, " como esta hoje?")
+```
 
 Saída:
 
@@ -800,14 +799,14 @@ dado temos que fazer a conversão com int( ) ou float( ), desta
 forma:
 </p>
 
-<pre>
-    nome = input("Insira seu nome ")
-    idade = int(input("Insira sua idade "))
-    altura = float(input("Insira sua altura "))
-    print("Seu nome e ", nome)
-    print("Voce tem ", idade, " anos de idade")
-    print("Voce mede ", altura, " de altura")
-</pre>
+```python
+nome = input("Insira seu nome ")
+idade = int(input("Insira sua idade "))
+altura = float(input("Insira sua altura "))
+print("Seu nome e ", nome)
+print("Voce tem ", idade, " anos de idade")
+print("Voce mede ", altura, " de altura")
+```
 
 <p align="justify">
 Perceba que ao obter a idade, primeira declaramos a
@@ -861,17 +860,17 @@ Figura 9 – Fluxograma Atividade 1
 
 <p align="center">Fonte: O autor.</p>
 
-<pre>
-    nome = input("Insira seu nome ")
-    idade = int(input("Insira sua idade "))
-    endereco = input("Insira seu endereco ")
-    telefone = input("Insira seu telefone ")
+```python
+nome = input("Insira seu nome ")
+idade = int(input("Insira sua idade "))
+endereco = input("Insira seu endereco ")
+telefone = input("Insira seu telefone ")
 
-    print("Nome: ", nome)
-    print("Idade: ", idade)
-    print("Endereço ", endereco)
-    print("Telefone para contato: ", telefone)
-</pre>
+print("Nome: ", nome)
+print("Idade: ", idade)
+print("Endereço ", endereco)
+print("Telefone para contato: ", telefone)
+```
 
 <p align="justify">
 Primeiramente declaramos a variável nome e atribuímos
@@ -927,13 +926,13 @@ Figura10 – Fluxograma Atividade 2
 
 <p align="center">Fonte: O autor.</p>
 
-<pre>
-    lado = float(input("Insira o tamanho dos lados do quadrado: "))
-    area = lado * lado
-    perimetro = lado * 4
-    print("A area do quadrado e de: ", area)
-    print("O perimetro do quadrado e de: ", perimetro)
-</pre>
+```python
+lado = float(input("Insira o tamanho dos lados do quadrado: "))
+area = lado * lado
+perimetro = lado * 4
+print("A area do quadrado e de: ", area)
+print("O perimetro do quadrado e de: ", perimetro)
+```
 
 <p align="justify">
 Primeiro precisamos do valor correspondente ao
@@ -983,11 +982,11 @@ Figura 11 – Fluxograma atividade 3
 
 <p align="center">Fonte: O autor.</p>
 
-<pre>
-    base = float(input("Insira o valor da base do triangulo: "))
-    altura = float(input("Insira o valor da altura do triangulo: "))
-    print("A area do triangulo e: ", (base * altura) / 2)
-</pre>
+```python
+base = float(input("Insira o valor da base do triangulo: "))
+altura = float(input("Insira o valor da altura do triangulo: "))
+print("A area do triangulo e: ", (base * altura) / 2)
+```
 
 <p align="justify">
 Primeiro vamos receber a entrada necessária.
@@ -1038,6 +1037,6 @@ seguida pelo nome do usuário, seguida por outra mensagem fazendo um elogio.
 <hr>
 
 
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch1.html">< Voltar ao Capítulo 1</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch1.html">< Voltar ao Capítulo 1</a>
 <br />
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch3.html">> Continuar para o Capítulo 3</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch3.html">> Continuar para o Capítulo 3</a>
