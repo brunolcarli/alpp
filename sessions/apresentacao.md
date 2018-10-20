@@ -47,6 +47,6 @@ dificuldade.
 <br /><br />
 
 
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch1.html">> Continuar para o Capítulo 1</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch1.html">> Continuar para o Capítulo 1</a>
 
 

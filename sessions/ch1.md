@@ -373,7 +373,7 @@ poderão ser encontrados através <a href="https://github.com/brunolcarli/Algori
 
 
 
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/apresentacao.html">< Voltar à Apresentação</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/apresentacao.html">< Voltar à Apresentação</a>
 <br />
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch2.html">> Continuar para o Capítulo 2</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch2.html">> Continuar para o Capítulo 2</a>
 
