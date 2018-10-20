@@ -655,6 +655,6 @@ ao 10.
 <hr>
 
 
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch3.html">< Voltar para o Capítulo 3</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch3.html">< Voltar para o Capítulo 3</a>
 <br />
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch5.html">> Continuar para o Capítulo 5</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch5.html">> Continuar para o Capítulo 5</a>
