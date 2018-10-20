@@ -263,9 +263,11 @@ print(mensagem)
 
 Salve seu arquivo e execute em <i>run module</i>. Sua saída deve ser parecida com esta:
 
-<p align="center">
-<img src="resources/img/fig_exemplo1.png">
-</p>
+```
+Ola mundo
+>>>
+```
+
 
 <p align="justify">
 Tome cuidado ao escrever o identificador da variável,
@@ -285,9 +287,13 @@ Perceba que criamos uma variável chamada mensagem,
 mas passamos para a instrução print() um identificador chamado <b>mesagem</b>. O interpretador Python irá retornar um erro parecido com este:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo2.png">
-</p>
+```
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    print(mesagem)
+NameError: name 'mesagem' is not defined
+>>>
+```
 
 <p align="justify">
 Não se preocupe com os erros, eles irão aparecer muitas vezes nas suas simulações de algoritmo. O Python é muito eficiente ao informar para o programador onde está o erro e que tipo de erro foi encontrado. Veja, na primeira linha temos
@@ -391,9 +397,10 @@ variável surpresa, então logo em seguida atribuímos o valor real 16.78, entã
 o valor da variável surpresa.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo3.png">
-</p>
+```
+CWB City Rocks
+>>>
+```
 
 <p align="justify">
 O valor exibido na tela foi o último valor a ser atribuído à variável, todos os outros valores foram desconsiderados, isso porque uma variável somente pode guardar um valor de cada
@@ -417,9 +424,11 @@ Primeiro declaramos uma variável chamada numero e
 pedimos para mostrá-la na tela, então realizamos a conversão para inteiro e pedimos para mostrar na tela. Na saída não conseguimos identificar a diferença, observe o resultado:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo4.png">
-</p>
+```
+12
+12
+>>>
+```
 
 <p align="justify">
 Mas se tentarmos realizar uma operação matemática,
@@ -441,9 +450,11 @@ Primeiro declaramos duas strings e tentamos exibir a
 soma de ambas, depois convertemos as strings para inteiro e exibimos a soma das variáveis:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo5.png">
-</p>
+```
+123
+15
+>>>
+```
 
 <p align="justify">
 Observe os resultados, na primeira linha obtivemos o
@@ -467,9 +478,12 @@ numéricos e forçarmos uma conversão, o Python logo retornará um erro, pois n
 real ou lógico.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo6.png">
-</p>
+```
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    banana = int(fruta)
+ValueError: invalid literal for int() with base 10: 'banana'
+```
 
 <p align="justify">
 O erro retornado é um ValueError, dizendo que
@@ -495,9 +509,12 @@ print(type(PI))
 
 Saida:
 
-<p align="center">
-<img src="resources/img/fig_exemplo7.png">
-</p>
+```
+<class 'str'>
+<class 'int'>
+<class 'bool'>
+<class 'float'>
+```
 
 <p align="justify">
 Vemos que que cada tipo de dado pertence a uma classe
@@ -593,9 +610,11 @@ print("O valor de b: ", b)
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo8.png">
-</p>
+```
+O valor de a: 17
+O valor de b: 25
+>>>
+```
 
 Nós também temos os operadores relacionais, que
 permitem realizar comparações entre valores:
@@ -634,9 +653,15 @@ print(a <= b)
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo9.png">
-</p>
+```
+False
+True
+False
+True
+True
+True
+>>>
+```
 
 <p align="justify">
 Existem mais operadores que não cobriremos aqui, mas
@@ -660,9 +685,10 @@ print(chaves * 10)
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo10.png">
-</p>
+```
+pipipipipipipipipipi
+>>>
+```
 
 <p align="justify">
 Temos também os operadores lógicos que podem ser
@@ -697,9 +723,11 @@ print(not a == b)
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo11.png">
-</p>
+```
+False
+True
+True
+```
 
 <p align="justify">
 Veja que definimos as variáveis a = 2, b = 3 e c =4.
@@ -769,7 +797,6 @@ Saída:
 2.0
 ```
 
-
 ## Entrada de dados
 
 
@@ -788,9 +815,11 @@ print("Ola ", nome, " como esta hoje?")
 
 Saída:
 
-<p align="center">
-<img src="resources/img/fig_exemplo12.png">
-</p>
+```
+Insira seu nome  bruno
+Ola bruno como esta hoje?
+>>>>
+```
 
 <p align="justify">
 Como vimos, a instrução input( ) recebe uma string por
@@ -825,9 +854,14 @@ que convertemos. A saída para o algoritmo acima seria parecida
 com esta:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo13.png">
-</p>
+```
+Insira seu nome Bruno
+Insira sua idade 28
+Insira sua altura 1.60
+Seu nome e Bruno
+Voce tem 28 anos de idade
+Voce mede 1.6 de altura
+```
 
 
 ## Exercícios elaborados
@@ -882,9 +916,17 @@ instruções são comandos de saída, exibindo as informações
 obtidas correspondentes aos dados da pessoa.
 </p>
 
-<p align="center">
-<img src="resources/img/exercicio1.png">
-</p>
+```
+Insira seu nome Bruno
+Insira sua idade 28
+Insira seu endereco Alameda Python numero 3
+Insira seu telefone (98) 7654-3210
+Nome: Bruno
+Idade: 28
+Endereço: Alameda Python numero 3
+Telefone para contato: (98) 7654-3210
+>>>
+```
 
 <p align="justify">
 <b>Observações</b>: É muito comum obtermos o valor de um
@@ -945,9 +987,13 @@ recebe o valor de lado multiplicado por 4. Em seguida temos as
 saídas exibindo os resultados.
 </p>
 
-<p align="center">
-<img src="resources/img/exercicio2.png">
-</p>
+```
+Insira o tamanho dos lados do quadrado: 3
+A area do quadrado e de: 9.0
+O perimetro do quadrado e de: 12.0
+>>>
+```
+
 
 <p align="justify">
 Observação: Como o valor de area deveria ser lado ao
@@ -1001,9 +1047,13 @@ diferença, mas a medida que for construindo algoritmos mais
 complexos o número de linhas e comandos pode impactar no desempenho do seu programa.
 </p>
 
-<p align="center">
-<img src="resources/img/exercicio3.png">
-</p>
+```
+Insira o valor da base do triangulo: 3.9
+Insira o valor da altura do triangulo: 7.2
+A area do triangulo e: 14.04
+>>>
+```
+
 
 <p align="justify">
 Observação: Se você andou brincando com o Python pode já
