@@ -745,3 +745,36 @@ As tuplas são como as listas, são estruturas de dados
 onde podemos agrupar diversos tipos de dados, porém a tupla se caracteriza por ser imutável, o que quer dizer que, uma vez definida, os valores da tupla não poderão ser alterados. Depois de declarada, não podemos adicionar nem remover dados à tupla. Para criar uma tupla em Python basta definirmos um identificador e atribuir os valores entre parênteses e separados por vírgula:
 </p>
 
+```python
+# declaração da tupla
+tupla = ("valor literal", 45, -12, 5.67)
+
+# exibe o conteúdo da tupla
+print(tupla)
+```
+
+Saída:
+
+```
+('valor literal', 45, -12, 5.67)
+>>>
+```
+
+<p align="justify">
+Podemos acessar os valores da tupla pelo índice
+da mesma forma como acessamos nas listas. A utilização das tuplas podem estar relacionadas a definição de variáveis constantes, ou seja, valores que não poderão ser modificados no decorrer do algoritmo, como por exemplo a definição de uma altura e largura fixa para uma janela em um programa de computador.
+</p>
+
+```python
+tamanho = (1280, 720)
+print("Altura: ", tamanho[0])
+print("Largura: ", tamanho[1])
+```
+
+Saída:
+
+```
+Altura: 1280
+Largura: 720
+>>>
+```

@@ -7,13 +7,13 @@
 utilização de comentários em certas partes do algoritmo. Estes comentários servem para documentar o código e possibilitar o entendimento de certas sessões do algoritmo por outros programadores que venham a ler seu código posteriormente. Em Python declaramos um comentário ao inserir o caractere #. Quando o Python se deparar com um comentário durante a interpretação do código, ele ignorará a linha comentada, ou seja, o Python não liga para os seus comentários.
 </p>
 
-<pre>
-    # Este é um comentário
-    # Sempre que o Python encontrar o símbolo # ele irá descartar
-    # tudo que houver depois dele
-    print("Esta instrucao sera executada")
-    # print("esta instrucao nao sera executada")
-</pre>
+```python
+# Este é um comentário
+# Sempre que o Python encontrar o símbolo # ele irá descartar
+# tudo que houver depois dele
+print("Esta instrucao sera executada")
+# print("esta instrucao nao sera executada")
+```
 
 Saída:
 
@@ -26,19 +26,18 @@ Perceba que tudo que estava depois do # não foi
 executado, pois o Python identificou como um comentário e logo passou para a próxima instrução válida. Este é o comentário de uma linha, porém também é possível inserir comentários de várias linhas desde que estejam entre aspas triplas (''' comentário ''' ou “““comentário”””) como no exemplo a seguir:
 </p>
 
-<pre>
-    '''
-    Este é um comentário de 
-    várias linhas
-    '''
+```python
+'''
+Este é um comentário de 
+várias linhas
+'''
 
-    """
-    Nada disso será
-    executado
-    pelo Python
-    """
-</pre>
-
+"""
+Nada disso será
+executado
+pelo Python
+"""
+```
 Vamos comentar nosso código de agora em diante para facilitar o entendimento do contexto.
 
 ## Estruturas Condicionais
@@ -60,17 +59,17 @@ para demonstrar o funcionamento da estrutura condicional
 simples.
 </p>
 
-<pre>
-    luz = False # luz apagada
+```python
+luz = False # luz apagada
 
-    acender_luz = input("Gostaria de acender a luz?[s/n] ")
+acender_luz = input("Gostaria de acender a luz?[s/n] ")
 
-    if acender_luz == "s": # se a entrada for s
-        luz = True         # a luz acende
-    
-    # verificamos o estado da luz
-    print(luz)
-</pre>
+if acender_luz == "s": # se a entrada for s
+    luz = True         # a luz acende
+
+# verificamos o estado da luz
+print(luz)
+```
 
 <p align="justify">
 Veja que a instrução if irá analisar a variável
@@ -81,10 +80,10 @@ acender_luz, e se o conteúdo armazenado nesta variável for igual a string “s
 <img src="resources/img/box1.png">
 </p>
 
-<pre>
-    if acender_luz == "s":
-    → → luz = True # observe a indentação
-</pre>
+```python
+if acender_luz == "s":
+→ → luz = True # observe a indentação
+```
 
 <p align="justify">
 Caso o código pertencente ao if não esteja tabulado à
@@ -105,32 +104,33 @@ Fonte: O autor
 
 Vamos melhorar o algoritmo anterior para verificar se a luz está acesa ou apagada:
 
-<pre>
-    luz = False # a luz começa apagada
-    acender_luz = input("Gostaria de acender a luz? [s/n] ")
+```python
+luz = False # a luz começa apagada
+acender_luz = input("Gostaria de acender a luz? [s/n] ")
 
-    if acender_luz == "s":
-        luz = True
-    
-    if luz:    # se o valor de luz for True
-        print("A luz esta acesa")
-</pre>
+if acender_luz == "s":
+    luz = True
+
+if luz:    # se o valor de luz for True
+    print("A luz esta acesa")
+```
 
 <p align="justify">
 Perguntar ao Python <b>if luz</b> é o mesmo que perguntar <b>if luz == True</b>. Se você quiser verificar se o valor é falso basta perguntar:
 </p>
 
-<pre>
-    if not luz:
-        print("A luz está apagada")
-</pre>
+```python
+if not luz:
+    print("A luz está apagada")
+```
 
 Que é o mesmo que perguntar:
 
-<pre>
-    if luz == False:
-        print("A luz está apagada")
-</pre>
+```
+python
+if luz == False:
+    print("A luz está apagada")
+```
 
 ## Estrutura condicional composta
 
@@ -139,24 +139,24 @@ Na estrutura condicional composta nós temos mais de
 uma opção de desvio para uma condição a ser analisada. Vamos melhorar ainda mais o algoritmo da luz:
 </p>
 
-<pre>
-    # a luz começa apagada
-    luz = False
+```python
+# a luz começa apagada
+luz = False
 
-    # perguntamos se o usuário quer acender a luz
-    acender_luz = input("Gostaria de acender a luz?[s/n] ")
+# perguntamos se o usuário quer acender a luz
+acender_luz = input("Gostaria de acender a luz?[s/n] ")
 
-    if acender_luz == "s":
-        luz = True
-    
-    # se acendeu a luz
-    if luz:
-        print("A luz está acesa")
-    
-    # se não
-    else:
-        print("A luz esta apagada")
-</pre>
+if acender_luz == "s":
+    luz = True
+
+# se acendeu a luz
+if luz:
+    print("A luz está acesa")
+
+# se não
+else:
+    print("A luz esta apagada")
+```
 
 <p align="justify">
 O else é um segmento do if que diz ao Python, “caso a
@@ -185,31 +185,31 @@ calcular sua média, primeiro vamos receber o nome da
 disciplina então as quatro notas e o programa deve informar sua média nesta disciplina.
 </p>
 
-<pre>
-    # solicitamos o nome da disciplina
-    disciplina = input("Insira o nome da disciplina: ")
+```python
+# solicitamos o nome da disciplina
+disciplina = input("Insira o nome da disciplina: ")
 
-    # solicitamos as notas de cada bimestre
-    nota1 = float(input("Insira a nota do 1 Bimestre: "))
-    nota2 = float(input("Insira a nota do 2 Bimestre: "))
-    nota3 = float(input("Insira a nota do 3 Bimestre: "))
-    nota4 = float(input("Insira a nota do 4 Bimestre: "))
+# solicitamos as notas de cada bimestre
+nota1 = float(input("Insira a nota do 1 Bimestre: "))
+nota2 = float(input("Insira a nota do 2 Bimestre: "))
+nota3 = float(input("Insira a nota do 3 Bimestre: "))
+nota4 = float(input("Insira a nota do 4 Bimestre: "))
 
-    # calculamos a media
-    media = (nota1 + nota2 + nota3 + nota4) / 4
+# calculamos a media
+media = (nota1 + nota2 + nota3 + nota4) / 4
 
-    # exibimos a media e a disciplina
-    print("Disciplina: ", disciplina)
-    print("Media: ", media)
+# exibimos a media e a disciplina
+print("Disciplina: ", disciplina)
+print("Media: ", media)
 
-    # se a media for menor que 7.0 o aluno e reprovado
-    if (media < 7.0):
-        print("Reprovado")
+# se a media for menor que 7.0 o aluno e reprovado
+if (media < 7.0):
+    print("Reprovado")
 
-    # senão, é aprovado
-    else: 
-        print("Aprovado")
-</pre>
+# senão, é aprovado
+else: 
+    print("Aprovado")
+```
 
 <p align="justify">
 As instruções if e else em Python analisam uma
@@ -239,35 +239,35 @@ Bem, na verdade o Python tem mais um comando de
 decisão composta para não precisarmos ficar repetindo if's toda hora. Quando o Python encontra um <b>if</b> ele obrigatóriamente irá realizar a verificação, mesmo que o if anterior tenha resultado em Verdadeiro. Com elif caso isso ocorra ele não executará a verificação, o que poupa processamento ao computador. O comando elif pode ser utilizado depois do if e antes do else, desta forma:
 </p>
 
-<pre>
-    # solicitamos o nome da disciplina
-    disciplina = input("Insira o nome da disciplina: ")
+```python
+# solicitamos o nome da disciplina
+disciplina = input("Insira o nome da disciplina: ")
 
-    # solicitamos as notas de cada bimestre
-    nota1 = float(input("Insira a nota do 1 Bimestre: "))
-    nota2 = float(input("Insira a nota do 2 Bimestre: "))
-    nota3 = float(input("Insira a nota do 3 Bimestre: "))
-    nota4 = float(input("Insira a nota do 4 Bimestre: "))
+# solicitamos as notas de cada bimestre
+nota1 = float(input("Insira a nota do 1 Bimestre: "))
+nota2 = float(input("Insira a nota do 2 Bimestre: "))
+nota3 = float(input("Insira a nota do 3 Bimestre: "))
+nota4 = float(input("Insira a nota do 4 Bimestre: "))
 
-    # calculamos a media
-    media = (nota1 + nota2 + nota3 + nota4) / 4
+# calculamos a media
+media = (nota1 + nota2 + nota3 + nota4) / 4
 
-    # exibimos a media e a disciplina
-    print("Disciplina: ", disciplina)
-    print("Media: ", media)
+# exibimos a media e a disciplina
+print("Disciplina: ", disciplina)
+print("Media: ", media)
 
-    # se a media for maior que 7.0 o aluno é aprovado
-    if media >= 7.0: 
-        print("Aprovado")
+# se a media for maior que 7.0 o aluno é aprovado
+if media >= 7.0: 
+    print("Aprovado")
 
-    # media entre 6.0 e 6.9 ele está em recuperação
-    elif media >= 6.0 and media <= 6.9: 
-        print("Recuperacao")
+# media entre 6.0 e 6.9 ele está em recuperação
+elif media >= 6.0 and media <= 6.9: 
+    print("Recuperacao")
 
-    # seão, está reprovado
-    else:
-        print("Reprovado")
-</pre>
+# seão, está reprovado
+else:
+    print("Reprovado")
+```
 
 <p align="justify">
 Tivemos que fazer algumas mudanças no nosso
@@ -313,43 +313,43 @@ A estrutura condicional em Python nos permite uma
 gama de verificações, inclusive verificar se determinadas letras ou palavras existem em uma string, veja:
 </p>
 
-<pre>
-    frase = "Quem ensina aprende o que ensina e quem aprende ensina ao aprender - FREIRE"
+```python
+frase = "Quem ensina aprende o que ensina e quem aprende ensina ao aprender - FREIRE"
 
-    # se existir a palavra FREIRE na frase
-    if "FREIRE" in frase:
-        print("Graaaaaande Mestre Paulo Freire")
-    else:
-        print("Frase de outra autoria")
-</pre>
+# se existir a palavra FREIRE na frase
+if "FREIRE" in frase:
+    print("Graaaaaande Mestre Paulo Freire")
+else:
+    print("Frase de outra autoria")
+```
 
 <p align="justify">
 Perguntamos ao Python se uma determinada palavra ou
 letra existe em uma string, ele irá analisar a string e se existir ele irá retornar verdadeiro, noutro caso ele retorna falso. Lembra-se da instrução type( )? Vamos fazer um algoritmo que recebe uma variável e verifica qual o tipo da variável escrevendo na tela:
 </p>
 
-<pre>
-    # definimos uma variavel com um valor
-    caixa = 72 
+```python
+# definimos uma variavel com um valor
+caixa = 72 
 
-    # verificamos seu tipo e guardamos como string
-    caixa = str(type(caixa))
+# verificamos seu tipo e guardamos como string
+caixa = str(type(caixa))
 
-    if 'str' in caixa:
-        print("Essa varivel e do tipo String (Literal)")
-        
-    elif 'int' in caixa:
-        print("Essa variavel e do tipo Inteiro")
-        
-    elif 'float' in caixa:
-        print("Essa variavel e do tipo float")
-        
-    elif 'bool' in caixa:
-        print("Essa variavel e do tipo bool")
-        
-    else:
-        print("Outro")
-</pre>
+if 'str' in caixa:
+    print("Essa varivel e do tipo String (Literal)")
+    
+elif 'int' in caixa:
+    print("Essa variavel e do tipo Inteiro")
+    
+elif 'float' in caixa:
+    print("Essa variavel e do tipo float")
+    
+elif 'bool' in caixa:
+    print("Essa variavel e do tipo bool")
+    
+else:
+    print("Outro")
+```
 
 <p align="justify">
 Lembra que a instrução type( ) retorna um texto
@@ -380,27 +380,27 @@ por encadeamento (PUGA; RISSETTI, 2010) são estruturas condicionais dentro de o
 
 Vamos exemplificar melhor em um algoritmo que verifica o maior dentre 3 números escolhidos:
 
-<pre>
-    # primeiro recebemos a entrada
-    num1 = int(input("Insira o primeiro numero "))
-    num2 = int(input("Insira o segundo numero "))
-    num3 = int(input("Insira o terceiro numero "))
+```python
+# primeiro recebemos a entrada
+num1 = int(input("Insira o primeiro numero "))
+num2 = int(input("Insira o segundo numero "))
+num3 = int(input("Insira o terceiro numero "))
 
-    # estrutura condicional externa
-    if num1 > num2:
+# estrutura condicional externa
+if num1 > num2:
 
-        # estrutura condicional interna (aninhada)
-        if num1 > num3: 
-            print("O primeiro numero foi o maior, ", num1)
-        else:
-            print("O terceiro numero e o maior, ", num3)
-    else: 
-        
-        if num2 > num3:
-            print("O segundo numero e o maior, ",num2)
-        else:
-            print("O terceiro numero e o maior, ", num3)
-</pre>
+    # estrutura condicional interna (aninhada)
+    if num1 > num3: 
+        print("O primeiro numero foi o maior, ", num1)
+    else:
+        print("O terceiro numero e o maior, ", num3)
+else: 
+    
+    if num2 > num3:
+        print("O segundo numero e o maior, ",num2)
+    else:
+        print("O terceiro numero e o maior, ", num3)
+```
 
 <p align="justify">
 Neste exemplo primeiro recebemos três entradas que
@@ -436,25 +436,25 @@ Existem sim formas diferentes e até mais eficazes de se implementar este algori
 <p align="center">Fonte: O Autor.</p>
 
 
-<pre>
-    # ler nome
-    nome = input("Insira seu nome: ")
+```python
+# ler nome
+nome = input("Insira seu nome: ")
 
-    # ler idade
-    idade = int(input("Insira sua idade: ")) 
+# ler idade
+idade = int(input("Insira sua idade: ")) 
 
-    # verifica se a idade e menor que 18
-    if idade < 18:
-        print(nome, " voce e menor de idade")
+# verifica se a idade e menor que 18
+if idade < 18:
+    print(nome, " voce e menor de idade")
 
-    # senao verifica se a idade est entre 18 e 65
-    elif idade >= 18 and idade < 65: 
-        print(nome, " voce e maior de idade")
-    
-    # senao for nenhuma das acima, entao e idoso
-    else:
-        print(nome, " voce ja e idoso")
-</pre>
+# senao verifica se a idade est entre 18 e 65
+elif idade >= 18 and idade < 65: 
+    print(nome, " voce e maior de idade")
+
+# senao for nenhuma das acima, entao e idoso
+else:
+    print(nome, " voce ja e idoso")
+```
 
 <br />
 
@@ -483,41 +483,41 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 
 <p align="center">Fonte: O autor.</p>
 
-<pre>
-    # receber o valor do peso
-    peso = float(input("Insira seu peso: "))
+```python
+# receber o valor do peso
+peso = float(input("Insira seu peso: "))
 
-    # receber o valor da altura
-    altura = float(input("Insira sua altura: ")) 
+# receber o valor da altura
+altura = float(input("Insira sua altura: ")) 
 
-    # calcular o imc
-    imc = peso/(altura**2)
+# calcular o imc
+imc = peso/(altura**2)
 
-    # se o imc for menor que 20
-    if imc < 20:
-        print("Abaixo do peso ideal")
+# se o imc for menor que 20
+if imc < 20:
+    print("Abaixo do peso ideal")
 
+# senao
+else:
+    # se for menor que 25
+    if imc <= 25:
+        print("Seu imc esta normal")
     # senao
     else:
-        # se for menor que 25
-        if imc <= 25:
-            print("Seu imc esta normal")
-        # senao
-        else:
-            # se for menor que 30
-            if imc <= 30:
-                print("Excesso de peso")
+        # se for menor que 30
+        if imc <= 30:
+            print("Excesso de peso")
 
-            # ou se for maior que 30 e menor que 35  
-            elif imc > 30 and imc <= 35: 
-                print("Obesidade")
-            # ou entao se for mairo que isso
-            else:
-                print("Obesidade morbida")
-    
-    # finalmente mostramos o imc
-    print("Seu imc e: ", imc) 
-</pre>
+        # ou se for maior que 30 e menor que 35  
+        elif imc > 30 and imc <= 35: 
+            print("Obesidade")
+        # ou entao se for mairo que isso
+        else:
+            print("Obesidade morbida")
+
+# finalmente mostramos o imc
+print("Seu imc e: ", imc) 
+```
 
 *Exercícios propostos*
 
@@ -541,8 +541,8 @@ entre 31 e 35) ou com obesidade mórbida (acima de 35 .
 <hr>
 
 
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch2.html">< Voltar para o Capítulo 2</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch2.html">< Voltar para o Capítulo 2</a>
 <br />
-<a href="https://brunolcarli.github.io/alpp2.0/sessions/ch4.html">> Continuar para o Capítulo 4</a>
+<a href="https://brunolcarli.github.io/alpp/sessions/ch4.html">> Continuar para o Capítulo 4</a>
 
 
