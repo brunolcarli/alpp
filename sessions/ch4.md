@@ -17,19 +17,18 @@ contado, que significa que vamos repetir um determinado conjunto de instruções
 
 ```python
 
-    # primeiro recebemos o nome
-    nome = input("Insira seu nome")
+# primeiro recebemos o nome
+nome = input("Insira seu nome: ")
 
-    """
-    Queremos mostrar o nome 10 vezes
-    ao invés de escrever dez vezes
-    print(bome), então podemos
-    fazer simplesmente o seguinte:
-    """
+"""
+Queremos mostrar o nome 10 vezes
+ao invés de escrever dez vezes
+print(bome), então podemos
+fazer simplesmente o seguinte:
+"""
 
-    for contagem in range(10):
-        print(nome)
-
+for contagem in range(10):
+    print(nome)
 ```
 
 <p align="justify">
@@ -39,9 +38,20 @@ números. Como isso funciona? Bem, a variável contagem
 somente será utilizada para fazer a contagem do laço, essa contagem se dará após o comando in que avaliará quantas vezes o laço se repetirá através do comando range() que recebe um número inteiro. Veja que na instrução for também é necessário que se faça a indentação do código que deseja-se repetir.
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo20.png">
-</p>
+```
+Insira seu nome: Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+Bruno
+>>>
+```
 
 <p align="justify">
 Veja que o laço repete a instrução print(nome) o
@@ -51,10 +61,10 @@ número de vezes que pedimos que fizesse. Vamos exemplificar novamente pedindo a
 
 ```python
 
-    # a variável i é o nosso contador
-    for i in range(11):
-        # perceba com i muda a cada repetição
-        print("2 x ", i, " = ", 2 * i)
+# a variável i é o nosso contador
+for i in range(11):
+    # perceba com i muda a cada repetição
+    print("2 x ", i, " = ", 2 * i)
 
 ```
 
@@ -67,9 +77,20 @@ Dentro de nosso print temos uma string que diz “2 x ” (repare nos espaços e
 que o laço foi repetido. Então fornecemos outra string “ = ” e então uma expressão que multiplica o valor de i por 2. Veja a saída:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo23.png">
-</p>
+```
+2 x  0  =  0
+2 x  1  =  2
+2 x  2  =  4
+2 x  3  =  6
+2 x  4  =  8
+2 x  5  =  10
+2 x  6  =  12
+2 x  7  =  14
+2 x  8  =  16
+2 x  9  =  18
+2 x  10  =  20
+>>>
+```
 
 <p align="justify">
 Observe como o valor de <b>i</b> se inicia em zero e a cada vez que a instrução print é executada ela é incrementada, depois do sinal de = temos a multiplicação de <b>i</b> por 2. Tente mudar o número dentro da instrução range para ver como o algoritmo se comporta. Dizemos que a instrução for é uma
@@ -79,10 +100,10 @@ estrutura do tipo laço contado porque sabemos exatamente quantas vezes devemos 
 
 ```python
 
-    mensagem = input("Insira uma mensagem")
-    repeticoes = int(input("Insira o numero de repetições: "))
+mensagem = input("Insira uma mensagem")
+repeticoes = int(input("Insira o numero de repetições: "))
 
-    for i in range(repeticoes):
+for i in range(repeticoes):
     print(mensagem)
 
 ```
@@ -93,9 +114,16 @@ do comando input( ), esta mensagem ficará guardada na
 variável mensagem, depois recebemos um valor numérico do usuário que é armazenado na variável repeticoes. No laço for repetimos a mensagem do usuário o número de vezes que ele informou. 
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo25.png">
-</p>
+```
+Insira uma mensagem: Python é legal
+Insira o numero de repetições: 5
+Python é legal
+Python é legal
+Python é legal
+Python é legal
+Python é legal
+>>>
+```
 
 <hr>
 <small><sup>5</sup></small> : <small>
@@ -114,13 +142,13 @@ para iterar pelos caracteres de uma string. Iterar pela string quer dizer que o 
 
 ```python
 
-    # definimos uma string
-    palavra = 'bola'
+# definimos uma string
+palavra = 'bola'
 
-    # para cada letra na string
-    for letra in palavra():
-        # escreva a letra na tela
-        print(letra)
+# para cada letra na string
+for letra in palavra:
+    # escreva a letra na tela
+    print(letra)
 
 ```
 
@@ -130,10 +158,13 @@ A cada repetição do laço for o Python vai escrever a
 letra que ele identificou, uma de cada vez até chegar ao fim da string, quando o Python identificar que já não há mais caracteres para ele verificar o loop se encerra.
 </p>
 
-
-<p align="center">
-<img src="resources/img/fig_exemplo27.png">
-</p>
+```
+b
+o
+l
+a
+>>>
+```
 
 <p align="justify">
 Lembra quando verificamos a existência de um
@@ -142,21 +173,19 @@ determinado caractere em uma string com a instrução if? Vamos fazer um algorit
 
 ```python
 
-    # pedimos uma altura
-    entrada = input("Insira sua altura: ")
+# pedimos uma altura
+entrada = input("Insira sua altura: ")
 
-    # para cada caractere na entrada
-    for caractere in entrada:
-        # se houver vigula na entrada
-        if caracter == ',':
-            # substituimos por um ponto
-            entrada = float(entrada.replace(',', '.'))
-    
-    print(entrada)
+# para cada caractere na entrada
+for caractere in entrada:
+    # se houver vigula na entrada
+    if caractere == ',':
+        # substituimos por um ponto
+        entrada = float(entrada.replace(',', '.'))
+
+print(entrada)
 
 ```
-
-
 
 <p align="justify">
 Neste exemplo recebemos uma entrada referente a
@@ -170,9 +199,11 @@ Também fazemos a conversão de string para float
 através da instrução float() e atribuímos o resultado da conversão para a entrada. Quando o loop encerrar escrevemos na tela o novo valor da variável entrada que está pronto para ser utilizado em qualquer cálculo de números fracionários:
 </p>
 
-<p align="center">
-<img src="resources/img/fig_exemplo29.png">
-</p>
+```
+Insira sua altura: 1,78
+1.78
+>>>
+```
 
 A mesma tarefa pode ser realizada também utilizando o operador **in**, desta forma:
 
@@ -183,7 +214,6 @@ A mesma tarefa pode ser realizada também utilizando o operador **in**, desta fo
     if "," in entrada:
         entrada = float(entrada.replace(",", "."))
 ```
-
 
 ## Estrutura while
 
