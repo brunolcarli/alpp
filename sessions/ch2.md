@@ -1028,6 +1028,7 @@ Figura 11 – Fluxograma atividade 3
 
 <p align="center">Fonte: O autor.</p>
 
+
 ```python
 base = float(input("Insira o valor da base do triangulo: "))
 altura = float(input("Insira o valor da altura do triangulo: "))
