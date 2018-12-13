@@ -142,10 +142,10 @@ que computação era besteira...</small>
     - [Estruturas de dados multidimensionais](sessions/ch5.md#estruturas-de-dados-multidimensionais)
     - [Tuplas](sessions/ch5.md#tuplas) `new`
     - [Dicionários](sessions/ch5.md#dicionarios) `new`
-* [Capítulo 6](sessions/ch6.md)
-    - [~~Sub-rotinas e programação com arquivos~~](sessions/ch6.md#sub-rotinas-e-programaca-com-arquivos)
-    - [~~Sub-rotinas~~](sessions/ch6.md#sub-rotinas)
-    - [~~Procedimentos~~](sessions/ch6.md#procedimentos)
+* [Capítulo 6](sessions/ch6.md) `new`
+    - [Sub-rotinas e programação com arquivos](sessions/ch6.md#sub-rotinas-e-programaca-com-arquivos) `new`
+    - [Sub-rotinas](sessions/ch6.md#sub-rotinas) `new`
+    - [Procedimentos](sessions/ch6.md#procedimentos) `new`
     - [~~Funções~~](sessions/ch6.md#funcoes)
     - [~~Parâmetros~~](sessions/ch6.md#parametros)
     - [~~Escopo das variáveis~~](sessions/ch6.md#escopo-das-variaveis)
