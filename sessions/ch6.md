@@ -143,14 +143,14 @@ O resultado da subtração é  2
 Você já conheceu aqui algumas formas interessantes de se construir algoritmos, implemente este último exemplo adicionando dois novos procedimentos para divisão e multiplicação. Implemente também um laço que pergunta ao usuário se gostaria de realizar outra operação ao final do algoritmo. Implemente também um laço que verifica se a entrada do usuário é válida (um valor numérico) e caso seja inválido fique repetindo a solicitação até que um valor válido seja inserido.
 </p>
 
-## Funções
+## ~~Funções~~
 
-## Parâmetros
+## ~~Parâmetros~~
 
-## Escopo das variáveis
+## ~~Escopo das variáveis~~
 
-## Recursividade
+## ~~Recursividade~~
 
-## Arquivos
+## ~~Arquivos~~
 
-## Bibliotécas e módulos
+## ~~Bibliotecas e módulos~~

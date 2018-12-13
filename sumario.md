@@ -151,6 +151,6 @@ que computação era besteira...</small>
     - [~~Escopo das variáveis~~](sessions/ch6.md#escopo-das-variaveis)
     - [~~Recursividade~~](sessions/ch6.md#recursividade)
     - [~~Arquivos~~](sessions/ch6.md#arquivos)
-    - [~~Bibliotécas e módulos~~](sessions/ch6.md#bibliotecas-e-modulos)
+    - [~~Bibliotecas e módulos~~](sessions/ch6.md#bibliotecas-e-modulos)
 * [Referências Bibliográfcas](sessions/referencias.html)
 
