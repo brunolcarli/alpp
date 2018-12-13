@@ -1020,7 +1020,7 @@ triângulo;
 
 <p align="center">
 Figura 11 – Fluxograma atividade 3
-</b>
+</p>
 
 <p align="center">
 <img src="resources/img/fig11.png">
@@ -1047,6 +1047,7 @@ pequeno programa como este pode não fazer nenhuma
 diferença, mas a medida que for construindo algoritmos mais
 complexos o número de linhas e comandos pode impactar no desempenho do seu programa.
 </p>
+
 
 ```
 Insira o valor da base do triangulo: 3.9
