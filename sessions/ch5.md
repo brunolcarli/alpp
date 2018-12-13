@@ -905,3 +905,307 @@ chave3 = morango
 Recorda-se quando criamos aquele pequeno algoritmo que recebe as notas de um aluno de uma disciplina e calcula sua média? Para esse algoritmo precisávamos definir quatro variáveis para as notas do aluno, através do dicionário basta criarmos as chaves para os valores que desejamos obter (no caso as notas do aluno), veja como seria obter e guardar as notas e medias de um aluno em um dicionário:
 </p>
 
+
+```python
+aluno = {        # abrimos um dicionário com identificador de aluno
+    'nome': '',  # definimos uma chave nome em branco
+    'nota_1': 0, # definimos a chave nota_1
+    'nota_2': 0, # definimos a chave nota_2
+    'nota_3': 0, # definimos a chave nota_3
+    'nota_4': 0, # definimos a chave nota_4
+    'media': 0   # definimos a chave media
+}
+
+aluno['nome'] = input("insira o nome: ") # solicite o nome do aluno
+aluno['nota_1'] = float(input("insira a primeira nota: ")) # solicite as notas
+aluno['nota_2'] = float(input("insira a segunda nota: "))
+aluno['nota_3'] = float(input("insira a terceira nota: "))
+aluno['nota_4'] = float(input("insira a quarta nota: "))
+
+# calcula a média
+aluno['media'] = (aluno['nota_1'] + aluno['nota_2'] + aluno['nota_3'] + aluno['nota_4']) / 4
+
+# informe o resultado
+print("Aluno: ", aluno['nome'])
+print("Média: %.1f" % aluno['media'])
+```
+Saída:
+
+```
+insira o nome: Bruno L. Carli
+insira a primeira nota: 6.7
+insira a segunda nota: 8.9
+insira a terceira nota: 7.0
+insira a quarta nota: 9.5
+Aluno:  Bruno L. Carli
+Média: 8.0
+>>>
+```
+
+<p align="justify">
+Se você prestou bem atenção deve ter reparado que na última instrução <b>print</b> deste algoritmo utilizamos uma <i>string</i> formatada, isso significa que utilizamos um caracter especial (%) para substituir o valor da variável designada para dentro da string. Neste caso escrevemos <b>“Media: %.1f”</b> , onde % irá ser substituído pelo valor de <b>aluno['media']</b>, e <b>.1f</b> significa que precisamos mostrar apenas uma casa após o ponto flutuante do número fracionário. Após fechar a <i>string</i> utilizamos novamente o % para referenciar a variável que contém o valor a ser mostrado na <i>string</i>.
+</p>
+
+<p align="justify">
+Agora já pensou que seu professor precisa guardar as notas de muitos alunos, tantos que nem sabemos quantos? Como implementar um algoritmo para ajudar nosso professor? Vamos fazer uma pergunta ao usuário perguntando quantos alunos possui a classe, e utilizamos esse valor para criar uma lista com este tamanho. Para cada elemento desta lista vamos atribuir um dicionário contendo o nome do aluno, uma lista com suas quatro notas, sua media e sua situação final (se aprovado, recuperação ou reprovado), para preencher a lista completa de alunos da turma vamos utilizar um laço de repetições, veja:
+</p>
+
+
+```python
+# entrar com a disciplina
+disciplina = input("Insira sua disciplina: ")
+
+# entrar com a quantidade de alunos da turma
+quantidade = int(input("Insira o número de alunos da turma: "))
+
+# a turma é uma lista com tamanho igual a quantidade de alunos
+turma = [alunos for alunos in range(quantidade)]
+
+# para cada aluno na turma
+for aluno in turma:
+
+	# informe os dados do aluno e guarde em um dicionario
+	turma[aluno] = {
+		'nome': input('Insira o nome do aluno: '),
+		'notas': [float(input("Insira a nota: ")) for nota in range(4)],
+		'media': 0,
+		'resultado': ''
+	}
+
+	# calcule a media referenciando-a pelo indice
+	turma[aluno]['media'] = (
+		turma[aluno]['notas'][0] + turma[aluno]['notas'][1] +
+		turma[aluno]['notas'][2] + turma[aluno]['notas'][3])/ 4
+		# as notas estão dentro de uma lista no dicionário que está dentro da lista turma
+
+	# agora vamos verificar se o aluno esta aprovado
+	if turma[aluno]['media'] < 6.0:
+		turma[aluno]['resultado'] = 'Reprovado'
+
+	elif turma[aluno]['media'] > 6.0 and turma[aluno]['media'] < 7.0:
+		turma[aluno]['resultado'] = "Recuperação"
+
+	else:
+		turma[aluno]['resultado'] = "Aprovado"
+
+# depois que seu loop receber todos os alunos vamos informar os resultados
+print("Disciplina: %s" % disciplina)
+
+for aluno in turma:
+	print("Nome: %s" % aluno['nome'].capitalize())
+
+	bimestre = 1
+
+	# aninhamos um for para contar as notas de cada aluno
+	for nota in aluno['notas']:
+		print("Bimestre: %i - Nota: %.1f" % (bimestre, nota))
+		bimestre += 1 # incrementamos o bimestre
+
+    # exibimos o resultado
+	print("Média final: %.1f" % aluno['media'])
+	print("Resultado: %s" % aluno['resultado'])
+```
+
+
+<p align="justify">
+Este código parece um pouco complicado a uma primeira vista mas vamos analisá-lo por partes. Primeiro requisitamos que o professor insira sua disciplina e a quantidade de alunos que compõem a turma. Até aqui tudo bem já estamos familiarizados com isso, então criamos uma variável turma, vamos atribuir a ela uma lista de tamanho igual ao número de alunos na turma. Através do laço de repetição vamos iterar pela turma, e para cada posição da lista vamos atribuir um dicionário contendo as informações do aluno. Ao criar a chave no dicionário atribuímos com valor um input( ), desta forma as informações inseridas pelo usuário vão estar armazenadas em nosso dicionário. Para receber as notas utilizamos uma list comprehension para receber 4 entradas de números inteiros. Veja que aqui nós temos uma estrutura multidimensional, para acessar os dados das notas vamos ter que fornecer três índices ao Python, o primeiro é o da primeira dimensão da lista, a lista externa que contém os dicionários turma[índice]. A segunda dimensão é o dicionário que contém as informações do aluno, para acessar uma informação do dicionário devemos fornecer a chave após fornecer o índice da lista acima turma[índice][chave]. A terceira é a lista dentro do dicionário, para acessarmos os dados precisamos fornecer o índice do elemento da lista após ter fornecido a chave do dicionário E o índice da lista externa turma[índice_externo] [chave][índice]. Através destes índices podemos somar as notas do aluno e atribuir à média e verificar se o aluno está reprovado, aprovado ou em recuperação. Para informar a saída utilizamos um laço de repetição encadeado, o primeiro para mostrar o nome de cada aluno, a media e o resultado final, o segundo somente para iterar pela lista interna do dicionário. Utilizamos strings formatadas onde substituímos o valor de % por um valor indicado após a string, o %s substitui um valor literal, o %i substitui um valor inteiro, o %f substitui um valor real. A saída é exemplificada para três alunos, mas pode ser utilizada para uma turma com trinta, cem mil alunos se você tiver paciência...
+</p>
+
+
+```
+Insira sua disciplina: Filosofia
+Insira o número de alunos da turma: 3
+Insira o nome do aluno: Pedrinho
+Insira a nota: 3.3
+Insira a nota: 5.0
+Insira a nota: 4.5
+Insira a nota: 1.0
+Insira o nome do aluno: Joãozinho
+Insira a nota: 6.0
+Insira a nota: 5.5
+Insira a nota: 6.4
+Insira a nota: 7.0
+Insira o nome do aluno: Luizinho
+Insira a nota: 9.0
+Insira a nota: 10.0
+Insira a nota: 8.0
+Insira a nota: 9.2
+Disciplina: Filosofia
+Nome: Pedrinho
+Bimestre: 1 - Nota: 3.3
+Bimestre: 2 - Nota: 5.0
+Bimestre: 3 - Nota: 4.5
+Bimestre: 4 - Nota: 1.0
+Média final: 3.5
+Resultado: Reprovado
+Nome: Joãozinho
+Bimestre: 1 - Nota: 6.0
+Bimestre: 2 - Nota: 5.5
+Bimestre: 3 - Nota: 6.4
+Bimestre: 4 - Nota: 7.0
+Média final: 6.2
+Resultado: Recuperação
+Nome: Luizinho
+Bimestre: 1 - Nota: 9.0
+Bimestre: 2 - Nota: 10.0
+Bimestre: 3 - Nota: 8.0
+Bimestre: 4 - Nota: 9.2
+Média final: 9.1
+Resultado: Aprovado
+>>>
+```
+
+## Exercícios elaborados
+
+8) Escreva um algoritmo que leia um vetor com 30 elementos inteiros e escreva-os em ordem contrária da leitura.
+
+**Problema a ser resolvido:** ler um vetor de 30 elementos e imprimir seu inverso;
+
+**Dados de entrada:** trinta números inteiros;
+
+**Processamento:** inverter o vetor ao mostrar o resultado;
+
+**Saída:** Informar os elementos do vetor em ordem contrária;
+
+
+```python
+vetor = [] # criamos um vetor vazio
+
+for i in range(30): # vamos contar até 10
+	# a cada contagem colocamos o valor no final da lista
+	vetor.append(i)
+
+vetor.reverse() # invertemos o vetor
+
+for elemento in vetor: # para cada elemento no vetor
+	print(elemento) # exiba o elemento
+
+
+```
+
+Saída:
+
+```
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+>>>
+```
+
+9) Faça um algoritmo que possua uma lista com dez posições, e leia do usuário números em ordem aleatória até que a lista seja preenchida completamente pelos números inseridos. Sem utilizar instruções para ordenar automaticamente a faça com que a saída mostre todos os números da lista em forma ordenada e crescente.
+
+**Problema a ser resolvido:** ler um vetor de 10 elementos e imprimir de forma ordenada;
+
+**Dados de entrada:** dez inúmeros inteiros;
+
+**Processamento:** ordenar o vetor manualmente e mostrar o resultado;
+
+**Saída:** Informar os elementos do vetor em ordem crescente;
+
+<p align="center">Figura 20 - Fluxograma bubblesort</p>
+
+<p align="center"><img src="resources/img/fig21.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+```python
+lista = list(range(10)) # criar uma lista com 10 posições
+
+for posicao in lista: # para cada posição na lista
+	lista[posicao] = int(input("Insira um número: ")) # entro co um inteiro e atribua-o à posição
+
+for i in range(10): # vamos contar até 10, i sera o contador
+	for j in range(10): # j sera o contador do vizinho
+		if lista[i] < lista[j]: # se o valor da posicao i for menor que o da posiçnao j
+			troca = lista[i] # realizamos a troca
+			lista[i] = lista[j] # colocamos o valor da posição j na posição i
+			lista[j] = troca # colocamos o valor da posição i na posição j
+
+for numero in lista: # escrevemos a lista
+	print(numero)
+```
+
+```
+Insira um número: 56
+Insira um número: 21
+Insira um número: 34
+Insira um número: 99
+Insira um número: 86
+Insira um número: 0
+Insira um número: 1
+Insira um número: 45
+Insira um número: 88
+Insira um número: 9
+0
+1
+9
+21
+34
+45
+56
+86
+88
+99
+>>>
+```
+
+Obs: Este é um algoritmo bem comum em computação denominado Bubble Sort, existem muitas formas diferentes de se ordenar os elementos em um vetor e este é um exemplo muito prático.
+
+Dica: Em python ao invés de declarar uma variável troca, e fazer isso:
+
+```python
+troca = lista[i]
+lista[i] = lista[j]
+lista[j] = troca
+```
+
+Você pode fazer simplesmente:
+
+```
+lista[i], lista[j] = lista[j], lista[i]
+```
+
+Vai funcionar da mesma forma, mágico não é mesmo?
+
+*Exercícios Propostos*:
+
+1) Armazeneonomedealgunsdeseusamigosemumalista. Exiba o nome de cada pessoa acessando cada elemento pelo índice da lista;
+2) Faça uma lista de convidados para uma festa, exiba uma mensagem para cada convidado informando que ele esta convidado para a festa.
+3) Crie uma lista com 500 posições, através de um laço mostre quais números na lista são pares e quais são ímpares.
+4) Escreva uma matriz para o mês em que você aniversario, mostre o dia do seu aniversário.
+5) Formule um algoritmo que cadastra em um dicionário o registro de produtos de uma loja de alimentos, guarde os registros em uma lista. Os produtos devem conter nome, quantidade em estoque e valor de compra.
+
+<hr>
+
+
+<a href="https://brunolcarli.github.io/alpp/sessions/ch4.html">< Voltar para o Capítulo 4</a>
+<br />
+<a href="https://brunolcarli.github.io/alpp/sessions/ch6.html">> Continuar para o Capítulo 6</a>
+
