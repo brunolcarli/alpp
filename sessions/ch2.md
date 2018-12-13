@@ -965,6 +965,7 @@ Figura10 – Fluxograma Atividade 2
 
 <p align="center">
 <img src="resources/img/fig10.png">
+</p>
 
 <p align="center">Fonte: O autor.</p>
 
