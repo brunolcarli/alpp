@@ -1197,9 +1197,13 @@ Vai funcionar da mesma forma, mágico não é mesmo?
 *Exercícios Propostos*:
 
 1) Armazeneonomedealgunsdeseusamigosemumalista. Exiba o nome de cada pessoa acessando cada elemento pelo índice da lista;
+
 2) Faça uma lista de convidados para uma festa, exiba uma mensagem para cada convidado informando que ele esta convidado para a festa.
+
 3) Crie uma lista com 500 posições, através de um laço mostre quais números na lista são pares e quais são ímpares.
+
 4) Escreva uma matriz para o mês em que você aniversario, mostre o dia do seu aniversário.
+
 5) Formule um algoritmo que cadastra em um dicionário o registro de produtos de uma loja de alimentos, guarde os registros em uma lista. Os produtos devem conter nome, quantidade em estoque e valor de compra.
 
 <hr>
