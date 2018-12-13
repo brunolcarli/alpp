@@ -152,5 +152,5 @@ que computação era besteira...</small>
     - [~~Recursividade~~](sessions/ch6.md#recursividade)
     - [~~Arquivos~~](sessions/ch6.md#arquivos)
     - [~~Bibliotécas e módulos~~](sessions/ch6.md#bibliotecas-e-modulos)
-* [Referências Bibliogárifcas](referencias.md)
+* [Referências Bibliográfcas](sessions/referencias.md)
 
