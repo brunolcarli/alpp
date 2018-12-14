@@ -1,8 +1,3 @@
-<hr>
-
-<p align="center">
-<img src="sessions/resources/img/capa.png" alt="Algoritmos e lógica de programação com python" >
-</p>
 
 <hr>
 
