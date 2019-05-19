@@ -1129,7 +1129,7 @@ Saída:
 
 **Saída:** Informar os elementos do vetor em ordem crescente;
 
-<p align="center">Figura 20 - Fluxograma bubblesort</p>
+<p align="center">Figura 21 - Fluxograma bubblesort</p>
 
 <p align="center"><img src="resources/img/fig21.png"></p>
 
