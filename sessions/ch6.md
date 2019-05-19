@@ -303,7 +303,109 @@ Saída:
 >>>
 ```
 
-## ~~Escopo das variáveis~~
+## Escopo das variáveis
+
+<p align="center">
+Quando trabalhamos com sub-rotinas devemos ficar
+atentos ao escopo das variáveis, se você declarar uma variável dentro de uma sub-rotina não poderá acessá-la no programa principal, mas poderá acessar as variáveis do programa principal dentro da sub-rotina, porém não poderá modificar seu valor a não ser que declare-a como global. As variáveis declaradas dentro das sub-rotinas são denominadas variáveis locais e as variáveis declaradas no programa principal são
+denominadas variáveis globais. Veja, vamos demonstrar com um exemplo:
+</p>
+
+```python
+# Essa subrotina mostra o valor de x
+def sub():
+    x = 2
+    print(x)
+
+# Definimos um valor para uma variável x
+x = 12
+
+# chamada para a subrotina
+sub()
+
+# Mostra o valor de x
+print(x)
+```
+
+<p align="justify">
+Definimos uma função chamada sub( ), nela possuímos
+uma variável x com valor 2, mas no programa principal
+também temos uma variável x com valor 12, ao chamar a subrotina é impresso o valor da variável local da sub-rotina, porém o valor de x permanece 12:
+</p>
+
+```
+2
+12
+>>>
+```
+
+<p align="justify">
+Isto se dá porque não informamos ao Python na
+definição da sub-rotina que x deveria ser referenciado como uma variável global. Veja:
+</p>
+
+```python
+# subrotina que mostra o valor de x
+def sub():
+    # Chamamos a variável global x
+    global x
+
+    # redefinimos seu valor para 2
+    x = 2
+    print(x)
+
+x = 12
+sub()
+print(x)
+```
+
+<p align="justify">
+Desta vez informamos que a variável x é uma variável
+global, assim podemos modificar seu valor dentro da subrotina:
+</p>
+
+```
+2
+2
+>>>
+```
+
+<p align="justify">
+Se tentarmos modificar uma variável declarada dentro
+da sub-rotina vamos levantar um erro, pois esta variável não pode ser utilizada no decorrer do algoritmo principal:
+</p>
+
+```python
+def sub():
+    # Variável local da subrotina sub()
+    x = 5
+    print("x = ", x)
+
+# Chamada para a subrotina
+sub()
+
+# Operação sobre variável definida dentro da subrotina
+if x < 10:
+    print("x é menor que 10")
+```
+
+A variável x só existe dentro da sub-rotina:
+
+```
+x =  5
+Traceback (most recent call last):
+  File "run.py", line 10, in <module>
+    if x < 10:
+NameError: name 'x' is not defined
+>>>
+```
+
+<p align="justify">
+Lembra-se deste erro? A variável de nome x não foi
+definida. Isto porque quando declaramos uma variável local em uma sub-rotina, esta somente existirá durante o processamento da sub-rotina. Ou seja, quando chamamos uma sub-rotina no algoritmo esta será executada e as variáveis ali declaradas
+serão inicializadas na memória, quando todos os comandos da sub-rotina tiverem sido executados e ela chegar ao fim de sua execução, suas variáveis locais serão destruídas. Isto é um método eficiente para poupar o uso de memória. As variáveis globais permanecerão ativas na memória enquanto seu
+algoritmo estiver executando, sempre que possível processe diversas variáveis em uma função e de um retorno para o programa principal, isto irá aumentar a eficiência do seu código.
+</p>
 
 ## ~~Recursividade~~
 
