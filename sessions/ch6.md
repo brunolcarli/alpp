@@ -155,7 +155,7 @@ a chamou. Valores de retorno permitem passar boa parte do trabalho pesado de um 
 
 ## Parâmetros
 
-<p align="center">
+<p align="justify">
 Um valor de retorno pode ser armazenado em um
 variável e ser processado ou manipulado por outras partes do algoritmo como operações aritméticas, lógicas, condicionais e até mesmo ser utilizado como argumento em outra função. Veja um exemplo que retorna o quadrado de um número:
 </p>
@@ -178,7 +178,7 @@ print("O quadrado de %i é %i" % (entrada, quad))
 print("O quadrado do quadrado é ", quadrado(quad))
 ```
 
-<p align="center">
+<p align="justify">
 Primeiramente definimos nossa função, da mesma
 forma como o procedimento, porém damos a instrução return para retornar o valor na hora de sua chamada. Então pedimos um valor inteiro ao usuário que será passado como argumento para a nossa função. Veja que ao chamar a função também
 atribuímos a mesma em uma variável chamada quad. Perceba que neste momento não estamos armazenando uma função em uma variável e sim o valor retornado por esta função. O resultado armazenado na variável quad é exibido na primeira
@@ -221,7 +221,7 @@ Meu nome é  Bruno Luvizotto Carli
 
 ## Parâmetros
 
-<p align="center">
+<p align="justify">
 Os parâmetros como vimos, são valores abstratos
 declarados em uma sub-rotina, no momento da chamada à subrotina fornecemos um valor real para os parâmetros denominados argumentos. Quando declaramos parâmetros em uma sub-rotina, obrigatoriamente devemos fornecer os argumentos em sua chamada, do contrário teríamos um erro:
 </p>
@@ -305,7 +305,7 @@ Saída:
 
 ## Escopo das variáveis
 
-<p align="center">
+<p align="justify">
 Quando trabalhamos com sub-rotinas devemos ficar
 atentos ao escopo das variáveis, se você declarar uma variável dentro de uma sub-rotina não poderá acessá-la no programa principal, mas poderá acessar as variáveis do programa principal dentro da sub-rotina, porém não poderá modificar seu valor a não ser que declare-a como global. As variáveis declaradas dentro das sub-rotinas são denominadas variáveis locais e as variáveis declaradas no programa principal são
 denominadas variáveis globais. Veja, vamos demonstrar com um exemplo:
@@ -458,6 +458,505 @@ Modifique este algoritmo para que ele receba uma
 entrada de usuário que seja um número e calcule o fatorial deste número, exibindo uma mensagem elegante na tela informando o resultado do fatorial.
 </p>
 
-## ~~Arquivos~~
+## Arquivos
+
+<p align="justify">
+Arquivos são formas de gravar dados de forma permanente em seu computador. Ao criarmos um arquivo
+podemos inserir dados processados através de um algoritmo, ou podemos utilizar um algoritmo para buscar dados em um arquivo escrito, também podemos utilizar algoritmos para escrever novos dados em arquivos escritos, entre outras possibilidades.
+
+Em Python utilizamos a instrução <code>open()</code> para abrir um
+arquivo, devemos fornecer um argumento literal com o nome e extensão do arquivo. Se o arquivo estiver salvo no mesmo diretório do programa.py que você estiver executando basta fornecer o nome e extensão do arquivo como por exemplo 'lista_de_compra.txt', caso esteja em outro diretório você precisará fornecer o caminho completo par ao arquivo como por exemplo <code>c:windows/desktop/pasta/lista_de_compras.txt</code> ou <code>/tmp/my_files/lista_de_compras.txt</code>.
+
+Sempre que abrirmos um arquivo com <code>open()</code>,
+devemos fecha-lo com <code>close()</code>. 
+</p>
+
+
+```python
+arquivo = open('lista.txt')
+
+# Faça algo com o arquivo depois feche-o
+
+arquivo.close()
+```
+
+<p align="justify">
+É importante que o arquivo exista e que você tenha
+informado corretamente o nome ou caminho ao utilizar o
+exemplo anterior, ou você irá se deparar com um erro
+informando que o arquivo não existe:
+</p>
+
+```
+Traceback (most recent call last):
+  File "run.py", line 1, in <module>
+    arquivo = open('lista.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'lista.txt'
+>>>
+```
+
+<p align="justify">
+A instrução <code>open()</code> aceita alguns parâmetros adicionais que especificam o modo de abertura do arquivo, assim poderemos informar se o arquivo deve ser aberto em modo de escrita, leitura, leitura e escrita, etc. A tabela a seguir mostra os parâmetros aceitos pela instrução <code>open()</code>:
+</p>
+
+| **Parâmetro** | **Operação**                                                                                                                  |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------|
+| `r`           | Abre o arquivo em modo leitura (default).                                                                                     |
+| `w`           | Abre o arquivo em modo de escrita, sobrescreve todos os dados do arquivo anterior.                                            |
+| `x`           | Abre em modo exclusivo. Falha se o arquivo ja existir.                                                                        |
+| `a`           | Abre para escrita *append*, adicionando dados ao final do arquivo existente.                                                  |
+| `b`           | Abre em modo binário                                                                                                          |
+| `t`           | Abre em modo texto (default)                                                                                                  |
+| `+`           | Abre um arquivo de disco para atualização (leitura e escrita)                                                                 |
+| `U`           | Abre em modo <a href="https://docs.python.org/3/glossary.html#term-universal-newlines">universal newlines</a> (Descontinuado) |
+
+Fonte: <https://docs.python.org/3/library/functions.html#open>
+
+Ao fornecer o modo de abertura devemos utilizar a seguinte sintaxe:
+
+`variável = open("nome_do_arquivo", "modo_de_abertura")`
+
+<p align="justify">
+Onde variável é a variável que irá armazenar o
+conteúdo do arquivo, nome_do_arquivo deve ser o valor literal contendo o nome do arquivo a ser aberto e modo_de_abertura deve ser um dos valores da tabela anterior. Veja no exemplo a seguir vamos criar uma lista de números e salvá-la em um arquivo com a instrução <code>write()</code>:
+</p>
+
+```python
+# Criamos uma lista com 100 números
+numeros = list(range(100))
+
+# Criamos um arquivo 0km em modo de escrita
+arquivo = open('numeros.txt', 'w')
+
+# Para cada número na lista de números
+for numero in numeros:
+    # Escreva cada número em forma de string no arquivo
+    arquivo.write(str(numero))
+
+# Feche o arquivo
+arquivo.close()
+```
+
+<p align="justify">
+Primeiro criamos uma lista com cem números para
+testar, então abrimos o arquivo <code>'numeros.txt'</code>, este arquivo na verdade não existe no computador mas como fornecemos o modo de abertura <code>'w'</code> (modo de escrita) o Python irá criar automaticamente este arquivo no diretório local, caso um arquivo com este nome existisse ele seria apagado e sobrescrito. Com um laço iteramos pela nossa lista escrevendo cada número dela no arquivo, note que não podemos escrever números em um arquivo, somente dados do tipo literal podem ser escritos em arquivos, então convertemos cada número para literal com <code>str()</code> no momento de escreve-lo no arquivo. É importante fechar o arquivo no final de seu algoritmo para que este não permaneça aberto na memória do computador, isto poderá corromper os dados do arquivo.
+
+Ótimo, agora vamos escrever um algoritmo para ler os
+dados no arquivo que acabamos de criar:
+</p>
+
+```python
+# Abrimos o arquivo em modo leitura
+arquivo = open('numeros.txt', 'r')
+
+# Para cada linha do arquivo
+for linha in arquivo:
+    print(linha)
+
+arquivo.close()
+```
+
+Saída:
+
+```
+0123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+>>>
+```
+
+<p align="justify">
+Perceba que se você abrir o arquivo texto em um editor
+de texto padrão os dados estarão praticamente da mesma
+forma:
+</p>
+
+<p align="center">Figura 22 - Arquivo Gerado</p>
+
+<p align="center"><img src="resources/img/fig22.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Se tentarmos abrir novamente o mesmo arquivo em
+modo de escrita para tentar escrever novos dados vamos apagar os dados existentes no arquivo atual, veja:
+</p>
+
+```python
+arquivo = open('numeros.txt', 'w')
+
+# Novos números a serem adicionados
+numeros = [999, 998, 997]
+
+for numero in numeros:
+    arquivo.write(str(numero))
+
+# feche o modo de escrita
+arquivo.close()
+
+# Abra em modo de leitura
+arquivo = open('numeros.txt', 'r')
+
+for linha in arquivo:
+    print(linha)
+
+arquivo.close()
+```
+
+Saída:
+
+```
+999998997
+```
+
+Veja que no arquivo no diretório os dados também são
+modificados:
+
+<p align="center">Figura 23 - Arquivo sobrescrito</p>
+
+<p align="center"><img src="resources/img/fig23.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Isto ocorre quando abrimos um arquivo existente em modo de escrita <code>'w'</code>, este modo cria um novo arquivo em branco para escrita, e se algum arquivo já existir com o nome declarado ele será apagado e sobrescrito. Para adicionarmos dados em um arquivo sem apagar o arquivo anterior precisamos abrir em modo <i>append</i>, um modo de escrita que permite adicionar dados à um arquivo já existente, o parâmetro para este modo é o <code>'a'</code>, veja:
+</p>
+
+```python
+# Abre o arquivo em modo append
+arquivo = open('numeros.txt', 'a')
+
+# Novos itens a serem adicionados
+letras = ['a', 'b', 'c']
+
+for letra in letras:
+    arquivo.write('\n' + letra)
+
+# Feche o arquivo
+arquivo.close()
+
+# Abra em modo de leitura
+arquivo = open('numeros.txt', 'r')
+for linha in arquivo:
+    print(linha)
+
+arquivo.close()
+```
+
+Saída:
+
+```
+999998997
+
+a
+
+b
+
+c
+```
+
+<p align="justify">
+Desta vez adicionamos algumas letras pulando linha, sim podemos utilizar o <code>\n</code> para pular linhas em arquivos, perceba que o arquivo original não foi apagado, mas novos
+dados foram adicionados a ele:
+</p>
+
+<p align="center">Figura 24 - Arquivo com dados adicionados ao final</p>
+
+<p align="center"><img src="resources/img/fig24.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Existe ainda um modo seguro de abrir um arquivo, utilizando as palavras reservadas <code>with</code> e <code>as</code>. Com with abrimos o arquivo sem que seja necessário fechá-lo com <code>open()</code>, garantindo a segurança do arquivo, a palavra reservada as define o identificador da variável que conterá o arquivo, veja:
+</p>
+
+```python
+with open('numeros.txt', 'r') as arquivo:
+    for linha in arquivo:
+        print(linha)
+```
+
+Este é um modo prático e eficiente de se trabalhar com arquivos em Python, veja a saída:
+
+```
+999998997
+
+a
+
+b
+
+c
+```
+
+<p align="jusitify">
+Legal, agora que sabemos ler e escrever em arquivos permanentes vamos criar um pequeno algoritmo comercial, ele deve possuir uma sub-rotina a ser chamada para cadastrar produtos com seu devido valor e código do produto em um arquivo. Também vamos ter uma sub-rotina para mostrar os produtos disponíveis, uma para buscar um produto específico e uma que calcule a compra.
+
+Primeiro crie um arquivo chamado <code>produtos.txt</code> através do seu sistema de arquivos ou dos algoritmos que aprendemos, então criamos um procedimento para cadastrar produtos no arquivo:
+</p>
+
+```python
+def cadastro():
+    # Abre o arquivo em modo de leitura e escrita
+    with open('produtos.txt', 'r+') as produtos:
+        # Recebe um novo produto
+        produto = input("Insira o nome do produto: ")
+
+        # Recebe o valor do produto
+        preco = input("Insira o valor de venda do produto: ")
+
+        # Codigo para o produto
+        codigo = 0
+
+        # O codigo é definido pelo número de linhas do arquivo
+        for _ in produtos:
+            codigo += 1
+        
+        # Insira o produto no arquivo
+        produtos.write(str(codigo) + " - " + produto + " R$: " + str(preco) + "\n")
+
+# Cadastre alguns produtos
+cadastro()
+```
+
+<p align="justify">
+Primeiro definimos o procedimento <code>cadastro()</code> e nele abrimos o arquivo <code>'produtos.txt'</code> em modo de leitura e escrita <code>'r+'</code>, desta forma podemos ler e escrever no arquivo, como este
+ainda não existia no diretório atual, o Python nos fez a
+gentileza de criá-lo para nós. Então solicitamos a entrada de um produto e seu valor, também precisamos criar um código para cada produto, mas como isto pode vir a ser um valor variável que não pode se repetir vamos inicializar um código de valor zero e incrementá-lo em 1 para cada linha do arquivo de produtos, desta forma cada vez que inserir-mos um novo produto o arquivo ganhará uma nova linha, e consequentemente o código será incrementado, assim temos que o código é gerado automaticamente para cada produto, legal não? Para testar adicionei dois produtos aleatórios em minha lojinha:
+</p>
+
+```
+Insira o nome do produto: Shampoo
+Insira o valor de venda do produto: 8.00
+>>>
+
+Insira o nome do produto: Sabonete
+Insira o valor de venda do produto: 3.90
+>>>
+```
+
+<p align="justify">
+Veja como o código do produto fica no arquivo gerado,
+podemos ver que ele inicia em 0 e na segunda linha o código é 1, e para cada produto que inserirmos o código irá ser incrementado. Você pode alterar o código para iniciar em números maiores como 100 e ser incrementado de 10 em 10 por exemplo, tente fazer isto.
+</p>
+
+<p align="center">Figura 24 - Arquivo de produtos</p>
+
+<p align="center"><img src="resources/img/fig25.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+No final escrevemos o código seguido do produto e seu valor de uma forma padrão, e sempre que precisarmos incluir um novo produto basta chamarmos o procedimento <code>cadastro()</code>.
+
+Agora vamos elaborar uma sub-rotina que mostre todos os arquivos cadastrados:
+</p>
+
+```python
+def ver_produtos():
+    with open('produtos.txt', 'r') as produtos:
+        for linha in produtos:
+            print(linha)
+
+ver_produtos()
+```
+
+<p align="justify">
+Este é simples, basta abrirmos o arquivo em modo leitura e através de um laço de repetição mostrar cada linha do arquivo, como cada produto está em uma linha do arquivo, vamos mostrar todos os produtos da lista
+</p>
+
+```
+0 - Shampoo R$: 8.00
+
+1 - Sabonete R$: 3.90
+```
+
+<p align="justify">
+Mas e se a lista de produtos tiver cem mil produtos
+cadastrados? Ja pensou ter que imprimir todos estes? Vamos fazer uma sub-rotina que pesquise no arquivo um determinado produto pelo nome:
+</p>
+
+```python
+def busca_produto():
+    with open('produtos.txt', 'r') as produtos:
+        # O produto precisa ser encontrado
+        achou = False
+
+        # Solicite pelo nome do produto
+        produto = input('Insira o nome do produto: ')
+
+        # Busca em cada linha do arquivo
+        for linha in produtos:
+            # Se o produto estiver nesta linha
+            if produto in linha:
+                # Esvcreva esta linha
+                print(linha)
+                
+                # Achamos o produto
+                achou = True
+
+        # Se não achou o produto
+        if not achou:
+            # Informamos que o produto não existe
+            print('Produto não cadastrado!')
+
+busca_produto()
+```
+
+<p align="justify">
+Aqui precisamos de uma variável que nomeamos de
+achou e inicializamos ela com False pois ainda não
+encontramos o produtos a ser buscado. Solicitamos o produto a ser buscado e verificamos cada linha do arquivo, se uma delas conter o produto atribuímos True para a variável achou e escrevemos a linha que contém o produto na tela. Caso o produto não seja encontrado no arquivo devemos informar que o produto não se encontra cadastrado no arquivo. Veja no exemplo buscamos pelo produto sabonete que foi cadastrado sob código 1, mas ao buscar a caneta o programa nos diz que esta não foi cadastrada:
+</p>
+
+```
+Insira o nome do produto: Sabonete
+1 - Sabonete R$: 3.90
+>>>
+Insira o nome do produto: Caneta
+Produto não cadastrado!
+>>>
+```
+
+Vamos para agora escrever a sub-rotina que calcula o
+valor da compra:
+
+```python
+def compra():
+    total = 0     # Variável com o valor total a pagar
+    lista = []    # Lista de preços dos produtos
+    compras = []  # Lista de compras
+
+    while True:   # Loop para receber vários produtos
+        item = input('Insira o código ou nome do produto: ')
+
+        # O loop funciona até que seja inserido "fim"
+        if item == 'fim':
+            break
+        else:
+            # Busca o produto desejado no arquivo
+            with open('produtos.txt', 'r') as produtos:
+                for linha in produtos:
+                    if item in linha:
+                        # Adiciona o produto na lista de compras
+                        compras.append(linha)
+
+                        # Adiciona somente o valor do produto na lista de preços
+                        lista.append(float(linha[-4:]))
+    
+    # Somamos o total a pagar
+    total = sum(lista)
+
+    print('Lista de compras: ')
+    for produto in compras:
+        print(produto)
+
+    print('TOTAL A PAGAR: R$ %2.f' % total)
+
+compra()
+```
+
+<p align="justify">
+Definimos um procedimento <code>compra()</code> e inicializamos três variáveis, uma para o valor total a pagar, uma para guardar a lista de preços dos produtos adquiridos e uma lista que guardará os dados do produto vindas do arquivo (código, nome e valor). Iniciamos um loop que inicia solicitando um produto cadastrado, o programa pode aceitar o nome ou o código do item, caso o valor inserido seja <code>'fim'</code> o loop encerra, do contrário ficará recebendo produtos. Quando um produto for inserido procuramos no arquivo o produto e adicionamos seus dados a lista de compras e somente os últimos caracteres contidos no arquivo (correspondentes ao preço) serão convertidos para real e adicionados à lista de valores. Quando o loop se encerrar somamos todos os valores da lista de valores e atribuímos à variável total, fornecemos a saída final que consiste na iteração pela lista de compras exibindo os dados das compras na tela e a exibição do total a pagar em uma string formatada. Veja na saída que o programa aceita tanto o nome do produto (shampoo) como o código (1 para o sabonete):
+</p>
+
+```
+Insira o código ou nome do produto: Shampoo
+Insira o código ou nome do produto: 1
+Insira o código ou nome do produto: fim
+Lista de compras:
+0 - Shampoo R$: 8.00
+
+1 - Sabonete R$: 3.90
+
+TOTAL A PAGAR: R$  1
+```
+
+<p align="justify">
+Legal agora que temos todas as sub-rotinas vamos
+juntá-las em um sistema útil! Faça o seguinte, crie uma nova pasta em seu computador chamada <code>sistemaPython</code>, abra um novo arquivo no <i>Idle</i> e copie cada uma das sub-rotinas criadas anteriormente:
+</p>
+
+```python
+def cadastro():
+    # Procedimento para cadastro
+    with open('produtos.txt', 'r+') as produtos:
+        produto = input("Insira o nome do produto: ")
+        preco = input("Insira o valor de venda do produto: ")
+        codigo = 0
+        for _ in produtos:
+            codigo += 1
+
+        produtos.write(str(codigo) + " - " + produto + " R$: " + str(preco) + "\n")
+
+# Procedimento para ver lista de produtos
+def ver_produtos():
+    with open('produtos.txt', 'r') as produtos:
+        for linha in produtos:
+            print(linha)
+
+# Procedimento para buscar um produto
+def busca_produto():
+    with open('produtos.txt', 'r') as produtos:
+        achou = False
+        produto = input('Insira o nome do produto: ')
+
+        for linha in produtos:
+            if produto in linha:
+                print(linha)
+                achou = True
+
+        if not achou:
+            print('Produto não cadastrado!')
+
+# Procedimento para compra de produto
+def compra():
+    total = 0
+    lista = []
+    compras = []
+
+    while True:
+        item = input('Insira o código ou nome do produto: ')
+        if item == 'fim':
+            break
+        else:
+            with open('produtos.txt', 'r') as produtos:
+                for linha in produtos:
+                    if item in linha:
+                        compras.append(linha)
+                        lista.append(float(linha[-4:]))
+
+    total = sum(lista)
+    print('Lista de compras: ')
+    for produto in compras:
+        print(produto)
+
+    print('TOTAL A PAGAR: R$ %2.f' % total)
+
+```
+
+<p align="justify">
+Salve este arquivo na pasta <code>sistemaPython</code> com um nome que desejar, aqui será salvo como <code>funcionalidades.py</code>. Neste mesmo diretório copie o arquivo <code>'produtos.txt'</code>, de modo que seu diretório fique parecido com este:
+</p>
+
+<p align="center">Figura 26 - Diretório Sistema Python</p>
+
+<p align="center"><img src="resources/img/fig26.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Muito bem agora crie um novo arquivo em branco no Idle e salve-o na mesma pasta com o nome <code>main.py</code> (ou outro
+que lhe agrade), vamos utilizar o nome main por ser o programa principal, muitas linguagens de programação possuem um programa principal onde as outras funcionalidades
+criadas são chamadas para um propósito principal, isto não é obrigatório em Python, mas torna seu código mais fácil de se
+compreender, seu diretório irá ficar parecido com este:
+</p>
+
+<p align="center">Figura 27 - Diretório Sistema Python final</p>
+
+<p align="center"><img src="resources/img/fig27.png"></p>
+
+<p align="center">Fonte: O autor.</p>
+
+<p align="justify">
+Agora podemos escrever o programa principal que une todas as funcionalidades que acabamos de criar.
+</p>
 
 ## ~~Bibliotecas e módulos~~
