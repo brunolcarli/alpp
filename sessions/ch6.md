@@ -407,7 +407,56 @@ serão inicializadas na memória, quando todos os comandos da sub-rotina tiverem
 algoritmo estiver executando, sempre que possível processe diversas variáveis em uma função e de um retorno para o programa principal, isto irá aumentar a eficiência do seu código.
 </p>
 
-## ~~Recursividade~~
+## Recursividade
+
+<p align="justify">
+A recursividade, em linguagem de programação é a
+capacidade de uma sub-rotina de chamar-se a si própria,
+fundamentando este conceito, Leal(2016a) afirma que “a
+recursividade é um mecanismo que permite uma função
+chamar a si mesma direta ou indiretamente”. Chamar a si
+mesma remete a função à execução de um loop, por isto
+precisamos definir em uma função recursiva:
+</p>
+
+- Uma chamada recursiva;
+- Uma parada;
+
+<p align="justify">
+Um exemplo clássico de chamada recursiva é o cálculo
+do fatorial de um número. O fatorial é calculado pelo número multiplicado por todos seus antecessores. Por exemplo o fatorial de 5! é 5 x 4 x 3 x 2 x 1 que resulta em 120. Veja neste exemplo de algoritmo Python para o cálculo fatorial de um número:
+</p>
+
+```python
+# Define a função
+def fatorial(numero):
+    # Aqui temos uma condição de parada
+    if numero == 0:
+        return 1
+    # E aqui a chamada recurisiva
+    else:
+        return numero * fatorial(numero - 1)
+
+# Chamamos a função fornecendo o valor 5 como argumento
+x = fatorial(5)
+
+print(x)
+```
+
+<p align="justify">
+Definimos dentro da função uma condição de parada,
+neste caso quando a variável local número chegar à 0. Até que chegue em zero continuaremos retornando a própria função subtraindo 1 do número em seu argumento e multiplicando pelo próprio número.
+</p>
+
+```
+120
+>>>
+```
+
+<p align="justify">
+Modifique este algoritmo para que ele receba uma
+entrada de usuário que seja um número e calcule o fatorial deste número, exibindo uma mensagem elegante na tela informando o resultado do fatorial.
+</p>
 
 ## ~~Arquivos~~
 
