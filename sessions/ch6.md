@@ -825,7 +825,7 @@ def compra():
     compras = []  # Lista de compras
 
     while True:   # Loop para receber vários produtos
-        item = input('Insira o código ou nome do produto: ')
+        item = input('Insira o nome do produto: ')
 
         # O loop funciona até que seja inserido "fim"
         if item == 'fim':
@@ -839,7 +839,7 @@ def compra():
                         compras.append(linha)
 
                         # Adiciona somente o valor do produto na lista de preços
-                        lista.append(float(linha[-4:]))
+                        lista.append(float(linha[-5:]))
     
     # Somamos o total a pagar
     total = sum(lista)
@@ -848,7 +848,7 @@ def compra():
     for produto in compras:
         print(produto)
 
-    print('TOTAL A PAGAR: R$ %2.f' % total)
+    print('TOTAL A PAGAR: R$ %.2f' % total)
 
 compra()
 ```
@@ -858,15 +858,15 @@ Definimos um procedimento <code>compra()</code> e inicializamos três variáveis
 </p>
 
 ```
-Insira o código ou nome do produto: Shampoo
-Insira o código ou nome do produto: 1
-Insira o código ou nome do produto: fim
+Insira nome do produto: Shampoo
+Insira nome do produto: Sabonete
+Insira nome do produto: fim
 Lista de compras:
 0 - Shampoo R$: 8.00
 
 1 - Sabonete R$: 3.90
 
-TOTAL A PAGAR: R$  1
+TOTAL A PAGAR: R$ 11.90
 ```
 
 <p align="justify">
@@ -913,7 +913,7 @@ def compra():
     compras = []
 
     while True:
-        item = input('Insira o código ou nome do produto: ')
+        item = input('Insira o nome do produto: ')
         if item == 'fim':
             break
         else:
@@ -921,15 +921,14 @@ def compra():
                 for linha in produtos:
                     if item in linha:
                         compras.append(linha)
-                        lista.append(float(linha[-4:]))
+                        lista.append(float(linha[-5:]))
 
     total = sum(lista)
     print('Lista de compras: ')
     for produto in compras:
         print(produto)
 
-    print('TOTAL A PAGAR: R$ %2.f' % total)
-
+    print('TOTAL A PAGAR: R$ %.2f' % total)
 ```
 
 <p align="justify">
@@ -959,4 +958,206 @@ compreender, seu diretório irá ficar parecido com este:
 Agora podemos escrever o programa principal que une todas as funcionalidades que acabamos de criar.
 </p>
 
-## ~~Bibliotecas e módulos~~
+## Bibliotecas e módulos
+
+<p align="justify">
+A maioria das linguagens de programação possuem
+bibliotecas contendo códigos pré-existentes que realizam uma ampla variedade de cálculos e tarefas. Estas bibliotecas quando fazem parte da linguagem são chamadas de Biblioteca Padrão,vtambém temos as Bibliotecas Externas que são partes devcódigo que baixamos de alguma fonte. No Python é comum se
+referir às bibliotecas como módulos, podemos escrever nossos próprios módulos e importa-los para nosso algoritmo (como vamos fazer com nosso sistemaPython) ou podemos utilizar as pré-existentes no Python (que são muitos, Python é conhecido por ter baterias inclusas, o que quer dizer que ele já vem com várias bibliotecas com funcionalidades para uma ampla variedade de tarefas.
+
+Vamos fazer o seguinte, abra seu arquivo <code>main.py</code> e escreva o seguinte:
+</p>
+
+```python
+# Inclui o módulo de funcionalidades que criamos
+import funcionalidades
+
+# Chamamos o procedimento de cadastro
+funcionalidades.cadastro()
+```
+
+<p align="justify">
+A instrução <code>import</code> diz ao Python para usar neste algoritmo o que estiver no modulo funcionalidades. O modulo funcionalidades é nada mais nada menos que nosso arquivo <code>funcionalidades.py</code> (ou o nome que você salvou o arquivo com as sub-rotinas na pasta <code>sistemaPython</code>). Para utilizar uma das funcionalidades do modulo importado use a sintaxe:
+</p>
+
+<p align="center"><code>modulo.funcionalidade()</code></p>
+
+Utilize o operador <code>.</code> para usar a funcionalidade desejada do modulo desejado, assim a funcionalidade será executada. Há outras formas de importar um módulo, veja a tabela abaixo:
+
+| **Declaração**                                   | **Tradução**                                    | Descrição                                                                                                                                  |
+|--------------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `import` modulo                                  | Importe o módulo                                | Importa um modulo todo para o escopo atual. Você deve referenciar a funcionalidade pela sintaxe `modulo.funcionalidade()`                  |
+| `from` modulo `import` funcionalidade            | Do módulo importe esta funcionalidade           | Importa uma funcionalidade específica de um módulo. Desta forma você pode chamar a funcionalidade diretamente pelo nome `funcionalidade()` |
+| `from` modulo `import` funcionalidade `as` nome  | Do módulo importe esta funcionalidade como nome | Cria um alias (apelido) para a funcionalidade importada. Desta forma você pode chamar a funcionalidade por um nome desejado.               |
+| `from` modulo `import *`                         | Do módulo importe tudo                          | Importa todas as funcionalidades do modulo.                                                                                                |
+
+
+<p align="justify">
+Você pode utilizar a forma como for mais conveniente,
+muitas vezes precisamos somente de uma ou algumas
+funcionalidades de um módulo, então não precisamos importar todas, isto aumenta a eficiência de seu algoritmo.
+
+Agora que sabemos sobre a importação de módulos
+vamos finalizar a implementação do nosso sistemaPython:
+</p>
+
+
+```python
+# importa o módulo de funcionalidades de criamos
+import funcionalidades
+
+# Criamos um loop para o programa
+while True:
+    # Criamos um menu para o programa
+    print('#' * 34)
+    print('>' * 11, 'BEM VINDO', '<' * 11)
+    print('Escolha a operação desejada')
+    print('[1] Cadastrar produto')
+    print('[2] Verificar produtos cadastrados')
+    print('[3] Buscar produto')
+    print('[4] Compra')
+    print('[5] Sair do sistema')
+    print('#' * 34)
+
+    entrada = input()
+
+    # Fornece a funcionalidade de acordo com a opção
+    if entrada == '1':
+        funcionalidades.cadastro()
+    elif entrada == '2':
+        funcionalidades.ver_produtos()
+    elif entrada == '3':
+        funcionalidades.busca_produto()
+    elif entrada == '4':
+        funcionalidades.compra()
+    elif entrada == '5':
+        print('#' * 34)
+        print('Encerrando Sistema')
+        print('Até logo')
+        print('#' * 34)
+        break
+    else:
+        print('#' * 34)
+        print('Opção inválida')
+        print('#' * 34)
+```
+
+<p align="justify">
+Colocamos tudo dentro de um laço while para que o
+programa fique rodando até que seja solicitado para encerrar, fornecemos as opções disponíveis, uma para cada funcionalidade do sistema e caso o usuário insira uma opção inválida o alertaremos disto.
+</p>
+
+```
+##################################
+>>>>>>>>>>> BEM VINDO <<<<<<<<<<<
+Escolha a operação desejada
+[1] Cadastrar produto
+[2] Verificar produtos cadastrados
+[3] Buscar produto
+[4] Compra
+[5] Sair do sistema
+##################################
+1
+Insira o nome do produto: Caneta
+Insira o valor de venda do produto: 1.00
+##################################
+>>>>>>>>>>> BEM VINDO <<<<<<<<<<<
+Escolha a operação desejada
+[1] Cadastrar produto
+[2] Verificar produtos cadastrados
+[3] Buscar produto
+[4] Compra
+[5] Sair do sistema
+##################################
+2
+0 - Shampoo R$: 8.00
+
+1 - Sabonete R$: 3.90
+
+2 - Caneta R$: 1.00
+
+##################################
+##################################
+>>>>>>>>>>> BEM VINDO <<<<<<<<<<<
+Escolha a operação desejada
+[1] Cadastrar produto
+[2] Verificar produtos cadastrados
+[3] Buscar produto
+[4] Compra
+[5] Sair do sistema
+##################################
+4
+Insira nome do produto: Caneta
+Insira nome do produto: Sabonete
+Insira nome do produto: Sabonete
+Insira nome do produto: fim
+Lista de compras:
+2 - Caneta R$: 1.00
+
+1 - Sabonete R$: 3.90
+
+1 - Sabonete R$: 3.90
+
+TOTAL A PAGAR: R$ 8.80
+##################################
+>>>>>>>>>>> BEM VINDO <<<<<<<<<<<
+Escolha a operação desejada
+[1] Cadastrar produto
+[2] Verificar produtos cadastrados
+[3] Buscar produto
+[4] Compra
+[5] Sair do sistema
+##################################
+5
+##################################
+Encerrando Sistema
+Até logo
+##################################
+```
+
+<p align="justify">
+Começamos cadastrando um novo item no sistema, e ao
+ver a lista de produtos é possível perceber que o novo item já encontra-se cadastrado e com um código válido. Realizamos a compra deste novo item e o programa nos revela o total da compra, excelente não?
+
+Python possui muitas outras bibliotecas que não foram
+abordadas aqui, como por exemplo o módulo <code>math</code> que possui várias ferramentas para cálculos matemáticos ou ainda o módulo <code>sqlite3</code> que permite a manipulação de bancos de dados, este por exemplo seria uma forma muito mais eficiente e segura de guardar dados como em um sistema comercial. Procure em outras fontes sobre este modulo e tente implementar este sistemaPython com um banco de dados. 
+</p>
+
+<i>Exercícios propostos:</i>
+
+1) Um supermercado popular próximo à sua casa está
+trabalhando em um novo sistema de cadastro de produtos.
+Desenvolva um cadastro de produtos que contenha código,
+descrição, unidade e preço para 20 produtos para o
+supermercado. Defina um menu com as seguintes opções:
+- Cadastrar os 20 registros;
+- Pesquisar um produto pelo código;
+- Classificar alfabeticamente os registros;
+- apresentar todos os registros;
+- sair do programa de cadastro;
+
+2) Uma balada top da sua cidade vai dar entrada livre e double
+drink para os 10 primeiros clientes que inserirem o nome
+em uma lista eletrônica contendo seu o algoritmo com o seu
+programa. Elabore um algoritmo para o cadastro de 10
+pessoas contendo as seguintes informações: nome, idade,
+RG, telefone, endereço. Caso a idade do cliente seja menor
+que 18 anos ele não pode entrar na festa e deve ser excluído
+da lista. O menu deve conter opções de cadastrar, excluir e
+mostrar a lista completa de VIPs.
+
+3) Você já foi em algum desses restaurantes fast food onde você
+pode montar seu próprio lanche? Você escolhe o tipo de
+pão(integral, italiano, com gergelim) o tamanho do sandúba
+(30cm , 50cm), o tipo de recheio (queijo e calabresa, carne
+bovina, almôndegas, vegetariano), o tipo de queijo(provolone,
+parmesão, cheddar), o tipo de salada(alface, tomates, cebola,
+ervilhas), o tipo de molho (ketchup, mostarda, barbecue), se
+quer quente ou frio e então voilà, você tem um sanduíche a seu
+gosto. Monte um algoritmo que simule a montagem de um
+sanduíche, Os sabores de queijo e calabresas e vegetaria
+custam R$ 9.00, os outros sabores custam R$ 12.00, o tamanho
+de 50cm custa o valor do sabor mais 75% do seu valor insira
+uma função que pergunta se o usuário aceita o dobro de queijo
+por um adicional de R$ 2.00. No final mostre na tela o
+sanduíche completo e o valor a pagar pelo sanduíche.
