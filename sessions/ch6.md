@@ -143,9 +143,165 @@ O resultado da subtração é  2
 Você já conheceu aqui algumas formas interessantes de se construir algoritmos, implemente este último exemplo adicionando dois novos procedimentos para divisão e multiplicação. Implemente também um laço que pergunta ao usuário se gostaria de realizar outra operação ao final do algoritmo. Implemente também um laço que verifica se a entrada do usuário é válida (um valor numérico) e caso seja inválido fique repetindo a solicitação até que um valor válido seja inserido.
 </p>
 
-## ~~Funções~~
+## Funções
 
-## ~~Parâmetros~~
+<p align="justify">
+As funções são sub-rotinas idênticas aos procedimentos,
+a declaração das funções é exatamente igual e sua estrutura é a mesma dos procedimentos assim como também podem possuir parâmetros. A única diferença entre uma função e um procedimento é que as funções sempre retornam valores.
+</p>
+
+> <small>Uma função nem sempre precisa exibir sua saída diretamente. Em vez disso, ela pode processar alguns dados e então devolver um valor ou um conjunto de valores. O valor devolvido pela função é chamado de valor de retorno. A instrução return toma um valor que está em uma função e o envia de volta à linha que
+a chamou. Valores de retorno permitem passar boa parte do trabalho pesado de um programa para funções, o que pode simplificar o corpo de seu programa. (MATTHES, 2016)</small>
+
+## Parâmetros
+
+<p align="center">
+Um valor de retorno pode ser armazenado em um
+variável e ser processado ou manipulado por outras partes do algoritmo como operações aritméticas, lógicas, condicionais e até mesmo ser utilizado como argumento em outra função. Veja um exemplo que retorna o quadrado de um número:
+</p>
+
+```python
+# a definição de uma função é idêntia a de um procedimento
+def quadrado(numero):
+    # utiliza-se a instrução return para retornar um valor
+    return numero ** 2
+
+entrada = int(input("Insira um número: "))
+
+# chamamos a função guardando seu retorno em uma variável
+quad = quadrado(entrada)
+
+# exibimos o resultado
+print("O quadrado de %i é %i" % (entrada, quad))
+
+# o retorno também pode ser impresso
+print("O quadrado do quadrado é ", quadrado(quad))
+```
+
+<p align="center">
+Primeiramente definimos nossa função, da mesma
+forma como o procedimento, porém damos a instrução return para retornar o valor na hora de sua chamada. Então pedimos um valor inteiro ao usuário que será passado como argumento para a nossa função. Veja que ao chamar a função também
+atribuímos a mesma em uma variável chamada quad. Perceba que neste momento não estamos armazenando uma função em uma variável e sim o valor retornado por esta função. O resultado armazenado na variável quad é exibido na primeira
+instrução print( ), e também é utilizado como argumento em uma nova chamada à função quadrado( ) que definimos, retornando um novo valor resultante da operação interna da nossa função. Quando retornamos um valor não precisamos
+utilizar uma função print( ) dentro da função para exibir o valor, ele poderá ser exibido se chamarmos a função dentro da
+instrução print( )
+</p>
+
+```
+Insira um número: 2
+O quadrado de 2 é 4
+O quadrado do quadrado é  16
+>>>
+```
+
+Vamos para outro exemplo, adaptado de Matthes(2016). Vamos escrever uma função que possui dois parâmetros que devem ser literais correspondentes ao nome e sobrenome de uma pessoa, essa função deve retornar o nome completo e
+formatado.
+
+```python
+def formatar(nome, sobrenome):          # Definimos a função
+    formatado = nome + " " + sobrenome  # Processamento da função
+	return formatado.title()            # retorno da função
+
+meu_nome = "bruno"
+meu_sobrenome = "LuVIZotTo CaRLI"
+
+nome_completo = formatar(meu_nome, meu_sobrenome)
+print("Meu nome é ", nome_completo)
+```
+
+<p align="justify">
+Definimos a função para receber dois parâmetros, no
+processamento fazemos a soma das strings, este processo é de unir strings é denominado concatenação. Retornamos as strings concatenadas e com a primeira letra de cada palavra com letra maiúscula. Definimos um nome e um sobrenome para ser fornecido à função, e seu retorno é atribuído à variável nome_completo que é em seguida exibida.
+</p>
+
+```
+Meu nome é  Bruno Luvizotto Carli
+>>>
+```
+
+## Parâmetros
+
+<p align="center">
+Os parâmetros como vimos, são valores abstratos
+declarados em uma sub-rotina, no momento da chamada à subrotina fornecemos um valor real para os parâmetros denominados argumentos. Quando declaramos parâmetros em uma sub-rotina, obrigatoriamente devemos fornecer os argumentos em sua chamada, do contrário teríamos um erro:
+</p>
+
+```python
+# definimos uma função que retorna o produto de dois números
+def multiplica(a, b):
+    return a * b
+
+# declaramos dois números
+x = 2
+y = 5
+
+# mas fornecemos somente um na chamada da função
+print(multiplica(x))
+```
+
+Saída:
+
+```
+Traceback (most recent call last):
+  File "run.py", line 10, in <module>
+    print(multiplica(x))
+TypeError: multiplica() missing 1 required positional argument: 'b'
+>>>
+```
+
+<p align="justify">
+Se não fornecermos os argumentos necessários
+obteremos um <i>Traceback</i> informando que na chamada à função multiplica( ) está faltando um argumento. Isto é porque os parâmetros definidos na função são obrigatórios, porém é possível definir parâmetros optativos no Python, basta
+inicializar o parâmetro na definição da sub-rotina. Veja:
+</p>
+
+```python
+# Inicializamos o parâmetro b com o valor 1
+def multiplica(a, b):
+    return a * b
+
+# declaramos dois números
+x = 2
+y = 5
+
+# mas fornecemos somente um na chamada da função
+print(multiplica(x))
+```
+
+<p align="justify">
+Declaramos a mesma função do exemplo anterior, mas
+desta vez inicializamos o segundo parâmetro com o valor 1, desta forma o parâmetro se torna optativo, e se não fornecermos o segundo valor a função utilizará o valor inicializado, retornando a multiplicação pelo valor 1:
+</p>
+
+```
+2
+>>>
+```
+
+<p align="justify">
+E no caso de fornecermos um argumento para um
+parâmetro inicializado, a sub-rotina irá utilizar o valor fornecido como parâmetro no lugar do valor inicializado:
+</p>
+
+```python
+# Inicializamos o parâmetro b com o valor 1
+def multiplica(a, b):
+    return a * b
+
+# declaramos dois números
+x = 2
+y = 5
+
+# mas fornecemos somente um na chamada da função
+print(multiplica(x, y))
+```
+
+Saída:
+
+```
+10
+>>>
+```
 
 ## ~~Escopo das variáveis~~
 
