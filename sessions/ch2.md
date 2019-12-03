@@ -552,7 +552,7 @@ Porém escrever uma variável em caixa alta não a torna realmente uma "constant
 Declarando uma tupla:
 
 ```python
-QUANTIDADE = (100)
+QUANTIDADE = (100, )  # não esqueça da vírgula
 ```
 
 Para acessar o valor da tupla:
